@@ -1,0 +1,86 @@
+*::selection{
+	background-color: pink;
+}
+body{
+	font-size: 20px;
+	font-family: verdana, helvetica, arial, sans-serif;
+	line-height: 1.6em;
+}
+h1, h2{
+	font-family: "microsoft yahei";
+	color:#007e7e;
+}
+h1 {
+	border-bottom: 1px solid black;
+	font-size: 150%;
+}
+h2{
+	font-size: 130%;
+}
+a:link{
+	color:#007e7e;
+}
+a:visited{
+	color: #333;
+}
+			.guarantee{
+				background-color: #a7cece;
+				line-height: 1.9em;
+				font-style: italic;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				color: #444;
+
+					border: white 3px dashed;
+					/* border-radius: 60px;
+					border-top-left-radius: 0; */
+					padding: 30px 30px 30px 80px;
+					margin: 30px 280px 0 30px;
+					
+						background-image: url(../img/background.gif);
+						background-repeat: no-repeat;
+						background-position: top left;
+			}
+			/* .guarantee::first-letter{
+				font-size:40px;
+			} */
+			.cd{
+				font-style: italic;
+			}
+			.artist{
+				font-weight: bold;
+			}
+			.copyright{
+				text-align: center;
+				
+			}
+
+#elixirs{
+	background-image: url(../img/cocktail.gif);
+	background-repeat: repeat-x;
+
+	width: 210px;
+	border:thin solid #007e7e;
+	margin-left: 20px;
+	/* 设置右下左内边距 */
+	padding: 0 20px 20px 20px;
+
+	text-align: center;
+	/* 行高也可以不用单位,表示行高为自身字体大小的1倍 */
+	line-height: 1;
+	float: right;
+}
+#elixirs h2{
+	color: black;
+	/* line-height: 120%; */
+}
+#elixirs h3{
+	color:#d12c47;
+}
+
+#elixirs a:hover{
+	background-color:#f88396;
+	color:#0d5353;
+}
+#elixirs p{
+	font-size: 80%;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图练习</title>
+    <link rel="stylesheet" href="../resetcss.css">
+    <style>
+        .img-list{
+            margin: 100px auto;
+            height: 470px;
+            width: 590px;
+            /* 让pointer有包含块可以进行位置选择 */
+            position: relative;
+            /* 不采取 overflow: hidden 的方法,我们要把所有的图片都堆叠在一起,应该使用绝对定位 */
+        }
+        /* 给每张图片都设置绝对定位,使它们都堆叠在一起 */
+        .img-list li{
+            position: absolute;
+        }
+        .pointer{
+            /* 设置为绝对定位,配合 ul 的相对定位可以摆放到我们想要的位置 */
+            position: absolute;
+            /* 我们不想让导航点消失,应该将其层级提升至最高 */
+            z-index: 99;
+
+            bottom: 20px;
+            left: 40px;
+        }
+        .pointer a{
+            /* 设置点点浮动,使点点横向排列,然后还能够设置高度宽度,就不需要 display:block 了 */
+            float: left;
+
+            width: 10px;
+            height: 10px;
+            margin: 0px 2px;
+            border-radius: 50%;
+            /* 光标不接近时呈现的颜色 */
+            background-color: rgba(255, 255, 255, .3);
+            /* 为什么要设置下面两个值?
+                    因为下方的样式设置了边框,会致其变大,导航点不在一条直线上.设置之后,所有导航点的大小都是一样的,就会在一条直线上了 */
+
+            /* 将背景颜色值设置到内容区,边框和内边距不再有背景颜色.在这我们是不让透明的边框能透出下面的颜色 */
+            background-clip: content-box;
+            /* 设置 2px的透明边框 */
+            border: 2px solid transparent;
+        }
+        /* 设置一个假的选定的导航点效果 */
+        .pointer a.active ,
+        .pointer a:hover{
+            background-color: white;
+            border: 2px solid rgba(255, 255, 255, .3);
+        }
+        /* 改变图片的层级来实现一个切换图片的效果 */
+        li:nth-child(1){
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 590*470 -->
+    <!-- 插入8张图片到列表中 -->
+    <ul class="img-list">
+        <li>
+            <a href="javascript:;"><img src="img/1.webp" alt="#"></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="img/2.webp" alt="#"></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="img/3.jpg" alt="#"></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="img/4.jpg" alt="#"></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="img/5.webp" alt="#"></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="img/6.jpg" alt="#"></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="img/7.webp" alt="#"></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="img/8.jpg" alt="#"></a>
+        </li>
+        <div class="pointer">
+            <!-- 8个假的导航点 -->
+            <a class="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </ul>
+</body>
+</html>

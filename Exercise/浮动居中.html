@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .b{
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+            float: left;
+            position: relative;
+            left: 50%;
+            /* margin: 0 0 0 -100px; */
+            transform: translateX(-50%);
+        }
+        .a{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        span{
+            font-size: 20px;
+            margin-top: 87px;
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="a clearfix">
+        <span>normal flow</span>
+    </div>
+    <div class="b clearfix">
+        <span>float flow</span>
+    </div>
+</body>
+</html>
