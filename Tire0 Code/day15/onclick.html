@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gainsboro;
+        }
+        form{
+            width: 360px;
+            height: 410px;
+            background-color: #fff;
+            position: relative;
+            display: none;
+        }
+        span{
+            background-color: pink;
+            font-size: 30px;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="登录" id="btn">
+    <form action="#" id="f">
+        <span id="off">X</span>
+    </form>
+</body>
+</html>
+<script>
+    btn.onclick=function(){
+        f.style.display="block"
+    }
+    off.onclick=function(){
+        f.style.display="none"
+    }
+</script>

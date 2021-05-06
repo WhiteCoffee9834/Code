@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 300px;
+            height: 300px;
+            /* background-color: pink; */
+            position:relative;
+            /* border-radius: 50%; */
+            /* float: left; */
+            /* animation: autorotate 1s infinite linear; */
+            left: 75px;
+            top: 75px;
+
+            /* transition: 20s all ease-in-out; */
+            transform:rotate(-45deg);
+        }
+        .Semicircle-1{
+            height: 100px;
+            width: 200px;
+            border-radius: 100px 100px 0 0;
+            background-color: red;
+        }
+        .square{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        .Semicircle-2{
+            height: 200px;
+            width: 100px;
+            border-radius: 0 100px 100px 0;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="Semicircle-1"></div>
+        <div class="square"></div>
+        <div class="Semicircle-2"></div>
+    </div>
+</body>
+</html>

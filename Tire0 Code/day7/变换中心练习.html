@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变换中心练习</title>
+    <style>
+        body{
+            padding: 300px;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            margin-bottom: 5px;
+        }
+        .box div{
+            width: 200px;
+            height: 100px;
+            background-color: #FF1493;
+            /* 只想transform的样式过渡
+            如果为all，则变换中心的改变也会产生过渡效果 */
+            transition-duration: .5s;
+            transition-property: transform;
+        }
+        /* 要点：
+        要让一个东西呈现出来，首先得要有这个东西 
+        难点在于如何实现出来的位置与回去的位置不一样*/
+        /* 第一个：
+        当光标移入时，从左边出来，移出时从右边回去
+        如果采取缩放的方式处理这个样式
+        则说明本身变换中心就应该在右边
+        光标移入将变换中心切换到左边即可 */
+        .box1 div{
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+        .box1:hover div{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .box2 div{
+            transform: scale(0);
+            transform-origin: right bottom;
+        }
+        .box2:hover div{
+            transform:scale(1);
+            transform-origin: top left;
+        }
+
+        .box3 div{
+            transform: scale(0);
+            transform-origin: center bottom;
+        }
+        .box3:hover div{
+            transform-origin: center top;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <div></div>
+    </div>
+    <div class="box box2">
+        <div></div>
+    </div>
+    <div class="box box3">
+        <div></div>
+    </div>
+</body>
+</html>

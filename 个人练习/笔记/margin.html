@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border:10px yellowgreen dotted;
+
+            margin-bottom: 100px;
+        }
+        /* margin
+            -外边距不会影响盒子可见框的大小,但是会影响盒子的位置
+                -由于元素在页面中是按照自左向右的顺序排列的
+                    在默认情况下如果我们设置的left和top则会移动元素本身,设置bottom和right则会移动其他元素
+            margin-top:
+                -上外边距,设置一个正值,元素会向下移动
+            margin-left:
+                -左外边距,设置一个正值,元素会向右移动
+                margin-bottom:
+                    -下外边距,设置一个正值,其下边的元素会向下移动
+                margin-right
+                    -右外边距,默认情况下没用.要搭配float才会生效
+            margin也可以设置负值,如果是负值,则元素会向相反的方向移动
+            也可以简写成margin,可以同时设置四个方向的外边距
+            margin会影响到盒子实际占用的空间
+            */
+        .box2{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

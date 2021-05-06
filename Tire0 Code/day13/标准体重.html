@@ -1,0 +1,17 @@
+<script>
+    var sex=prompt("输入性别:")
+    var height=prompt("身高:")
+
+    var normal_weight_male;
+    var normal_weight_female;
+    if(sex=="男"){
+        normal_weight_male=height-105;
+        alert("您的标准体重应为:"+normal_weight_male+"kg")
+    }else if(sex=="女"){
+        normal_weight_female=height-100;
+        alert("您的标准体重为"+normal_weight_female+"kg")
+    }
+    else{
+        alert("你是臭狗");
+    }
+</script>

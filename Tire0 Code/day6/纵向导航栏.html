@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./resetcss.css">
+    <style>
+        .clearfix::before,
+        .clearfix:after{
+            clear: both;
+            display: table;
+            content:"";
+        }
+        .nav{
+            width: 310px;
+            height: 450px;
+            border: 3px solid #EEE;
+        }
+        .head{
+            height: 56px;
+            border-bottom:1px solid #EEE ;
+        }
+        .head h3{
+            margin: 20px;
+            font-size: 17px;
+        }
+        .nav li{
+            margin-left: 20px;
+            font-size: 14px;
+            /* 行间距=行高-字体大小
+            行高=行间距+字体大小 */
+            line-height: 36px;
+        }
+        .nav a{
+            color: black;
+            text-decoration: none;
+            /* display: block; */
+        }
+        a:hover{
+            color: #FF714B;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="head clearfix">
+            <h3>热门推荐</h3>
+        </div>
+        <ul>
+            <li><a href="javascript:;">1.哈佛女神公开高效学习法</a></li>
+            <li><a href="javascript:;">2.李诞自曝靠幽默追到女神</a></li>
+            <li><a href="javascript:;">3.刷爆朋友圈理性护肤指南</a></li>
+            <li><a href="javascript:;">4.如何让家庭不为钱困扰？</a></li>
+            <li><a href="javascript:;">5.告别无效健身3步甩肚腩</a></li>
+            <li><a href="javascript:;">6.兼职写作稿费如何过千元</a></li>
+            <li><a href="javascript:;">7.高情商如何避免冷场尬聊</a></li>
+            <li><a href="javascript:;">8.拥有优质睡眠只需20分钟</a></li>
+            <li><a href="javascript:;">9.北大教授强推的62本好书</a></li>
+            <li><a href="javascript:;">10.他手机拍照怎么这么优秀</a></li>
+        </ul>
+    </div>
+</body>
+</html>

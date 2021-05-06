@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doooooooooooooooge</title>
+    <style>
+        @keyframes autorotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+
+            }
+        }
+
+        .shibainu,
+        .doge {
+            /* border-radius: 50%; */
+            width: 600px;
+            height: 600px;
+
+            transition: all 3s linear;
+            margin-top: 300px;
+            animation: autorotate infinite 5s cubic-bezier(.22,1.98,.77,-1.02);
+        }
+
+        .shibainu {
+            float: left;
+            margin-left: 300px;
+        }
+
+        .doge {
+            float: right;
+            margin-right: 300px;
+        }
+
+        img {
+            border-radius: 50%;
+            border: 5px solid black;
+        }
+
+        /* .shibainu:hover,.doge:hover{
+            transform: rotate(360deg);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="shibainu">
+        <img src="./images/shibainu.jpg" alt="#">
+    </div>
+    <div class="doge">
+        <img src="./images/Dog.jpeg" alt="#">
+    </div>
+</body>
+
+</html>

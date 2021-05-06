@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 1500px;
+            height: 500px;
+            background-color:  #b0b0b0;
+        }
+        .wrapper div{
+            float: left;
+            width: 240px;
+            height: 360px;
+            background-color: white;
+            margin-left: 50px;
+            margin-top: 70px;
+            text-align: center;
+            transition: .2s linear;
+        }
+        .wrapper div img{
+            /* margin: 0 10px 0 10px; */
+            vertical-align: bottom;
+        }
+        .wrapper div p{
+            /* text-align: center; */
+            font-size: 19px;
+            margin-top: 28px;
+        }
+        .a{
+            transform: rotate(20deg) scale(.8);
+        }
+        .b{
+            transform: rotate(-10deg) scale(.9);
+        }
+        .c{
+            transform: rotate(20deg) scale(.8);
+        }
+        .d{
+            transform: rotate(-15deg) scale(.7);
+        }
+        .e{
+            transform: rotate(15deg) scale(.9);
+        }
+        .wrapper div:hover{
+            transform: rotate(0deg) scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="a">
+            <img src="./images/a.png" alt="">
+            <p>鹿晗</p>
+        </div>
+        <div class="b">
+            <img src="./images/b.png" alt="">
+            <p>迪丽热巴</p>
+        </div>
+        <div class="c">
+            <img src="./images/c.png" alt="">
+            <p>李光洙</p>
+        </div>
+        <div class="d">
+            <img src="./images/d.png" alt="">
+            <p>王祖蓝</p>
+        </div>
+        <div class="e">
+            <img src="./images/e.png" alt="">
+            <p>李晨</p>
+        </div>
+    </div>
+</body>
+</html>

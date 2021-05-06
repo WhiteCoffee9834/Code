@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper1  div , 
+        .wrapper2   div {
+            width: 200px;
+            height: 200px;
+            display:inline-block;
+        }
+        .wall {
+            background-color: #fff;
+            width: 100px;
+            height: 1px;
+            display: block;
+        }
+
+        .wrapper1 .box1 {
+            background-color: #bfa;
+            border-radius: 50%;
+        }
+
+        .wrapper1 .box2 {
+            background-color: pink;
+            border-top-left-radius: 50px;
+        }
+
+        .wrapper1 .box3 {
+            background-color: salmon;
+            border-radius: 0 90px 0 90px;
+        }
+
+        .wrapper1 .box4 {
+            background-color: sandybrown;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .wrapper1 .box5 {
+            background-color: silver;
+            border-radius: 0 0 100px 100px;
+            height: 100px ;
+        }
+
+        .wrapper1 .box6 {
+            background-color: teal;
+            border-radius: 50px;
+            height: 50px;
+        }
+        span{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #a{
+            background-color: red;
+            border-radius: 50%;
+        }
+        #b{
+            background-color: green;
+            height: 100px;
+            border-top-left-radius: 100px 50px;
+            border-top-right-radius: 100px 50px;
+            border-bottom-left-radius: 100px 50px;
+            border-bottom-right-radius: 100px 50px;
+        }
+        #c{
+            background-color: pink;
+            border-radius: 10px 20px 30px 40px;
+        }
+        #d{
+            background-color: powderblue;
+            border-radius: 50% 0 50% 0;
+        }
+        #e{
+            background-color: yellowgreen;
+            border-radius: 50%;
+            border-bottom-left-radius: 0;
+        }
+        #f{
+            height: 100px;
+            background-color: yellow;
+            border-radius: 100px 100px 0 0;
+        }
+        #g{
+            width: 100px;
+            background-color: purple;
+            border-radius: 100px 0 0 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+    </div>
+
+    <div class="wall"></div>
+
+    <span>进阶</span>
+    <div class="wrapper2">
+        <div id="a"></div>
+        <div id="b"></div>
+        <div id="c"></div>
+        <div id="d"></div>
+        <div id="e"></div>
+        <div id="f"></div>
+        <div id="g"></div>
+    </div>
+</body>
+
+</html>
