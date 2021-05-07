@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格增加文本样式</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+        }
+        table{
+            border-collapse: collapse;
+            border-color: rgba(0, 0, 0, .3);
+        }
+        tr{
+            height: 100px;
+        }
+        a,b,c{
+            color: #fff;
+        }
+        .a{
+            background-color: #ff2663;
+        }
+        .b{
+            background-color: #ff5e8a;
+        }
+        .c{
+            background-color: #ff8aac;
+        }
+        td:nth-child(3){
+            text-align: right;
+        }
+        p{
+            font-size: 12px;
+        }
+        del,
+        p:nth-child(1){
+            color: rgba(0, 0, 0, .5);
+        }
+        span{
+            color: #f7658c;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td width="20px" class="a">1</td>
+            <td width="100px">
+                <div></div>
+            </td>
+            <td>
+                <p>240件已售</p>
+                <p>香港直邮 天梭力洛克系列机械男表</p>
+                <p><del>&yen;2579.00</del><span>&yen;2529</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="b">2</td>
+            <td>
+                <div></div>
+            </td>
+            <td>
+                <p>362件已售</p>
+                <p>[门店配镜]850抵1680元配镜套餐</p>
+                <p><del>&yen;1680.00</del><span>&yen;850</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="c">3</td>
+            <td>
+                <div></div>
+            </td>
+            <td>
+                <p>717件已售</p>
+                <p>邦顿手表男士机械多功能夜光防水</p>
+                <p><del>&yen;778.00</del><span>&yen;409</span></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
