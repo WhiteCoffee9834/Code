@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 整体宽度设置 */
+        .wrapper{
+            width: 660px;
+            margin: 30px auto;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+        .img_wrapper{
+            width: 660px;
+            height: 330px;
+            background-color: salmon;
+            margin-bottom: 24px;
+        }
+        /* 设置灰色方块容器高度 防止高度丢失*/
+        .block_a,
+        .block_b{
+            height: 30px;
+            margin-bottom: 33px;
+        }
+        .block_b{
+            margin-top: 33px;
+        }
+        /* 灰色方块通用样式 */
+        .left_a,
+        .right_a,
+        .left_b,
+        .right_b{
+            height: 30px;
+            background-color: #ebf0ec;
+        }
+        /* 左浮动 */
+        .left_a,
+        .left_b{
+            float: left;
+        }
+        /* 右浮动 */
+        .right_a,
+        .right_b{
+            float: right;
+        }
+        /* a号宽度 */
+        .left_a,
+        .right_a{
+            width: 284px;
+        }
+        /* b号宽度 */
+        .left_b,
+        .right_b{
+            width: 223px;
+        }
+        /* 边框设置 */
+        .left_a,
+        .left_b{
+            border-right: 8px solid #01046d;
+        }
+        .right_a,
+        .right_b{
+            border-left: 8px solid #01046d;
+        }
+        /* 灰色方块中间字的通用样式 */
+        .block_a p,
+        .block_b p{
+            text-align: center;
+            line-height: 30px;
+            font-size: 21px;
+            font-weight: bold;
+            color: #01046d;
+
+            float: left;
+        }
+        /* 单独设置灰色方块中间字所占的宽度 */
+        .block_a p{
+            width: 76px;
+        }
+        .block_b p{
+            width: 198px;
+        }
+        /* 给段落中的字设置样式 */
+        .body>p{
+            text-indent: 2em;
+            font-size: 12px;
+            line-height: 30px;
+        }
+        /* 主体的边框,边距 */
+        .body{
+            border-bottom: 1px dashed #c9c9c9;
+            margin-bottom: 28px;
+            padding-bottom: 36px;
+        }
+        /* 尾 */
+        .foot{
+            width: 660px;
+        }
+        /* 按钮容器的宽高,居中,设置空格的大小为 6px */
+        .button_wrapper{
+            width: 380px;
+            height: 30px;
+            margin: 0 auto;
+            font-size: 6px;
+        }
+        /* 如果只通过内边距的方式来固定宽高,会导致盒子的高度不理想,应通过定死高度的方式来设置 */
+        /* 设置按钮的样式,高度固定为 28px ,且为 content-box ,设置了高度就不用设置垂直的内边距 */
+        .button_wrapper button{
+            border: 1px solid #e0e0e0;
+            background-color: #fff;
+            padding: 0 12px;
+            font-size: 12px;
+            height: 28px;
+            box-sizing: content-box;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="body">
+            <h1>头条新闻:建设新型数字城市</h1>
+            <div class="img_wrapper"></div>
+            <div class="block_a">
+                <div class="left_a"></div>
+                <p>前言</p>
+                <div class="right_a"></div>
+            </div>
+            <p>共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车</p>
+            <p>共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共</p>
+            <div class="block_b">
+                <div class="left_b"></div>
+                <p>最新进展公示结果</p>
+                <div class="right_b"></div>
+            </div>
+            <p>共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享单车共享</p>
+        </div>
+        <div class="foot">
+            <div class="button_wrapper">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>...</button>
+                <button>99</button>
+                <button>100</button>
+                <button>下一页</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
