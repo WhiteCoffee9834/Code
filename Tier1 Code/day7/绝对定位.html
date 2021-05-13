@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 500px;
+            height: 350px;
+            background-image: url(./img/bg.png);
+            position: relative;
+        }
+        .anchor,
+        .foot img{
+            position: absolute;
+        }
+        .left_anchor{
+            left: 0;
+            top: 148px;
+        }
+        .right_anchor{
+            right: 0;
+            top: 148px;
+        }
+        .foot{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 56px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        .foot img{
+            margin-left: 14px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left_anchor anchor">
+            <img src="./img/3.png" alt="">
+        </div>
+        <div class="right_anchor anchor">
+            <img src="./img/4.png" alt="">
+        </div>
+        <div class="foot">
+            <img src="./img/2.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

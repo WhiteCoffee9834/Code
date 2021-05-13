@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单+变化小三角</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .wrapper{
+            margin: 50px auto;
+            width: 82px;
+        }
+        .head{
+            line-height: 36px;
+            border: 1px solid grey;
+
+            position: relative;
+        }
+        .triangle{
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-top-color: #000;
+            border-bottom: 0;
+
+            position: absolute;
+            right: 6px;
+            bottom: 15.5px;
+        }
+        .head,
+        p{
+            width: 80px;
+            height: 36px;
+
+            text-align: center;
+            line-height: 36px;
+
+            cursor: pointer;
+        }
+        p{
+            border-width: 0 1px 1px 1px;
+            border-color: grey;
+            border-style: solid;
+        }
+        .body p{
+            display: none;
+        }
+        .wrapper:hover .body p{
+            display: block;
+        }
+        .wrapper:hover .head{
+            color: white;
+            background-color: #31c37c;
+        }
+        .wrapper:hover .triangle{
+            border: 5px solid transparent;
+            border-bottom-color: #fff;
+            border-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <span>充值</span>
+            <div class="triangle"></div>
+        </div>
+        <div class="body">
+            <p>购买</p>
+            <p>饭票</p>
+        </div>
+    </div>
+</body>
+</html>
