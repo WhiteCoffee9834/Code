@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真等高布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .tier1_wrapper{
+            width: 100%;
+            background-color: chartreuse;
+            overflow: hidden;
+        }
+        .tier2_wrapper{
+            width: 100%;
+            background-color: chocolate;
+            margin-left: -20%;
+        }
+        .tier3_wrapper{
+            width: 100%;
+            background-color: darkcyan;
+            margin-left: -60%;
+        }
+        .tier3_wrapper div{
+            float: left;
+        }
+        .left,
+        .right{
+            width: 20%;
+        }
+        .middle{
+            width: 60%;
+            position: relative;
+            left: 80%;
+        }
+        .right{
+            position: relative;
+            left: 80%;
+        }
+        .left{
+            position: relative;
+            left: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="tier1_wrapper">
+        <div class="tier2_wrapper">
+            <div class="tier3_wrapper clearfix">
+                <div class="left">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sint perferendis nobis veritatis eveniet quaerat exercitationem asperiores suscipit unde repellat accusamus aliquid adipisci tempore molestiae, soluta, hic dolor enim illo.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sint perferendis nobis veritatis eveniet quaerat exercitationem asperiores suscipit unde repellat accusamus aliquid adipisci tempore molestiae, soluta, hic dolor enim illo.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sint perferendis nobis veritatis eveniet quaerat exercitationem asperiores suscipit unde repellat accusamus aliquid adipisci tempore molestiae, soluta, hic dolor enim illo.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sint perferendis nobis veritatis eveniet quaerat exercitationem asperiores suscipit unde repellat accusamus aliquid adipisci tempore molestiae, soluta, hic dolor enim illo.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maxime vel iusto quam labore facere magni doloremque esse. Officia doloribus earum vero quos provident possimus veritatis ipsum fuga reprehenderit impedit.
+                </div>
+                <div class="middle">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel consequatur debitis consectetur eos, nulla voluptates esse a ipsa ratione laborum vitae! Voluptatum sint dolor quam natus repudiandae blanditiis aliquid eos?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, eius. Dignissimos officia sequi temporibus praesentium! Totam, perspiciatis quas voluptates impedit asperiores velit, nostrum adipisci eos itaque sequi labore deleniti perferendis laboriosam cum temporibus dignissimos quae veritatis! Dolores, laborum itaque quo, ad nihil minus officiis mollitia assumenda vero debitis cupiditate harum eveniet, accusantium consequuntur natus cum odit quasi eligendi deleniti quis! Asperiores ipsam aliquid veniam accusantium at fugit minus fuga itaque. Itaque enim repellendus perspiciatis totam architecto ut expedita quae optio laboriosam veritatis facilis asperiores, adipisci tenetur saepe tempora dolore nobis ducimus hic deserunt minima sequi qui magni rem voluptatibus? Ipsum similique libero dignissimos mollitia, assumenda quos blanditiis eligendi sint, quas corrupti obcaecati, soluta repudiandae ipsa voluptate doloremque. Voluptatum ea quia expedita nemo earum, nihil asperiores repudiandae debitis ipsam facere. Commodi nihil omnis dolorem, minima autem exercitationem, rem perferendis sed officiis aut, ex molestias veniam magni qui! Ex pariatur doloremque fugiat soluta hic architecto suscipit ad iste tenetur exercitationem enim, deserunt repellat quibusdam eos molestiae culpa aut asperiores quia distinctio nesciunt beatae, veritatis placeat doloribus dolores. Eum fugiat accusantium excepturi quo laboriosam? Possimus non, facere laudantium qui nesciunt esse. Adipisci, reiciendis voluptates aliquam eos illo reprehenderit sed asperiores aliquid ea repellendus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero totam velit illo ratione sequi neque! Sequi quidem a illum ab tempore deserunt inventore laborum repellendus, optio similique nostrum natus temporibus iure iusto quia sunt et ut! Voluptates voluptatum tempora, illo fuga, unde, harum quasi 
+                </div>
+                <div class="right">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci nobis hic expedita, debitis facilis exercitationem reprehenderit ex laborum, quia quidem voluptas quis numquam quo. Dolorum ullam consectetur voluptatibus quam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore reprehenderit quibusdam vero necessitatibus ipsa illo temporibus amet, doloribus, laudantium, pariatur soluta cupiditate placeat quidem excepturi non magnam voluptates libero molestiae.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
