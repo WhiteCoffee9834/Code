@@ -1,0 +1,93 @@
+/* 表单整体的样式,开启相对定位 */
+.user_form_relative{
+    width: 300px;
+    height: 195px;
+    margin: 21px auto;
+
+    position: relative;
+
+    margin-bottom: 40px;
+}
+/* 表单通用样式 */
+.user_form_relative input{
+    width: 300px;
+    height: 40px;
+
+    border: 1px solid #80c4ae;
+    border-radius: 4px;
+    padding: 10px 24px;
+    box-sizing: border-box;
+
+    outline: none;
+}
+/* 电话号码输入框地样式 */
+.user_form_relative input[type="tel"]{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+/* 密码输入框 */
+.user_form_relative input[type="password"]{
+    font-size: 12px;
+}
+/* 输入框地提是内容地样式 */
+.user_form_relative input::placeholder{
+    font-size: 14px;
+    color: #999;
+}
+/* TODO 验证失败消息,日后再用 */
+.user_form_relative p{
+    visibility: hidden;
+    line-height: 30px;
+    font-size: 12px;
+    color: #f77678;
+}
+.user_form_relative input[type="submit"]{
+    background-color: #74c6b3;
+    color: #fff;
+    font-size: 16px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.user_form_relative span{
+    font-size: 12px;
+}
+.user_form_relative .forget_password,.reg_account{
+    position: absolute;
+    bottom: 0;
+}
+.user_form_relative .forget_password{
+    left: 0;
+}
+.user_form_relative .reg_account{
+    right: 0;
+}
+/* 第三方软件登录区域 */
+.login_footer > p::before,
+.login_footer > p::after{
+    content: "";
+    display: inline-block;
+    width: 134px;
+    border-bottom: 1px solid #ECECEC;
+
+    position: relative;
+    bottom: 6px;
+}
+.login_footer > p::before{
+    right: 18px;
+}
+.login_footer > p::after{
+    left: 18px;
+}
+
+.third_party{
+    width: 168px;
+    margin: 25px auto;
+    font-size: 0;
+}
+.third_party img{
+    cursor: pointer;
+}
+.third_party img:not(:last-child){
+    margin-right: 30px;
+}
