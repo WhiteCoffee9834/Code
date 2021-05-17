@@ -1,16 +1,112 @@
-/* 登录注册通用样式表 */
-
-.clearfix::before,
-.clearfix::after{
-    content: "";
-    display: table;
-    clear: both;
+/* 通用样式表 */
+body {
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
 }
 a{
-    text-decoration: none;
     color: #74C6B3;
     font-size: 12px;
 }
+/* 主页样式开始 */
+.body-1180{
+    width: 1180px;
+    margin: 0 auto;
+}
+.nav-head{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    /* FIXME box-shadow */
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+}
+.nav-head i a img{
+    margin-top: 14px;
+}
+.nav-head ul,li{
+    float: left;
+    margin-right: 20px;
+}
+.nav-head ul li:first-child{
+    margin-left: 120px;
+}
+.nav-head li a{
+    display: block;
+
+    height: 80px;
+    width: 80px;
+
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+}
+.nav-head li a::before{
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.nav-head li .nav-active{
+    background-color: #80C4AE;
+    color: #fff;
+}
+.nav-head li:hover{
+    background-color: #80C4AE;
+    color: #fff;
+}
+.search-wrapper-relative{
+    position: relative;
+    margin-top: 22px;
+}
+.search-wrapper-relative .class-select-relative{
+    position: relative;
+
+    width: 70px;
+    height: 36px;
+    border: 1px solid #80C4AE;
+    box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
+
+    color: #80C4AE;
+    text-align: center;
+    line-height: 34px;
+}
+.search-wrapper-relative .class-select-relative .triangle-down{
+    position: absolute;
+    top: 15px;
+    right: 6px;
+
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #80C4AE;
+    border-bottom: none; 
+}
+.search-wrapper-relative input{
+    height: 36px;
+    width: 210px;
+    box-sizing: border-box;
+    border: 1px solid #80C4AE;
+    border-left: 0;
+    border-radius: 0;
+    padding: 10px 0 10px 35px;
+
+    outline: none;
+}
+.search-wrapper-relative i{
+    position: absolute;
+    right: 110px;
+    top: 8px;
+}
+.search-wrapper-relative>span,
+.search-wrapper-relative>span a{
+    color: #000;
+    font-size: 14px;
+}
+.search-wrapper-relative>span{
+    margin-left: 24px;
+}
+/* 主页样式结束 */
+
+/* 登录注册通用样式表开始 */
 .mask{
     width: 100%;
     height: 100%;
@@ -48,9 +144,6 @@ a{
     margin-bottom: 30px;
     margin-top: 10px;
 }
-.logo_wrapper .logo{
-    vertical-align: bottom;
-}
 /* 文字居中对齐 */
 .login_content p,
 .login_footer p{
@@ -74,3 +167,4 @@ a{
 .login_content > p::after{
     left: 36px;
 }
+/* 登录注册通用样式表结束 */
