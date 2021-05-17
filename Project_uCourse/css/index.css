@@ -1,0 +1,118 @@
+/* 主页样式表 */
+.index-head-banner{
+    width: 1180px;
+    height: 350px;
+    margin-top: 30px;
+}
+.index-content{
+    margin-top: 45px;
+}
+.index-content .title-relative{
+    position: relative;
+
+    font-size: 20px;
+}
+.index-content .title-relative::before{
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    width: 5px;
+    height: 20px;
+    background-color: #80c4ae;
+    font-size: 0;
+    
+}
+.index-content .title-relative span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 56px;
+    font-size: 14px;
+}
+.index-content .title-relative span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-left-color: #80c4ae;
+    border-right: 0;
+}
+
+.index-class-wrapper{
+    height: 470px;
+    margin-top: 20px;
+}
+.index-class-wrapper .class-img-box-relative{
+    position: relative;
+
+    width: 280px;
+    height: 225px;
+    background-color: #fff;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.index-class-wrapper .class-img-box-relative:nth-child(4n+4){
+    margin-right: 0;
+}
+.index-class-wrapper .class-top-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 71px;
+    height: 33px;
+    border-radius: 4px 0 12px 0;
+    background-color: rgba(0,0,0,0.3);
+
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    line-height: 33px;
+}
+.index-class-wrapper .class-bottom-mask{
+    position: absolute;
+    top: 130px;
+    left: 0;
+
+    height: 33px;
+    width: 270px;
+    background-color: rgba(0,0,0,0.2);
+    padding-left: 10px;
+
+    text-align: left;
+    color: #fff;
+    line-height: 33px;
+}
+.index-class-wrapper .free-to-study{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+
+    width: 86px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #74C6B3;;
+
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+.index-class-wrapper .class-img-box-footer{
+    padding: 10px;
+}
+.index-class-wrapper .class-img-box-footer p:first-child{
+    font-size: 14px;
+    color: #333;
+}
+.index-class-wrapper .class-img-box-footer p:last-child{
+    font-size: 12px;
+    color: #7a7a7a;
+    margin-top: 5px;
+}
