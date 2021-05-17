@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双飞翼</title>
+    <style>
+        *{
+            padding: 0;margin: 0;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .center{
+            width: 100%;
+            height: 450px;
+            /* background-color: peru; */
+            float: left;
+            margin-top: 25px;
+        }
+        .center_core{
+            margin: 0 200px;
+            background-color: peru;
+            height: 100%;
+        }
+        .left,
+        .right{
+            float: left;
+            height: 500px;
+            width: 200px;
+        }
+        .left{
+            background-color: plum;
+
+            margin-left: -100%;
+            position: relative;
+            left: -10px;
+        }
+        .right{
+            background-color: salmon;
+            
+            margin-left: -200px;
+            position: relative;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <div class="center">
+            <div class="center_core">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem autem officiis. Cumque repudiandae ea nam facilis cum facere quisquam sit fuga dignissimos tempora! Veniam illo eligendi alias ullam ducimus culpa maxime, quisquam, assumenda molestias deserunt obcaecati temporibus illum dolore neque. Fuga sint illum excepturi assumenda fugit a doloribus. Cumque eaque incidunt, officia suscipit perferendis eveniet vel odio ullam, voluptate illo consequuntur debitis dolorem nam fugit delectus exercitationem eum dicta impedit cum aut, provident ab ipsa explicabo reprehenderit. Recusandae similique dolor debitis dolorem facere veritatis nobis, ducimus, accusantium aspernatur nam nulla mollitia in. Aspernatur laboriosam nesciunt explicabo ipsum eaque atque blanditiis illum, ut quasi nisi distinctio, perspiciatis libero adipisci dolorem rem quae voluptates voluptatem consectetur doloremque provident earum quod? Est, nihil cupiditate tempore iste voluptatibus, aperiam eveniet ipsum itaque repellat temporibus nesciunt fuga unde ab autem. Fuga aliquid nihil quo deserunt sed expedita ratione totam voluptates rem! Molestiae, quibusdam. Repudiandae placeat ipsa nobis minus quod corporis earum eligendi unde, blanditiis at laborum, odit aperiam! Iusto ducimus nobis et a vel quasi cum magni, sunt, illum cupiditate, quos qui ex earum perspiciatis veniam doloribus. Tempore magnam accusamus facere quis id neque totam debitis soluta at sit, doloribus eaque iusto molestias vitae.
+            </div>
+        </div>
+        <div class="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe at quaerat porro reiciendis sapiente sunt quod similique cum molestias omnis. Culpa eligendi rerum quo quam. Doloremque nostrum mollitia voluptatem nemo.
+        </div>
+        <div class="right">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nihil rem soluta molestias modi voluptatibus, excepturi dicta aliquid eius quam! Dolores facilis, architecto dicta voluptatum eius dolor vel nisi ullam nam? Vitae consequuntur provident iusto, ducimus quibusdam, non optio cupiditate excepturi fugiat mollitia eveniet nam est dolorum laborum accusantium. Tempore.
+        </div>
+    </div>
+</body>
+</html>
