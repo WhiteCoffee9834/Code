@@ -1,9 +1,103 @@
 /* 主页样式表 */
-.index-head-banner{
+/* 右侧子导航样式开始 */
+.subnav{
+    position: fixed;
+    top: 700px;
+    right: 50%;
+    margin-right: -800px;
+    width: 70px;
+    height: 220px;
+}
+.subnav div{
+    position: relative;
+
+    width: 70px;
+    height: 70px;
+    background-color: #ffefd6;
+    margin-bottom: 5px;
+    overflow: hidden;
+
+    text-align: center;
+    cursor: pointer;
+}
+.subnav div img{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.subnav div p{
+    margin-top: 50px;
+}    
+/* 右侧子导航样式结束 */
+/* 轮播图样式开始 */
+.body-1180{
+    width: 1180px;
+    margin: 0 auto;
+    font-size: 0
+}
+.index-head-banner-relative{
+    position: relative;
+
     width: 1180px;
     height: 350px;
     margin-top: 30px;
 }
+.index-head-banner-relative .scroll-img{
+    overflow: hidden;
+}
+.index-head-banner-relative .scroll-img img{
+    position: absolute;
+}
+.index-head-banner-relative .scroll-img img:nth-child(1){
+    z-index: 1;
+}
+.index-head-banner-relative .preview{
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.index-head-banner-relative .next{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.index-head-banner-relative .pointer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+    text-align: center;
+
+    z-index: 2;
+}
+.index-head-banner-relative .pointer i{
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+    background-color: #e3f3f0;
+    border-radius: 50%;
+    margin-left: 10px;
+
+    font-size: 0;
+    cursor: pointer;
+}
+.index-head-banner-relative .pointer .pointer-actived{
+    background-color: #e28a6c;
+}
+/* 轮播图样式结束 */
+
+/* 同步课程样式开始 */
 .index-content{
     margin-top: 45px;
 }
@@ -53,11 +147,12 @@
     width: 280px;
     height: 225px;
     background-color: #fff;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
     margin-right: 20px;
     margin-bottom: 20px;
     border-radius: 4px;
 }
-.index-class-wrapper .class-img-box-relative:nth-child(4n+4){
+.index-class-wrapper .class-img-box-relative:nth-child(4n){
     margin-right: 0;
 }
 .index-class-wrapper .class-top-mask{
@@ -116,3 +211,142 @@
     color: #7a7a7a;
     margin-top: 5px;
 }
+/* 同步课程样式结束 */
+
+/* 中部横幅样式开始 */
+.index-middle-banner{
+    margin-top: 50px;
+}
+/* 中部横幅结束 */
+/* 在线测试开始 */
+.index-class-wrapper .online-test-relative{
+    position: relative;
+
+    width: 380px;
+    height: 224px;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.index-class-wrapper .online-test-relative:nth-child(3n){
+    margin-right: 0;
+}
+.index-class-wrapper .class-bottom-mask2{
+    position: absolute;
+    top: 130px;
+    left: 0;
+
+    height: 33px;
+    width: 360px;
+    background-color: rgba(0,0,0,0.2);
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    line-height: 33px;
+}
+.index-class-wrapper .class-bottom-mask2 span:last-child{
+    float: right;
+}
+.index-class-wrapper .class-info{
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+/* 在线测试结束 */
+/* 精品课程开始 */
+.index-class-wrapper-890{
+    height: 474px;
+    width: 895px;
+    margin-top: 20px;
+}
+.index-class-wrapper-890 .class-img-box-relative{
+    position: relative;
+
+    width: 280px;
+    height: 225px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.index-class-wrapper-890 .class-img-box-relative img{
+    height: 163px;
+}
+.index-class-wrapper-890 .class-img-box-relative:nth-child(3n){
+    margin-right: 15px;
+}
+.index-class-wrapper-890 .class-top-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 71px;
+    height: 33px;
+    border-radius: 4px 0 12px 0;
+    background-color: rgba(0,0,0,0.3);
+
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    line-height: 33px;
+}
+.index-class-wrapper-890 .free-to-study{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+
+    width: 86px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #74C6B3;;
+
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+.index-class-wrapper-890 .class-img-box-footer{
+    padding: 10px;
+}
+.index-class-wrapper-890 .class-img-box-footer p:first-child{
+    font-size: 14px;
+    color: #333;
+}
+.index-class-wrapper-890 .class-img-box-footer p:last-child{
+    font-size: 12px;
+    color: #7a7a7a;
+    margin-top: 5px;
+}
+.class-huge-img{
+    margin-top: 20px;
+}
+/* 精品课程结束 */
+/* 底部超链接区块开始 */
+.hyperlink-block{
+    display: inline-block;
+
+    width: 380px;
+    height: 100px;
+    
+    text-align: center;
+    line-height: 100px;
+    font-size: 26px;
+    color: #fff;
+}
+.hyperlink-block{
+    margin-top: 40px;
+    margin-right: 20px;
+}
+.hyperlink-block:nth-of-type(1){
+    background-image: url(../img/底部／同步课程.png);
+}
+.hyperlink-block:nth-of-type(2){
+    background-image: url(../img/底部／在线练习.png);
+}
+.hyperlink-block:nth-of-type(3){
+    background-image: url(../img/底部-精品课程.png);
+    margin-right: 0;
+}
+/* 底部超链接区块结束 */
