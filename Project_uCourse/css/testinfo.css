@@ -1,0 +1,75 @@
+body{
+    background-color: #f2f2f2;
+}
+/* 考试信息开始 */
+.start-test-wrapper{
+    height: 340px;
+    background-color: #fff;
+    padding: 20px;
+}
+.start-test-wrapper .img-box{
+    width: 540px;
+    height: 340px;
+    background-color: #d8d8d8;
+
+    text-align: center;
+    line-height: 340px;
+    font-size: 60px;
+}
+.start-test-wrapper .text-info{
+    position: relative;
+    width: 600px;
+    height: 340px;
+}
+.start-test-wrapper .text-info ul{
+    margin-left: 50px;
+    margin-top: 35px;
+}
+.start-test-wrapper .text-info li{
+    font-size: 16px;
+    color: #666;
+    word-spacing: 10px;
+}
+.start-test-wrapper .text-info li:first-child{
+    font-size: 22px;
+    margin-bottom: 26px;
+}
+.start-test-wrapper .text-info p{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 184px;
+    height: 48px;
+    background-color: #74C6B3;
+    border-radius: 4px;
+
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    font-size: 16px;
+}
+.test-core{
+    height: 1470px;
+    background-color: #fff;
+    padding-top: 66px;
+}
+.test-core .test-core-img{
+    width: 980px;
+    height: 1300px;
+    background-color: #d8d8d8;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.more-content{
+    height: 160px;
+    font-size: 22px;
+    text-decoration: underline;
+    text-align: center;
+    color: #74C6B3;
+}
+.more-content span::before{
+    height: 100%;
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+}
