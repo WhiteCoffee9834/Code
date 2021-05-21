@@ -46,3 +46,30 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* custom */
+a{
+	text-decoration: none;
+}
+.clearfix::before,
+.clearfix::after{
+	content: "";
+	display: table;
+	height: 0;
+	clear:both;
+	visibility: hidden;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+em,i{
+	font-style: normal;
+}
+strong,b{
+	font-weight: normal;
+}
+img{
+	vertical-align: bottom;
+}
