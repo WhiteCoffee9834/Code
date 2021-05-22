@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行末省略样式</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .wrapper{
+            width: 400px;
+            height: 250px;
+            padding: 20px;
+            background-color: pink;
+        }
+        .wrapper>p{
+            font: 22px/24px "Segoe UI";
+            margin-bottom: 20px;
+        }
+        .img-wrapper{
+            position: relative;
+            float: left;
+            background-color: plum;
+            width: 200px;
+            height: 100px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+        .img-wrapper .mask{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 20px;
+            background-color: rgba(0, 0, 0, .6);
+            text-align: center;
+            font: 18px/20px "Segoe UI";
+            color: #fff;
+
+        }
+        .aside-right{
+            float: right;
+            width: 180px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .aside-right p{
+            margin-bottom: 10px;
+        }
+        .aside-right p:last-child{
+            color: #646567;
+            font-size: 12px;
+        }
+        li:nth-child(1):before{
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url(./img/ico2.jpg);
+            vertical-align: middle;
+        }
+        li:nth-child(2)::before{
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url(./img/ico1.jpg);
+            vertical-align: middle;
+        }
+        li:nth-child(3)::before{
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url(./img/ico3.jpg);
+            vertical-align: middle;
+        }
+        li{
+            white-space: nowrap;
+            text-overflow:ellipsis ;
+            overflow: hidden;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <p>
+            英语专四考试指导
+        </p>
+        <div class="img-wrapper">
+            <div class="mask">
+                <span>
+                    100份文档
+                </span>
+            </div>
+        </div>
+        <div class="aside-right">
+            <p>
+                专享攻略 模拟试题
+            </p>
+            <p>
+                5大专区
+            </p>
+        </div>
+        <ul>
+            <li>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti a id rem eaque eligendi reprehenderit sunt veniam illum beatae tempora!
+            </li>
+            <li>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti a id rem eaque eligendi reprehenderit sunt veniam illum beatae tempora!
+            </li>
+            <li>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti a id rem eaque eligendi reprehenderit sunt veniam illum beatae tempora!
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
