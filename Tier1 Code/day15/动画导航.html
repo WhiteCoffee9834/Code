@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform练习,动画导航</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #29a79b;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+
+            list-style: none;
+            width: 1000px;
+            margin: 200px auto;
+        }
+        li{
+            position: relative;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+        li span{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: -100px;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+
+            transition: 1s;
+        }
+        li span::after{
+            position: absolute;
+            left: 30px;
+            bottom: -12px;
+            width: 0;
+            height: 0;
+            content: "";
+            border: 20px solid transparent;
+            border-top-color: #fff;
+            border-bottom:0;
+        }
+        li:nth-child(1) span{
+            transform-origin: bottom center;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+        li:nth-child(1):hover span{
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+        li:nth-child(2) span{
+            transform-origin: bottom center;
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        li:nth-child(2):hover span{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        li:nth-child(3) span{
+            transform-origin: center center;
+            transform: scaleX(0);
+        }
+        li:nth-child(3):hover span{
+            transform: scaleX(1);
+        }
+        li:nth-child(4) span{
+            transform-origin: top center;
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        li:nth-child(4):hover span{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        li:nth-child(5) span{
+            transform-origin: bottom center;
+            transform: scale(0);
+        }
+        li:nth-child(5):hover span{
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            Homepage
+            <span></span>
+        </li>
+        <li>
+            Homepage
+            <span></span>
+        </li>
+        <li>
+            Homepage
+            <span></span>
+        </li>
+        <li>
+            Homepage
+            <span></span>
+        </li>
+        <li>
+            Homepage
+            <span></span>
+        </li>
+    </ul>
+</body>
+</html>

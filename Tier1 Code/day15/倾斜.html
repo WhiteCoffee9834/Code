@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: flex-start;
+            width: 800px;
+            height: 80px;
+            background-color: dimgray;
+            margin: 50px auto;
+            transform: skew(-45deg);
+        }
+        main div{
+            flex: 1;
+            text-align: center;
+        }
+        main div:nth-child(2){
+            background-color: dodgerblue;
+        }
+        span{
+            display: inline-block;
+            transform: skew(45deg);
+            line-height: 80px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box1">
+            <span>
+                网站首页
+            </span>
+        </div>
+        <div class="box2">
+            <span>
+                网站首页
+            </span>
+        </div>
+        <div class="box3">
+            <span>
+                网站首页
+            </span>
+        </div>
+        <div class="box4">
+            <span>
+                网站首页
+            </span>
+        </div>
+    </main>
+</body>
+</html>

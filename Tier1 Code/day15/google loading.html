@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes loading-red{
+            0%{
+                left: 0;
+                top: 0;
+            }
+            100%{
+                left: 32px;
+                top: 32px;
+            }
+        }
+        @keyframes loading-blue{
+            0%{
+                left: 32px;
+                top: 0;
+            }
+            100%{
+                left: 0;
+                top: 32px;
+            }
+        }
+        @keyframes loading-green{
+            0%{
+                left: 0;
+                top: 32px;
+            }
+            100%{
+                left: 32px;
+                top: 0;
+            }
+        }
+        @keyframes loading-yellow{
+            0%{
+                left: 32px;
+                top: 32px;
+            }
+            100%{
+                left: 0;
+                top: 0;
+            }
+        }
+        .wrapper{
+            transform: rotate(45deg);
+            position: relative;
+            width: 64px;
+            height: 64px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .wrapper div{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+        }
+        .red{
+            background-color: #c5523f;
+            animation: loading-red 0.5s infinite alternate ease-in;
+        }
+        .green{
+            background-color: #499255;
+            animation: loading-green 0.5s infinite alternate ease-in;
+        }
+        .yellow{
+            background-color: #f2b736;
+            animation: loading-yellow 0.5s infinite alternate ease-in;
+        }
+        .blue{
+            background-color: #1875e5;
+            animation: loading-blue 0.5s infinite alternate ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="green"></div>
+        <div class="yellow"></div>
+    </div>
+</body>
+</html>
