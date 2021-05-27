@@ -1,0 +1,204 @@
+header{
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    height: .8rem;
+    background-image: linear-gradient(#FF6040,#FF8A80);
+}
+header .search-wrapper-relative{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: .52rem;
+}
+header .search-wrapper-relative input[type="submit"]{
+    position: absolute;
+    top: .18rem;
+    left: .12rem;
+    background-image: url(../image/search.png);
+    width: .18rem;
+    height: .18rem;
+    background-size: cover;
+    border: 0;
+    
+}
+header .search-wrapper-relative input[type="text"]{
+    outline: none;
+    border: 0;
+    width: 3.55rem;
+    height: .32rem;
+    padding: 0;
+    padding-left: .34rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-size: 14px;
+}
+header .search-wrapper-relative input[type="text"]::placeholder{
+    font-size: 14px;
+}
+header .header-nav-relative{
+    position: relative;
+    width: 100%;
+    height: .32rem;
+
+
+    font-size: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+header .header-nav-relative .slider{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    white-space: nowrap;
+}
+header .header-nav-relative a{
+    font-size: 14px;
+    color: #fff;
+    padding: 0 0.05rem;
+}
+header .header-nav-relative .highlight{
+    font-size: 16px;
+}
+header .nav-more{
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    height: .32rem;
+    line-height: .32rem;
+    background-image: linear-gradient(#FF7A68,#FF8A80);
+
+    color: #fff;
+    font-size: 14px;
+}
+header .nav-more a{
+    color: #fff;
+}
+
+
+main .box{
+    position: relative;
+    margin: .1rem auto;
+    width: 3.56rem;
+    height: .32rem;
+}
+main .banner{
+
+    background-color: #fff4f2;
+    text-align: center;
+    line-height: .32rem;
+
+    font-size: 16px;
+    color: #FF6040;
+}
+.border-left-right::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    content: "";
+    width: 1px;
+    height: 32px;
+    background-color: #FF6040;
+    transform: scaleX(0.5);
+}
+.border-left-right::after{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    content: "";
+    width: 1px;
+    height: 32px;
+    background-color: #FF6040;
+    transform: scaleX(0.5);
+}
+.border-top-bottom::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    content: "";
+    width: 3.55rem;
+    height: 1px;
+    background-color: #FF6040;
+    transform: scaleY(0.5);
+}
+.border-top-bottom::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    width: 3.55rem;
+    height: 1px;
+    background-color: #FF6040;
+    transform: scaleY(0.5);
+}
+
+main section{
+    width: 3.56rem;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    
+}
+main section .item{
+    display: flex;
+    width: 3.56rem;
+    height: 1.1rem;
+    margin-bottom: .2rem;
+}
+main section .item .description{
+    width: calc(3.56rem - 108px);
+    margin-left: 15px;
+}
+main section .item p:nth-of-type(1){
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+main section .item p:nth-of-type(2){
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+main section .item p:nth-of-type(3) span:first-child{
+    font-size: 20px;
+    color: #FF6040;
+}
+main section .item p:nth-of-type(3) b:nth-of-type(1){
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+}
+main section .item p:nth-of-type(3) b:nth-of-type(2){
+    font-size: 12px;
+    color: #999;
+    margin-left: 10px;
+}
+main section .item p:nth-of-type(4){
+    width: 1.1rem;
+    height: .16rem;
+    background-color: #ff8066;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+main section .item p:nth-of-type(5){
+    color: #999;
+    font-size: 12px;
+    margin-top: .06rem;
+}
