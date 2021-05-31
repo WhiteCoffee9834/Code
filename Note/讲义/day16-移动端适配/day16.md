@@ -1,4 +1,4 @@
-# day16-day17
+day16-day17
 
 ## 1.设备划分
 
@@ -250,7 +250,7 @@ em : 相对单位          相对于父盒子身上的字体大小font-size
 
 #####      5.1.2 rem+js查询布局
 
-```css
+``` javascript
 js适配文件:
 // 适配代码  
 
@@ -331,17 +331,21 @@ px 和rem 倍数关系还是50倍
 
    
 
-2. 清除默认的按钮样式
+2. 在iOS上，输入框默认有内部阴影，但无法使用 box-shadow 来清除，如果不需要阴影，可以这样关闭：
 
 ```
-button {
-     -webkit-appearance: none;
+input,
+button,
+textarea {　
+　　-webkit-appearance: none;
 }
 ```
 
 
 
-3. 长按禁止弹出菜单
+3. 长按禁止弹出菜单【禁止弹出系统菜单(禁止保存或拷贝图像IOS）】
+
+   通常当你在手机或者pad上长按图像 img ，会弹出选项 存储图像 或者 拷贝图像。
 
    ```css
    img,a,p {
@@ -378,7 +382,66 @@ button {
 
    
 
-   `pxtorem插件`  可以自动将px转换为rem单位  需要在设置里设置相应的字体值!
+6. 1px边框问题
+
+   在移动端web开发中，UI设计稿中设置边框为1像素，前端在开发过程中如果出现border:1px，测试会发现在retina屏机型中，1px会比较粗。
+
+   ![](media/wps1.jpg)
+
+   ![](media/wps2.jpg)
+
+   可以采用伪元素+transform模拟的方式
+
+   代码示例：
+
+   ```css
+   /* 2倍屏下 缩小0.5倍 */
+   @media screen and (-webkit-min-device-pixel-ratio: 2) {
+       .pro-listBox  h3::after {
+           content: " ";
+          
+           transform: scaleY(0.5);
+       }
+       .pro-listBox  h3::before {
+           content: " ";
+           transform: scaleX(0.5);
+       }
+   
+   }
+   
+   /* 2倍屏下 缩小0.3倍 */
+   @media screen and (-webkit-min-device-pixel-ratio: 3) {
+       .pro-listBox  h3::after {
+           content: " ";
+         
+           transform: scaleY(0.3);
+       }
+       .pro-listBox  h3::before {
+           content: " ";
+           transform: scaleX(0.3);
+       }
+   }
+   
+   ```
+
+   
+
+7. 移动端禁止选中内容
+
+   用户可以选中页面中的内容，那么你可以在css中禁掉
+
+   ```css
+   .user-select-none {
+       -webkit-user-select: none; /* Chrome all / Safari all */
+     
+   }
+   ```
+
+   
+
+​    
+
+<img src="media/高清屏-正常.png/"  width="00px" height="300px">
 
 
 
@@ -395,7 +458,3 @@ button {
 
 
 ==ctrl+shift+p 调出命令窗口  输入autoprefixer 点一下这个插件即可使用！！！==
-
-
-
-
