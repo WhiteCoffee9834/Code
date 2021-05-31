@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品信息管理</title>
+    <link rel="stylesheet" href="../css/resetcss.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1889155_ybnq12m5m0b.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/item_manager.css">
+    <link rel="stylesheet" href="../css/base_response.css">
+    <link rel="stylesheet" href="../css/item_manager_response.css">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="">
+        <div class="user-info">
+            <img src="../img/pic.png" alt="">
+            <span>
+                用户名
+            </span>
+            <i class="iconfont icon-tuichu"></i>
+            <span>
+                注销
+            </span>
+        </div>
+    </header>
+    <main>
+        <!-- 放在头部的菜单按钮，默认隐藏 -->
+        <a class="menu">
+            <i></i>
+            <i></i>
+            <i></i>
+        </a>
+        <!-- 用input的复选框的checked状态来使aside从零高度到240px -->
+        <input type="checkbox">
+        <!-- 侧边栏 -->
+        <aside>
+            <!-- 侧边列表 -->
+            <ul class="list-1">
+                <li>
+                    <i class="iconfont icon-gouwudai"></i>
+                    <span>
+                        商品管理
+                    </span>
+                    <ul class="sub-list">
+                        <li>
+                            <i class="iconfont icon-xinxi"></i>
+                            <span>
+                                商品信息管理
+                            </span>
+                        </li>
+                        <li>
+                            <i class="iconfont icon-fuzhi"></i>
+                            <span>
+                                添加商品信息
+                            </span>
+                        </li>
+                        <li>
+                            <i class="iconfont icon-type-"></i>
+                            <span>
+                                商品类型管理
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="iconfont icon-yonghuguanli1"></i>
+                    <span>
+                        订单管理
+                    </span>
+                </li>
+                <li>
+                    <i class="iconfont icon-yonghuguanli1"></i>
+                    <span>
+                        用户管理
+                    </span>
+                </li>
+                <li>
+                    <i class="iconfont icon-yonghuguanli"></i>
+                    <span>
+                        管理员管理
+                    </span>
+                </li>
+            </ul>
+        </aside>
+        <!-- 核心区 -->
+        <section>
+            <div class="info-wrapper">
+                <p>
+                    <span>
+                        商品信息管理
+                    </span>
+                    <span></span>
+                </p>
+            </div>
+            <!-- 表格全局容器 -->
+            <div class="table-wrapper">
+                <div class="table-head clearfix">
+                    <div class="button-box fl">
+                        <span class="btn btn-add">
+                            <img src="../img/add.png">
+                            添加
+                        </span>
+                        <span class="btn btn-count">
+                            <img src="../img/count.png">
+                            统计
+                        </span>
+                    </div>
+                    <div class="search-box fr">
+                        <input type="text" placeholder="请输入产品名称">
+                        <input type="button" value="查询">
+                    </div>
+                </div>
+                <!-- 表格核心区 -->
+                <div class="table-core">
+                    <table>
+                        <tr>
+                            <th class="ckbox"><input type="checkbox"></th>
+                            <th>编号ID</th>
+                            <th>商品名称</th>
+                            <th>用户</th>
+                            <th>发布时间</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>2018-03-10</td>
+                            <td>华为手机</td>
+                            <td>admin</td>
+                            <td>2019-10-03 9:00</td>
+                            <td>
+                                <p>已审核</p>
+                                <p>
+                                    <a href="#">查看</a>
+                                    <a href="#">审核</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>2018-03-10</td>
+                            <td>华为手机</td>
+                            <td>admin</td>
+                            <td>2019-10-03 9:00</td>
+                            <td>
+                                <p>已审核</p>
+                                <p>
+                                    <a href="#">查看</a>
+                                    <a href="#">审核</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>2018-03-10</td>
+                            <td>华为手机</td>
+                            <td>admin</td>
+                            <td>2019-10-03 9:00</td>
+                            <td>
+                                <p>已审核</p>
+                                <p>
+                                    <a href="#">查看</a>
+                                    <a href="#">审核</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>2018-03-10</td>
+                            <td>华为手机</td>
+                            <td>admin</td>
+                            <td>2019-10-03 9:00</td>
+                            <td>
+                                <p>已审核</p>
+                                <p>
+                                    <a href="#">查看</a>
+                                    <a href="#">审核</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 表格下部页码及描述 -->
+            <div class="clearfix page-bpx">
+                <p class="pagecur fl">共<span>1256</span>条记录，当前显示第<span>2</span>页</p>
+                <ul class="clearfix pager fr">
+                    <li>&lt;</li>
+                    <li class="cur">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>...</li>
+                    <li>10</li>
+                    <li>&gt;</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

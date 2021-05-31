@@ -1,0 +1,67 @@
+/* 主体右侧内容区样式 */
+main .info-wrapper > p{
+    font-size: 16px;
+    line-height: 1;
+    padding: 20px 0;
+    border-bottom: 1px solid #bbb;
+}
+main .info-wrapper > p::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color: #f46a11;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+main .info-wrapper > p span:last-child{
+    font-size: 14px;
+}
+main .info-wrapper > p span:last-child::after{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top-color: black;
+    border-bottom: 0;
+    vertical-align: middle;
+}
+main .info-wrapper .info-core{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main .info-wrapper .info-core .item{
+    box-sizing: border-box;
+    margin: 20px 0 0;
+    height: 130px;
+    width: 24%;
+    border-radius: 10px;
+    background-color: #ec9720;
+    color: #fff;
+    padding: 20px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+main .info-core p:nth-child(1){
+    font-size: 30px;
+}
+main .info-core p:nth-child(2){
+    font-size: 14px;
+    line-height: 40px;
+}
+main .info-core p:nth-child(3){
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    cursor: pointer;
+}

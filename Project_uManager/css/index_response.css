@@ -1,0 +1,14 @@
+/* 1024断点 */
+@media screen and (min-width:768px) and (max-width:1024px){
+    /* 主体内容区响应 */
+    main section .info-wrapper .info-core .item{
+        width: 49%;
+    }
+}
+/* 768断点 */
+@media screen and (max-width:768px) {
+    /* 主体内容区响应 */
+    main section .info-wrapper .info-core .item{
+        width: 100%;
+    }
+}

@@ -1,0 +1,52 @@
+/* 1024断点 */
+@media screen and (min-width:768px) and (max-width:1024px){
+    /* 主体内容区响应 */
+    .form-section{
+        margin-top: 30px;
+    }
+    .form-section dl dt,
+    .form-section dl dd p{
+        float: none;
+    }
+    .form-section dl dd input[type="text"],
+    .form-action input,.btn-confirm,
+    .form-section textarea{
+        margin-left: 0;
+    }
+    .form-section dl dt{
+        text-align: left;
+    }
+    .form-section dl dd{
+        width: 100%;
+    }
+    .form-section dl dd input[type="text"],
+    .form-section textarea{
+        width: 100%;
+    }
+}
+/* 768断点 */
+@media screen and (max-width:768px) {
+    /* 主体内容区响应 */
+    .form-section{
+        margin-top: 30px;
+    }
+    .form-section dl dt,
+    .form-section dl dd p{
+        float: none;
+    }
+    .form-section dl dd input[type="text"],
+    .form-action input,.btn-confirm,
+    .form-section textarea{
+        margin-left: 0;
+    }
+    .form-section dl dt{
+        text-align: left;
+    }
+    .form-section dl dd{
+        width: 100%;
+    }
+    .form-section dl dd input[type="text"],
+    .form-section textarea{
+        width: 100%;
+    }
+}

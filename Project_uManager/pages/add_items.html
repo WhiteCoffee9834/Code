@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加商品</title>
+    <link rel="stylesheet" href="../css/resetcss.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1889155_ybnq12m5m0b.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/add_items.css">
+    <link rel="stylesheet" href="../css/base_response.css">
+    <link rel="stylesheet" href="../css/add_items_response.css">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="">
+        <div class="user-info">
+            <img src="../img/pic.png" alt="">
+            <span>
+                用户名
+            </span>
+            <i class="iconfont icon-tuichu"></i>
+            <span>
+                注销
+            </span>
+        </div>
+    </header>
+    <main>
+        <!-- 放在头部的菜单按钮，默认隐藏 -->
+        <a class="menu">
+            <i></i>
+            <i></i>
+            <i></i>
+        </a>
+        <!-- 用input的复选框的checked状态来使aside从零高度到240px -->
+        <input type="checkbox">
+        <!-- 侧边栏 -->
+        <aside>
+            <!-- 侧边列表 -->
+            <ul class="list-1">
+                <li>
+                    <i class="iconfont icon-gouwudai"></i>
+                    <span>
+                        商品管理
+                    </span>
+                    <ul class="sub-list">
+                        <li>
+                            <i class="iconfont icon-xinxi"></i>
+                            <span>
+                                商品信息管理
+                            </span>
+                        </li>
+                        <li>
+                            <i class="iconfont icon-fuzhi"></i>
+                            <span>
+                                添加商品信息
+                            </span>
+                        </li>
+                        <li>
+                            <i class="iconfont icon-type-"></i>
+                            <span>
+                                商品类型管理
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="iconfont icon-yonghuguanli1"></i>
+                    <span>
+                        订单管理
+                    </span>
+                </li>
+                <li>
+                    <i class="iconfont icon-yonghuguanli1"></i>
+                    <span>
+                        用户管理
+                    </span>
+                </li>
+                <li>
+                    <i class="iconfont icon-yonghuguanli"></i>
+                    <span>
+                        管理员管理
+                    </span>
+                </li>
+            </ul>
+        </aside>
+        <!-- 主要内容 -->
+        <section>
+            <div class="info-wrapper">
+                <p>
+                    <span>
+                        添加商品
+                    </span>
+                    <span class="fr">
+                        操作
+                    </span>
+                </p>
+            </div>
+            <div class="form-section">
+                <form action="javascript:;">
+                    <dl class="clearfix form-list">
+                        <dt>商品名称:</dt>
+                        <dd>
+                            <input type="text" placeholder="请输入商品标题">
+                            <p class="tips-msg">标题不得超过30个字</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix form-list">
+                        <dt>商品价格:</dt>
+                        <dd>
+                            <input type="text" placeholder="请输入商品价格">
+                            <p class="tips-msg">不能为空</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix form-list">
+                        <dt>关键字:</dt>
+                        <dd>
+                            <input type="text" placeholder="请输入关键词">
+                            <p class="tips-msg">多个关键词空格隔开</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix form-list">
+                        <dt>商品描述:</dt>
+                        <dd>
+                            <textarea cols="30" rows="10" placeholder="请输入商品描述"></textarea>
+                            <div class="form-action">
+                                <input type="button" value="确认保存" class="btn-confirm">
+                                <input type="button" value="取消" class="btn-cancel">
+                            </div>
+                        </dd>
+                    </dl>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

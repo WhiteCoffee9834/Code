@@ -1,0 +1,55 @@
+/* 头部响应式 */
+/* 1024断点 */
+
+/* 768断点 */
+@media screen and (max-width:768px) {
+    /* 响应式声明 */
+    html{
+        font-size: 13.333vw;
+    }
+    body{
+        line-height: 1.5;
+        font-size: 12px;
+    }
+    /* 使logo消失 */
+    header>img{
+        display: none;
+    }
+    /* 在768下头部改变对齐方式为末端对齐 */
+    header{
+        justify-content: flex-end;
+    }
+    
+    
+
+    /* 菜单按钮显现 */
+    main .menu{
+        display: block;
+    }
+    main aside{
+        width: 100%;
+        height: 0;
+
+        position: absolute;
+        z-index: 10;
+        top: 60px;
+        left: 0;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    main aside ul{
+        display: none;
+    }
+    main > input:checked+aside{
+        height: 240px;
+        background-color: #fff;
+    }
+    input:checked+aside ul{
+        display: block;
+    }
+    /* 使内容区头部的"操作"消失 */
+    main .info-wrapper >p span:last-child{
+        display: none;
+    }
+}

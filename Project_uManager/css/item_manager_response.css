@@ -1,0 +1,44 @@
+/* 768 */
+@media screen and (min-width:576px) and (max-width:768px){
+    .page-bpx p{
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .page-bpx ul{
+        float: none;
+        text-align: center;
+    }
+}
+/* 576 */
+@media screen and (max-width:576px){
+    main section{
+        padding: 0 10px;
+    }
+    .table-core{
+        width: calc(100vw - 20px);
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .table-core table{
+        width: 600px;
+    }
+    .table-wrapper .button-box{
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .table-wrapper .search-box{
+        float: none;
+        text-align: center;
+    }
+    .page-bpx p{
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .page-bpx ul{
+        float: none;
+        text-align: center;
+    }
+}

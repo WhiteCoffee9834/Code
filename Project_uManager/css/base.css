@@ -1,0 +1,118 @@
+/* 头部样式开始 */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 60px;
+    background-color: #f26b11;
+    padding:0 25px;
+    box-sizing: border-box;
+}
+header .user-info{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+}
+header .user-info img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+header .user-info span:nth-child(2){
+    margin-right: 10px;
+}
+header .user-info i{
+    margin-right: 5px;
+}
+/* 头部公共样式结束 */
+
+/* 主体容器样式开始 */
+main{
+    display: flex;
+    height: calc(100vh - 60px);
+}
+main section{
+    flex: 1;
+    padding: 0 38px;
+    background-color: #f5f5f5;
+}
+/* 主体容器样式结束 */
+
+/* 主体侧边栏样式开始 */
+/* 侧边栏固定宽度，高度取100%，设置一个高度过度时间，应用在后面的响应式界面中 */
+main aside{
+    width: 220px;
+    height: 100%;
+    transition: height , 0.5s;
+}
+/* 复选框定位在与menu一样的位置，清除默认样式，然后使用高层级覆盖menu */
+main > input[type="checkbox"]{
+    padding: 0;
+    bottom: 0;
+    width: 42px;
+    height: 36px;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 9px;
+    left: 6px;
+    z-index: 10;
+}
+/* 在响应式界面中显示出的菜单按钮，默认隐藏 */
+.menu{
+    display: none;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 20px;
+    padding: 10px 10px 0;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    opacity: 0.5;
+}
+/* 菜单按钮中的横条样式 */
+.menu i{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 3px;
+}
+/* 侧边栏中的 */
+aside .list-1{
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+}
+aside .list-1 li{
+    line-height: 30px;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+}
+aside .list-1 .sub-list{
+    margin-left: 20px;
+}
+aside .list-1>li:nth-child(1)>i,
+aside .list-1>li:nth-child(1)>span{
+    color: #f26b11;
+}
+aside .list-1 li:not(.list-1>li:nth-child(1)):active{
+    background-color: turquoise;
+    color: #fff;
+}
+aside .sub-list li:hover{
+    background-color: #ec9720;
+    color: #fff;
+}
+aside .sub-list li{
+    line-height: 40px;
+    margin-bottom: 0;
+}
+aside .sub-list li:nth-child(1){
+    margin-top: 20px;
+}
+/* 主体侧边栏样式结束 */

@@ -1,0 +1,145 @@
+/* 主体内容区头部样式 */
+main .info-wrapper > p{
+    font-size: 16px;
+    line-height: 1;
+    padding: 20px 0;
+    border-bottom: 1px solid #bbb;
+}
+main .info-wrapper > p::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color: #f46a11;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+/* 主体内容区头部样式结束 */
+
+/* 表格头部 */
+.table-head{
+    width: 100%;
+    margin: 20px 0;
+}
+.table-head .btn{
+    display: inline-block;
+    padding: 0 10px;
+    height: 34px;
+    border: 1px solid #dca471;
+    background-color: #ffdcaa;
+    line-height: 34px;
+    box-shadow: 0 1px #feecec inset;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 14px;
+}
+.table-head .btn img{
+    width: 20px;
+    vertical-align: middle;
+}
+.table-head .search-box{
+    height: 36px;
+    font-size: 0;
+}
+.search-box input[type="text"]{
+    width: 156px;
+    height: 36px;
+    border: 1px solid #d7a373;
+    padding-left: 12px;
+    border-top-left-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    vertical-align: bottom;
+}
+.search-box input[type="button"]{
+    width: 95px;
+    height: 36px;
+    background-color: #f26017;
+    border-top-right-radius: 3px;
+    font-size: 14px;
+    color: #fff;
+    border: 0;
+    outline: none;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+/* 表格核心区样式 */
+.table-core table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-core td,
+.table-core th{
+    border: 1px solid #efc7a3;
+    color: #010000;
+    font-size: 14px;
+    vertical-align: middle;
+    padding-left: 1%;
+    text-align: left;
+}
+.table-core td input{
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+.table-core th:nth-child(1), .table-core td:nth-child(1) {
+    width: 30px;
+    text-align: center;
+    padding: 0;
+}
+.table-core tr:nth-child(even){
+    background-color: #fff7e8;
+}
+.table-core tr:nth-child(odd){
+    background-color: #fff;
+}
+.table-core tr:nth-child(1){
+    height: 44px;
+    background-color: #ffdcaa;
+}
+.table-core tr:nth-child(1n+2){
+    height: 60px;
+}
+.table-core td:last-child p:last-child{
+    margin-top: 5px;
+}
+.table-core td:last-child p:last-child a{
+    color: #ed550a;
+}
+
+
+/* 底部样式 */
+.page-bpx{
+    width: 100%;
+    margin-top: 20px;
+}
+.page-bpx p{
+    font-size: 14px;
+    line-height: 38px;
+}
+.page-bpx p span{
+    color: #eb5509;
+}
+.page-bpx ul{
+    font-size: 0;
+}
+.page-bpx ul li{
+    display: inline-block;
+    width: 32px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-right: 0;
+    font-size: 14px;
+    text-align: center;
+}
+.page-bpx ul li:last-child{
+    border-right: 1px solid #ddd;
+}
+.page-bpx ul li:nth-child(2){
+    background-color: #f4f6f5;
+    color: #ee7a0b;
+}
