@@ -1,0 +1,88 @@
+@charset "UTF-8";
+a {
+  color: blue;
+}
+
+.rounded {
+  border-top-left-radius: 5px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body.firefox a {
+  font-weight: normal;
+}
+
+.main {
+  color: black;
+}
+
+.main a {
+  font-weight: bold;
+}
+
+.main a:hover {
+  color: red;
+}
+
+.main {
+  color: black;
+}
+
+.main-sidebar {
+  border: 1px solid #000;
+}
+
+.funky {
+  font-family: fantasy;
+  font-size: 30em;
+  font-weight: bold;
+}
+
+.funky.error, .funky.seriousError {
+  font: 20px/26px;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+.error, .seriousError {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+
+.seriousError {
+  border-width: 3px;
+}
+
+/* ！保留注释 */
+/* This Css version 1.2.3 */
+.main {
+  width: 5em;
+}
+
+.sidebar {
+  width: 5em;
+}
