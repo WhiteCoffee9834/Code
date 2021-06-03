@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add input, .add button {
+            height: 30px;
+            width: 100px;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="add">
+        <input type="text">
+        +
+        <input type="text">
+        <button id="btn">=</button>
+        <input type="text">
+    </div>
+
+    <script>
+        var a=document.getElementsByTagName("input")
+        var btn=document.getElementById("btn")
+
+        btn.onclick=function(){
+            var sum=Number(a[0].value)+Number(a[1].value)
+            console.log(sum)
+            a[2].value=sum
+        }
+    </script>
+</body>
+</html>

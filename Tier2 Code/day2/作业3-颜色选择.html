@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>择样器</title>
+    <style>
+        .wrapper{
+            display: grid;
+            height: 400px;
+            width: 400px;
+            grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 'a''b''c''d''e''f';
+            border: 1px solid #ccc;
+        }
+        .item-head{
+            grid-area: a;
+            border-bottom: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .item{
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .item button{
+            margin-left: 10px;
+        }
+        .item-bgc{
+            grid-area: b;
+        }
+        .item-color{
+            grid-area: c;
+        }
+        .item-size{
+            grid-area: d;
+        }
+        .item-width{
+            grid-area: e;
+        }
+        .item-height{
+            grid-area: f;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="item-head" id="main">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolorum quis architecto deserunt excepturi ratione suscipit consequuntur, iusto laboriosam modi?
+        </div>
+        <div class="item-bgc item">
+            <input type="text" class="item-bgc-set" value="white">
+            <button>背景颜色</button>
+        </div>
+        <div class="item-color item">
+            <input type="text" class="item-color-set" value="black">
+            <button>文字颜色</button>
+        </div>
+        <div class="item-size item">
+            <input type="number" class="item-size-set" value="16">
+            <button>文字大小</button>
+        </div>
+        <div class="item-width item">
+            <input type="number" class="item-width-set" value="400">
+            <button>修改宽度</button>
+        </div>
+        <div class="item-height item">
+            <input type="number" class="item-height-set" value="400">
+            <button>修改高度</button>
+        </div>
+    </div>
+    <script>
+        var wrapper = document.getElementById("wrapper")
+        var main = document.getElementById("main")
+
+        var bgc_set = document.getElementsByClassName("item-bgc-set")[0]
+        var color_set = document.getElementsByClassName("item-color-set")[0]
+        var size_set = document.getElementsByClassName("item-size-set")[0]
+        var width_set = document.getElementsByClassName("item-width-set")[0]
+        var height_set = document.getElementsByClassName("item-height-set")[0]
+
+        var bgc_btn = document.getElementsByTagName("button")[0]
+        var color_btn = document.getElementsByTagName("button")[1]
+        var size_btn = document.getElementsByTagName("button")[2]
+        var width_btn = document.getElementsByTagName("button")[3]
+        var height_btn = document.getElementsByTagName("button")[4]
+
+        var bgc_data = bgc_set.value
+        var color_data = color_set.value
+        var size_data = size_set.value
+        var width_data = width_set.value
+        var height_data = height_set.value
+
+        bgc_btn.onclick = function(){
+            bgc_data = bgc_set.value
+            main.style.backgroundColor=bgc_data
+        }
+        color_btn.onclick = function(){
+            color_data = color_set.value
+            main.style.color=color_data
+        }
+
+        size_btn.onclick = function(){
+            size_data = size_set.value
+            main.style.fontSize=size_data+"px"
+        }
+        width_btn.onclick = function(){
+            width_data = width_set.value
+            wrapper.style.width=width_data+"px"
+        }
+        height_btn.onclick = function(){
+            height_data = height_set.value
+            wrapper.style.height=height_data+"px"
+        }
+    </script>
+</body>
+</html>
