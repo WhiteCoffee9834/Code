@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输出表格</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 2px solid #ccc;
+            width: 200px;
+        }
+        tr:nth-child(1){
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+    </table>
+    <script>
+        var table = document.getElementsByTagName("tr")
+        var row
+        var row1_data = ["姓名","Web","Java","UI"]
+        var row2_data = ["张飞",890,90,3029]
+        var row3_data = ["关羽",9090,2323,543925]
+        var row4_data = ["刘备",320189,3434,3213]
+            for (row = 0 ; row <=3 ; row++){
+                table[0].innerHTML += ("<td>" + row1_data[row] + "</td>")
+                table[1].innerHTML += ("<td>" + row2_data[row] + "</td>")
+                table[2].innerHTML += ("<td>" + row3_data[row] + "</td>")
+                table[3].innerHTML += ("<td>" + row4_data[row] + "</td>")
+            }
+    </script>
+</body>
+</html>
