@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        数量: <input type="number"> <br>
+        价格: <span></span>
+    </p>
+    <p>
+        数量: <input type="number"> <br>
+        价格: <span></span>
+    </p>
+    <p>
+        数量: <input type="number"> <br>
+        价格: <span></span>
+    </p>
+    <p>
+        数量: <input type="number"> <br>
+        价格: <span></span>
+    </p>
+    <script>
+        var p = document.getElementsByTagName("p")
+        for (var i=0 ; i<p.length ; i++){
+            cal(p[i])
+        }
+        function cal(z){
+            var input = z.getElementsByTagName("input")[0]
+            var span = z.getElementsByTagName("span")[0]
+            z.onclick = function(){
+                var j = Number(input.value) * 199
+                span.innerText = j
+            }
+        }
+    </script>
+</body>
+</html>
