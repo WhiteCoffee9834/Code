@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/right.gif" alt="">
+    <button>Left</button>
+    <button>Right</button>
+    <script>
+        var bird = document.getElementsByTagName("img")[0]
+        var button = document.getElementsByTagName("button")
+        var move = null
+
+        // 向右
+        button[1].onclick = function(){
+            bird.src = "./img/right.gif"
+            birdMove(6,Infinity)
+        }
+        // 向左
+        button[0].onclick = function(){
+            bird.src = "./img/left.gif"
+            birdMove(6,0)
+        }
+
+
+
+        function birdMove(step,target){
+            step = parseInt(getStyle(bird,"left")) < target ? step : -step
+            clearInterval(move)
+
+            move = setInterval(function moving(){
+                var left = parseInt(getStyle(bird,"left"))
+                left += step
+
+                if(step > 0 && left >= target || step < 0 && left <= target){
+                    left = target
+                    clearInterval(move)
+                }
+                bird.style.left = left + "px"
+            },60)
+        }
+
+
+
+        function getStyle(el,attr){
+            return el.currentStyle ? el.currentStyle[attr] : getComputedStyle(el)[attr];
+        }
+    </script>
+</body>
+</html>

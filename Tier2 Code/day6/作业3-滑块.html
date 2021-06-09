@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 80%;
+            height: 100%;
+            background-color: orange;
+            margin-left: -80%;
+        }
+
+        section {
+            width: 20%;
+            height: 100px;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div></div>
+        <section></section>
+    </main>
+    <script>
+        var main = document.getElementsByTagName("main")[0]
+        var div = document.getElementsByTagName("div")[0]
+        var section = document.getElementsByTagName("section")[0]
+        var move = null
+        var n = -80
+        var x = true
+        section.onclick = function () {
+            if (x == true) {
+                clearInterval(move)
+                move = setInterval(function () {
+                    n++
+                    if (n >= 0) {
+                        n = 0
+                        clearInterval(move)
+                    }
+                    div.style.marginLeft = n + "%"
+                }, 30)
+                x = false
+                console.log(x)
+            }
+            else if (x == false) {
+                clearInterval(move)
+                move = setInterval(function () {
+                    n--
+                    if (n <= -80) {
+                        n = -80
+                        clearInterval(move)
+                    }
+                    div.style.marginLeft = n + "%"
+                }, 30)
+                x = true
+                console.log(x)
+            }
+        }
+    </script>
+</body>
+
+</html>

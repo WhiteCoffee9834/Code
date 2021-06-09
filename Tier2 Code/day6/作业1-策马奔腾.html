@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>策马奔腾</title>
+</head>
+<body>
+    <button>Start</button>
+    <img src="./img/m1.jpg" alt="">
+    <script>
+        var button = document.getElementsByTagName("button")[0]
+        var img = document.getElementsByTagName("img")[0]
+        var m = 1
+        var play = null
+        button.onclick = function(){
+            play = setInterval(playImg,100)
+        }
+        function playImg(){
+            m++
+            if(m >= 12){
+                m=1
+                // clearInterval(play)
+            }
+            img.src = "./img/m" + m + ".jpg"
+            console.log(m)
+        }
+    </script>
+</body>
+</html>

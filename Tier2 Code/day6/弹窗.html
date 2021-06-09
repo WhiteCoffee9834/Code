@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: flex-end;
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            display: none;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            border-radius: 50%;
+
+
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            X
+        </span>
+    </div>
+    <script>
+        var div = document.getElementsByTagName("div")[0]
+        var close = document.getElementsByTagName("span")[0]
+        /* setInterval(function time(){
+            div.style.display = "block"
+        },100) */
+        setTimeout(function timeDelay(){
+            div.style.display = "flex"
+        },1000)
+        
+        close.onclick = function(){
+            div.style.display = "none"
+            setTimeout(function closeDelay(){
+                div.style.display = "flex"
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
