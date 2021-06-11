@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乱序字符串除重排序</title>
+</head>
+<body>
+    <script>
+        var string = "1233dfdfdfd&34343dfdfgfdj&454545gfgfgfgdfrsdh&54545sjfh"
+
+        var numberString = ""
+        var wordString = ""
+        console.log(string)
+
+        for(var i = 0 ; i < string.length ; i++){
+            if(numberString.indexOf(string[i]) == -1 && string.charCodeAt(i) >= 48 && string.charCodeAt(i) <= 57){
+                numberString += string[i]
+            }else if (wordString.indexOf(string[i]) == -1 && string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122){
+                wordString += string[i]
+            }
+        }
+
+        console.log(numberString + wordString)
+    </script>
+</body>
+</html>

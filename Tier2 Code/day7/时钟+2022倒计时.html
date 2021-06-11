@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock + CountDown</title>
+    <style>
+        p {
+            width: 100%;
+            height: 60px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            background-image: linear-gradient(pink, plum);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+
+    </p>
+    <p>
+
+    </p>
+    <p>
+
+    </p>
+    <p>
+
+    </p>
+    <p>
+
+    </p>
+    <p>
+
+    </p>
+    <script>
+        var p = document.getElementsByTagName("p")
+
+        setInterval(dateFunction, 300);
+        setInterval(clockFunction, 300)
+        setInterval(countDown, 300)
+        
+        function dateFunction() {
+            var date = new Date()
+            p[0].innerHTML = date
+        }
+        function clockFunction() {
+            var clock = new Date()
+            var year = clock.getFullYear()
+            var month = clock.getMonth() + 1
+            var day = clock.getDate()
+            var hour = clock.getHours()
+            var minute = clock.getMinutes()
+            var second = clock.getSeconds()
+
+            p[1].innerHTML = year + "/" + month + "/" + day
+            p[2].innerHTML = addZero(hour) + ":" + addZero(minute) + ":" + addZero(second)
+        }
+        function countDown() {
+            var currentDate = new Date()
+            var futureDate = new Date("2022/1/1 00:00:00")
+            var time = futureDate - currentDate
+            p[3].innerHTML = time + "ms"
+
+            var second = Math.floor(time / 1000)
+            var day = parseInt(second / 86400)
+            var hour = parseInt(second % 86400 / 3600)
+            var minute = parseInt(second % 3600 / 60)
+            var second = parseInt(second % 60)
+
+            p[4].innerHTML = "距离2022年还剩余:" + addZero(day) + "天" + addZero(hour) + "时" + addZero(minute) + "分" + addZero(second) + "秒"
+        }
+        function addZero(num) {
+            if (num < 10) {
+                return "0" + num
+            } else {
+                return num
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟双色球</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            width: 100px;
+            height: 44px;
+            margin: 40px 60px;
+        }
+        span{
+            float: left;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            margin-right: 20px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Start</button>
+        <button>Stop</button>
+    </div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <script>
+        var button = document.getElementsByTagName("button")
+        var span = document.getElementsByTagName("span")
+        var n = 0
+        var run = null
+        button[1].onclick = function(){
+            n++
+        }
+        button[0].onclick = function(){
+            clearInterval(run)
+            n = 0
+            run = setInterval(function(){
+                for(i = n ; i < span.length ; i++){
+                    span[i].innerHTML = parseInt(Math.random()*37)
+                }
+            },100)
+        }
+    </script>
+</body>
+</html>
