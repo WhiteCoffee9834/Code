@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格增项</title>
+</head>
+
+<body>
+
+    <body>
+        姓名：
+        <input type="text">
+        性别：
+        <input type="radio" name="sex" value="男" checked>男
+        <input type="radio" name="sex" value="女">女
+        职业：
+        <input type="text">
+        <button>添加</button>
+
+        <table width="500" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>职业</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>厨师</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>李四</td>
+                    <td>女</td>
+                    <td>干烦人</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>王五</td>
+                    <td>男</td>
+                    <td>程序员</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            var input = document.querySelectorAll("input")
+            var button = document.querySelector("button")
+            var table = document.querySelector("table")
+            var tBody = table.tBodies[0]
+            button.onclick = () => {
+                var tableRow = document.createElement("tr")
+                var tableCell = document.createElement("td")
+                var n = tBody.rows.length + 1
+                console.log(tBody)
+                
+                tableCell.innerHTML = n < 10 ? "0" + n : n
+                tableRow.appendChild(tableCell)
+
+                tableCell = document.createElement("td")
+                tableCell.innerHTML = input[0].value
+                tableRow.appendChild(tableCell)
+
+                tableCell = document.createElement("td")
+                tableCell.innerHTML = input[1].checked == true ? "男" : "女"
+                tableRow.appendChild(tableCell)
+
+                tableCell = document.createElement("td")
+                tableCell.innerHTML = input[3].value
+                tableRow.appendChild(tableCell)
+
+                tBody.appendChild(tableRow)
+            }
+        </script>
+    </body>
+
+</html>
