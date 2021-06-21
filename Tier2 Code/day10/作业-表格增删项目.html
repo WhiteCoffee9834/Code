@@ -97,8 +97,28 @@
 
             tBody.appendChild(tableRow)
 
-            input[0].value = ""
-            input[3].value = ""
+            input[0].value = input[3].value = ""
+
+
+            var chk = tBody.querySelectorAll("input")
+            console.log(chk)
+            for (var x = 0; x < chk.length; x++) {
+                chk[x].onclick = () => {
+                    // 设置一个值为true,再设置一个条件,只要条件不满足,将值设置为false
+                    var tag = true
+                    for (var j = 0; j < chk.length; j++) {
+                        // 只要有一个复选框没有被选中,则tag的值为false
+                        if (chk[j].checked == false) {
+                            tag = false
+                        }
+                    }
+                    console.log(tag)
+                    // 让全选框的选中状态与条件的成立状态相同.
+                    // 只要条件成立,那么代表所有的复选框都选中,则全选框应该被选中
+                    // 条件不成立,那么代表有复选框未被选中,则全选框不被选中
+                    all.checked = tag
+                }
+            }
         }
         var all = document.querySelector("#selectAll")
         all.onclick = () => {
@@ -108,11 +128,12 @@
             for (var i = 0; i < tBody.rows.length; i++) {
                 var button = tr[i].children[0].children[0]
                 // console.log(button)
-                if (button.checked == false) {
+                button.checked = all.checked
+                /* if (button.checked == false) {
                     button.checked = true
                 } else {
                     button.checked = false
-                }
+                } */
             }
         }
         del.onclick = () => {
