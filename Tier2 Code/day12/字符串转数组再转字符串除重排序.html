@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排序</title>
+</head>
+
+<body>
+    <script>
+        var string = "123ffhdjs&ahgjkah&fjdsakf32432&14324"
+        var newString = ""
+        var word = ""
+        var number = ""
+        for (var i = 0; i < string.length; i++) {
+            if (newString.indexOf(string[i]) == -1) {
+                newString += string[i]
+            }
+        }
+        newString = newString.split("&")
+        // console.log(newString)
+        newString = newString.join("")
+        for (var j = 0; j < newString.length; j++) {
+            if (newString.charCodeAt(j) >= 48 && newString.charCodeAt(j) <= 57) {
+                word += newString[j]
+                // console.log(word)
+            }
+            if (newString.charCodeAt(j) >= 97 && newString.charCodeAt(j) <= 122) {
+                number += newString[j]
+                // console.log(number)
+            }
+        }
+        console.log(newString = word + number)
+    </script>
+</body>
+
+</html>
