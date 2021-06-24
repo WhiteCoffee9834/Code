@@ -310,7 +310,7 @@ console.log(op.cloneNode(true));
     console.log(aoTe[0].getAttribute("id"));
     console.log(aoTe[0].getAttribute("class"));
 
-    //设置 元素.setAtrribute("属性名","属性值");
+    //设置 元素.setAttribute("属性名","属性值");
     aoTe[1].setAttribute("class","gaiya");
     console.log(aoTe[2].flag);//undefined  不能通过 元素.属性名的方式获取自定义属性
     console.log(aoTe[2].getAttribute("flag"));// true
