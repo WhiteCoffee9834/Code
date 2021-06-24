@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS滚动条</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #333;
+        }
+        section{
+            margin: 50px auto;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: flex-end;
+            height: 600px;
+            width: 400px;
+            overflow: hidden;
+            background-color: #ccc;
+            position: relative;
+        }
+        #text{
+            height: 1800px;
+            width: 360px;
+            position: absolute;
+            right: 30px;
+        }
+        #scrollbar{
+            width: 30px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: #ededed;
+            border-radius: 10px;
+
+            position: relative;
+        }
+        #block{
+            border-radius: 10px;
+            background-color: skyblue;
+            background-image: -webkit-linear-gradient(45deg,
+                    rgba(255, 255, 255, 0.2) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(255, 255, 255, 0.2) 50%,
+                    rgba(255, 255, 255, 0.2) 75%,
+                    transparent 75%,
+                    transparent);
+
+            position: absolute;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt et nostrum iusto autem facilis sint eaque quis debitis voluptatibus perferendis ab vero, laudantium incidunt enim hic. Quas, amet fuga quidem quisquam magnam inventore dolore cupiditate nulla reprehenderit exercitationem itaque nisi iste, sapiente totam. Officia fugiat quia illum vero unde, culpa aut necessitatibus, veniam molestias ratione sit eligendi explicabo obcaecati ex in amet repellat sequi nostrum perspiciatis. Eius, ratione ad! Voluptatibus earum aut fugiat nesciunt ea, fugit ullam impedit? Voluptas dicta sit beatae earum ex perferendis laudantium facilis delectus blanditiis, expedita consequatur hic numquam ducimus, cumque distinctio reiciendis libero nobis explicabo! Architecto nisi iure eligendi tenetur ad cumque consequuntur odit sequi atque eum reprehenderit, excepturi soluta provident eveniet quo, veniam mollitia quas sed, distinctio fugiat beatae vel? Assumenda ea laudantium ab expedita est cupiditate nulla sunt iste! Ut voluptatum ipsum quae doloremque inventore doloribus sed provident tenetur pariatur quod! Temporibus molestiae culpa recusandae adipisci atque quo ut tempore, rerum omnis natus totam ad commodi cum ex ratione quasi nobis molestias quidem? Iusto veritatis id ducimus ut, quis, magni, repudiandae corrupti placeat similique repellat nesciunt omnis aliquid ipsam ullam et corporis error itaque quidem fugiat distinctio consequatur soluta suscipit recusandae totam. Eum ex ducimus rem quos, maxime temporibus inventore, sapiente incidunt, obcaecati magni similique illo. Iusto facilis totam magni odit culpa ipsam quos, magnam voluptatum error molestias necessitatibus iste dolore recusandae enim id illum esse nulla numquam repellendus expedita, voluptatem amet. Maxime a, impedit dolores laboriosam illo vero, iusto adipisci ex aspernatur doloremque nam saepe repellendus modi asperiores placeat suscipit unde earum porro beatae libero? Sint dolorem dolor saepe provident excepturi, omnis odio. Debitis itaque quidem ducimus at deleniti magnam quam illo molestias culpa dolore, facilis obcaecati suscipit eos aspernatur odio officiis illum assumenda! Magni necessitatibus placeat similique ducimus dignissimos assumenda optio quod nobis dolore, ea excepturi, atque obcaecati, recusandae cumque repellat non voluptate aliquam pariatur! Quo earum voluptatibus est vel. Illum inventore sit, sed rem neque esse blanditiis temporibus quaerat adipisci maxime soluta odio officia quibusdam non tempore minima distinctio modi quis sint ipsam iure animi debitis. Quisquam illum neque assumenda quos, accusantium ipsam totam ab eaque, pariatur, quidem consequuntur vel rerum expedita ratione inventore et consequatur itaque quaerat possimus quam magni odit!
+        </div>
+        <div id="scrollbar">
+            <p id="block"></p>
+        </div>
+    </section>
+    <script src="./work.js"></script>
+</body>
+</html>
