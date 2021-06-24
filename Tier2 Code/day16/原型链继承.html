@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型链继承</title>
+</head>
+
+<body>
+    <script>
+        function Student(name, age, gender) {
+            this.name = name
+            this.age = age
+            this.gender = gender
+        }
+        Student.prototype.study = function () {
+            console.log("Im prototype")
+        }
+        function Primary() {
+            this.play = function () {
+                console.log("Im Primary")
+            }
+        }
+        Primary.prototype = new Student("Tom", 8, "male")
+        var P1 = new Primary()
+        console.log(P1)
+        console.log(P1.name)
+        P1.study()
+        P1.play()
+    </script>
+</body>
+
+</html>
