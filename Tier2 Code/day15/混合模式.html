@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>混合模式</title>
+</head>
+<body>
+    <script>
+        function Dog (name, age, gender){
+            this.name = name
+            this.age = age
+            this.gender = gender
+            this.sayHello = () => {
+                console.log("Hello " + name)
+            }
+        }
+        Dog.prototype.sayDog = () => {
+            console.log("Hello dog")
+        }
+        function Person(name, age, gender){
+            this.name = name
+            this.age = age
+            this.gender = gender
+            this.sayHello = () => {
+                console.log("Hello " + name)
+            }
+        }
+        Person.prototype.world = () =>{
+            console.log("Hello world")
+        }
+        var P1 = new Person ("Jim", 10, "male")
+        console.log(P1)
+        P1.sayHello()
+        P1.world()
+        var P2 = new Dog ("Tom", 4, "male")
+        console.log(P2)
+        P2.sayHello()
+        P2.sayDog()
+        console.log(Person.prototype)
+        console.log(P1.__proto__)
+        console.log(Object.prototype)
+        // console.log(Person.__proto__ == Object.prototype)
+    </script>
+</body>
+</html>
