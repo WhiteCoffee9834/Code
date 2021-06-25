@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>首页</title>
 </head>
+
 <body>
     <div class="background-image-fixed">
         <img src="./img/VCB-left.png" alt="" class="vcb-left">
@@ -48,14 +50,14 @@
                 </li>
             </ul>
             <div class="search-wrapper-relative fl">
-                    <div class="class-select-relative fl">
-                        <span>课程</span>
-                        <i class="triangle-down"></i>
-                    </div>
-                    <input type="text" placeholder="搜索感兴趣的内容">
-                    <i>
-                        <img src="./img/index/search.png" alt="">
-                    </i>
+                <div class="class-select-relative fl">
+                    <span>课程</span>
+                    <i class="triangle-down"></i>
+                </div>
+                <input type="text" placeholder="搜索感兴趣的内容">
+                <i>
+                    <img src="./img/index/search.png" alt="">
+                </i>
             </div>
             <!-- TODO 登录后消失 -->
             <div class="login-reg" style="display: none;">
@@ -108,23 +110,12 @@
     <div class="body-1180">
         <!-- 轮播图 -->
         <div class="index-head-banner-relative">
-            <div class="scroll-img">
-                <img src="./img/index/tbanner1.png" alt="">
-                <img src="./img/index/tbanner2.png" alt="">
-                <img src="./img/index/tbanner3.png" alt="">
-                <img src="./img/index/tbanner4.png" alt="">
-                <img src="./img/index/tbanner5.png" alt="">
-            </div>
-            <img src="./img/上翻.png" alt="" class="preview">
-            <img src="./img/下翻 .png" alt="" class="next">
-            <div class="pointer">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i class="pointer-actived"></i>
-            </div>
+            <ul class="scroll-img">
+                <!-- JS实现 bannerData -->
+            </ul>
+            <ul class="scroll-title">
+                <!-- JS实现 bannerData -->
+            </ul>
         </div>
         <div class="index-content">
             <p class="title-relative">
@@ -134,215 +125,9 @@
                     <a href="#">更多课程</a>
                 </span>
             </p>
+
             <div class="index-class-wrapper">
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner1.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner2.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner3.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner4.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner5.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner6.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner7.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative class-a">
-                    <img src="./img/index/banner8.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            人教版
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask">
-                        <span>
-                            1100人在学习
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
+                <!-- JS实现 setHtml lesson.online -->
             </div>
         </div>
         <div class="index-middle-banner">
@@ -358,165 +143,10 @@
                 </span>
             </p>
             <div class="index-class-wrapper">
-                <div class="fl online-test-relative">
-                    <img src="./img/index/test1.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            上海
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask2">
-                        <span>
-                            1100人已考试
-                        </span>
-                        <span>
-                            初一
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            去考试
-                        </span>
-                    </div>
-                    <div class="class-info">
-                        <p>
-                            2020年6月北京中考试题
-                        </p>
-                    </div>
-                </div>
-                <div class="fl online-test-relative">
-                    <img src="./img/index/test2.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            上海
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask2">
-                        <span>
-                            1100人已考试
-                        </span>
-                        <span>
-                            初一
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            去考试
-                        </span>
-                    </div>
-                    <div class="class-info">
-                        <p>
-                            2020年6月北京中考试题
-                        </p>
-                    </div>
-                </div>
-                <div class="fl online-test-relative">
-                    <img src="./img/index/test3.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            上海
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask2">
-                        <span>
-                            1100人已考试
-                        </span>
-                        <span>
-                            初一
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            去考试
-                        </span>
-                    </div>
-                    <div class="class-info">
-                        <p>
-                            2020年6月北京中考试题
-                        </p>
-                    </div>
-                </div>
-                <div class="fl online-test-relative">
-                    <img src="./img/index/test4.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            上海
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask2">
-                        <span>
-                            1100人已考试
-                        </span>
-                        <span>
-                            初一
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            去考试
-                        </span>
-                    </div>
-                    <div class="class-info">
-                        <p>
-                            2020年6月北京中考试题
-                        </p>
-                    </div>
-                </div>
-                <div class="fl online-test-relative">
-                    <img src="./img/index/test5.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            上海
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask2">
-                        <span>
-                            1100人已考试
-                        </span>
-                        <span>
-                            初一
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            去考试
-                        </span>
-                    </div>
-                    <div class="class-info">
-                        <p>
-                            2020年6月北京中考试题
-                        </p>
-                    </div>
-                </div>
-                <div class="fl online-test-relative">
-                    <img src="./img/index/test6.png" alt="">
-                    <div class="class-top-mask">
-                        <span>
-                            上海
-                        </span>
-                    </div>
-                    <div class="class-bottom-mask2">
-                        <span>
-                            1100人已考试
-                        </span>
-                        <span>
-                            初一
-                        </span>
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            去考试
-                        </span>
-                    </div>
-                    <div class="class-info">
-                        <p>
-                            2020年6月北京中考试题
-                        </p>
-                    </div>
-                </div>
+                <!-- JS实现 setHtml lesson.test -->
             </div>
         </div>
-        <div class="index-content">
+        <div class="index-content clearfix">
             <p class="title-relative">
                 精品课程
                 <span>
@@ -525,120 +155,7 @@
                 </span>
             </p>
             <div class="fl index-class-wrapper-890">
-                <div class="fl class-img-box-relative">
-                    <img src="./img/index/good_banner1.png" alt="">
-                    <div class="class-top-mask">
-                        北京
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative">
-                    <img src="./img/index/good_banner2.png" alt="">
-                    <div class="class-top-mask">
-                        北京
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative">
-                    <img src="./img/index/good_banner3.png" alt="">
-                    <div class="class-top-mask">
-                        北京
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative">
-                    <img src="./img/index/good_banner4.png" alt="">
-                    <div class="class-top-mask">
-                        北京
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative">
-                    <img src="./img/index/good_banner5.png" alt="">
-                    <div class="class-top-mask">
-                        北京
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
-                <div class="fl class-img-box-relative">
-                    <img src="./img/index/good_banner6.png" alt="">
-                    <div class="class-top-mask">
-                        北京
-                    </div>
-                    <div class="free-to-study">
-                        <span>
-                            免费学习
-                        </span>
-                    </div>
-                    <div class="class-img-box-footer">
-                        <p>
-                        行政管理专业版
-                        </p>
-                        <p>
-                        23课时
-                        </p>
-                    </div>
-                </div>
+                <!-- JS实现 setHtml lesson.good -->
             </div>
             <div class="fr class-huge-img">
                 <img src="./img/index/good_banner7.png" alt="">
@@ -656,18 +173,23 @@
     <footer class="index-footer clearfix">
         <div class="footer-core">
             <p>
-                首页 | 关于我们 | 加入我们 | 合作专区 | 联系我们 | AI开放平台 | 意见反馈 | 漏洞提交 | 隐私政策 | 版权声明 | 反盗链声明 | 网上有害信息举报 | 备案公示 | 营业执照 | 教师资格证公示
+                首页 | 关于我们 | 加入我们 | 合作专区 | 联系我们 | AI开放平台 | 意见反馈 | 漏洞提交 | 隐私政策 | 版权声明 | 反盗链声明 | 网上有害信息举报 | 备案公示 | 营业执照 |
+                教师资格证公示
             </p>
             <p>
-                京ICP备 13030888号 Copyright © 2014-2019 行者信息科技（北京）有限公司 | 地址：北京市新华区马当路388号C座 | 电话：010-66666666 |  京公网安备 01010102002533号
+                京ICP备 13030888号 Copyright © 2014-2019 行者信息科技（北京）有限公司 | 地址：北京市新华区马当路388号C座 | 电话：010-66666666 | 京公网安备
+                01010102002533号
             </p>
             <p>
                 京网文〔2018〕4086-308号 | 网络文化经营许可证：沪网文[2018]4086-308号 | 增值电信业务经营许可证：京B2-20150021 | 食品经营许可证：JY13101140088888
             </p>
             <p>
-                医疗器械经营许可证：京嘉食药监械经营许20188008号 | 互联网药品信息服务资格证书：(京)-经营性-2018-0011 | 
+                医疗器械经营许可证：京嘉食药监械经营许20188008号 | 互联网药品信息服务资格证书：(京)-经营性-2018-0011 |
             </p>
         </div>
     </footer>
+    <script src="./static/data.js"></script>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
