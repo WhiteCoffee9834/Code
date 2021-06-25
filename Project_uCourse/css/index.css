@@ -28,6 +28,8 @@
     top: 0;
     bottom: 0;
     margin: auto;
+    width: 70px;
+    height: 70px;
 }
 .subnav div p{
     margin-top: 50px;
@@ -47,53 +49,35 @@
     margin-top: 30px;
 }
 .index-head-banner-relative .scroll-img{
+
     overflow: hidden;
-}
-.index-head-banner-relative .scroll-img img{
-    position: absolute;
-}
-.index-head-banner-relative .scroll-img img:nth-child(1){
-    z-index: 1;
-}
-.index-head-banner-relative .preview{
-    position: absolute;
-    left: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-.index-head-banner-relative .next{
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-.index-head-banner-relative .pointer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
 
-    width: 100%;
-    height: 40px;
+}
+.index-head-banner-relative .scroll-img li{
+    position: absolute;
+    opacity: 0;
+}
+.index-head-banner-relative .scroll-img li:first-child{
+    opacity: 1;
+}
+.index-head-banner-relative .scroll-title{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 200px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
-
-    z-index: 2;
 }
-.index-head-banner-relative .pointer i{
-    display: inline-block;
-
-    width: 10px;
-    height: 10px;
-    background-color: #e3f3f0;
-    border-radius: 50%;
-    margin-left: 10px;
-
-    font-size: 0;
-    cursor: pointer;
+.index-head-banner-relative .scroll-title li{
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    color: white;
 }
-.index-head-banner-relative .pointer .pointer-actived{
-    background-color: #e28a6c;
+.index-head-banner-relative .scroll-title li:first-child{
+    color: #bfa;
 }
 /* 轮播图样式结束 */
 
@@ -257,7 +241,7 @@
 /* 精品课程开始 */
 .index-class-wrapper-890{
     height: 474px;
-    width: 895px;
+    width: 880px;
     margin-top: 20px;
 }
 .index-class-wrapper-890 .class-img-box-relative{
@@ -275,7 +259,7 @@
     height: 163px;
 }
 .index-class-wrapper-890 .class-img-box-relative:nth-child(3n){
-    margin-right: 15px;
+    margin-right: 0;
 }
 .index-class-wrapper-890 .class-top-mask{
     position: absolute;
@@ -320,7 +304,7 @@
     margin-top: 5px;
 }
 .class-huge-img{
-    margin-top: 20px;
+    margin-top: 15px;
 }
 /* 精品课程结束 */
 /* 底部超链接区块开始 */

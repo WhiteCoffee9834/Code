@@ -12,6 +12,9 @@ body{
     box-sizing: border-box;
     padding: 20px;
 }
+.video-wrapper img{
+    width: 100%;
+}
 .video-info{
     width: 320px;
 }
@@ -163,7 +166,7 @@ body{
     border-top-color: #999;
     border-bottom: 0;
 }
-.class-content-core li::before{
+/* .class-content-core li::before{
     content: "";
     display: inline-block;
     position: relative;
@@ -171,7 +174,7 @@ body{
     background-image: url(../img/playvideo/playicon.png);
     width: 23px;
     height: 23px;
-}
+} */
 .class-content-core li{
     position: relative;
     height: 35px;
