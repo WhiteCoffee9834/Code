@@ -339,3 +339,5 @@ var tCells = tRows[2].cells;
 tCells[2].innerHTML = 10;
 console.log(tCells);
 ```
+
+表单域.name就能够获取表单了
