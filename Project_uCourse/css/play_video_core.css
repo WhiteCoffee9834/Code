@@ -1,0 +1,293 @@
+body {
+    background-color: #f2f2f2;
+}
+
+/* 头部样式开始 */
+
+
+/* 视频盒子样式开始 */
+.video-wrapper {
+    width: 860px;
+    height: 580px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.video-wrapper img {
+    width: 100%;
+}
+
+/* 视频右侧讨论栏样式开始 */
+.video-info {
+    width: 300px;
+    height: 580px;
+    margin-left: 20px;
+}
+
+.video-info ul {
+    width: 100%;
+}
+
+.comment-head {
+    margin-bottom: 20px;
+    height: 220px;
+}
+
+.comment-head li {
+    margin-bottom: 10px;
+}
+
+.comment-head li:nth-child(1) span {
+    display: block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    background-color: #80c4ae;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.comment-head li:nth-child(1) {
+    border-bottom: 1px solid #ccc;
+}
+
+.comment-head li:nth-child(1) {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.comment-head li:nth-child(2) textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    outline: none;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.comment-head li:nth-child(3) button {
+    width: 60px;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #80c4ae;
+}
+
+.comment-core {
+    height: 340px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.comment-core::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 10px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+}
+
+.comment-core::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background-color: skyblue;
+    background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent);
+}
+
+.comment-core::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #ededed;
+    border-radius: 10px;
+}
+
+.comment-core li {
+    font-size: 16px;
+    height: 50px;
+}
+
+.comment-core li:nth-child(2n) {
+    border-bottom: 1px solid #ccc;
+}
+
+.comment-core li p {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.comment-core li p img {
+    width: 40px;
+}
+
+.comment-core li p span:first-of-type {
+    margin-left: 10px;
+}
+
+.comment-core li p span:last-child {
+    float: right;
+}
+
+/* 视频右侧讨论栏样式结束 */
+/* 视频盒子样式结束 */
+
+/* 老师介绍样式开始 */
+.teacher-wrapper {
+    height: 156px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.teacher-wrapper>p {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.teacher-wrapper .teacher-card {
+    margin-left: 30px;
+    width: 236px;
+    border-right: 1px solid #80c4ae;
+
+}
+
+.teacher-wrapper .teacher-card .avatar {
+    width: 62px;
+    height: 62px;
+    background-color: #D8D8D8;
+    border-radius: 50%;
+
+    margin-right: 20px;
+}
+
+.teacher-wrapper .teacher-card p:first-of-type {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.teacher-wrapper .teacher-card p:last-of-type {
+    font-size: 16px;
+}
+
+.teacher-wrapper .teacher-info {
+    width: 853px;
+    height: 66px;
+    margin-left: 34px;
+    font-size: 16px;
+}
+
+/* 老师介绍盒子样式结束 */
+/* 头部样式结束 */
+/* 主体样式开始 */
+.class-content-core {
+    height: 1008px;
+    padding: 66px 40px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.class-content-core p {
+    position: relative;
+
+    height: 22px;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 20px 0;
+}
+
+.class-content-core p .triangle-top {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #999;
+    border-top: 0;
+}
+
+.class-content-core p .triangle-down {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #999;
+    border-bottom: 0;
+}
+
+.class-content-core li {
+    position: relative;
+    height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+.class-content-core li a:hover {
+    background-color: #e5f3ef;
+}
+
+.class-content-core li b {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    display: none;
+    width: 100px;
+    height: 30px;
+    border: 2px solid #74c6b3;
+    border-radius: 4px;
+    color: #74C6B3;
+    text-align: center;
+    line-height: 30px;
+}
+
+.class-content-core li a:hover b {
+    display: block;
+}
+
+.class-content-core li a {
+    position: absolute;
+    left: 30px;
+    width: 100%;
+    color: #333;
+}
+
+.class-content-core li span {
+    float: right;
+    color: #666;
+}
+
+.more-content {
+    height: 160px;
+    font-size: 22px;
+    text-decoration: underline;
+    text-align: center;
+    color: #74C6B3;
+}
+
+.more-content span::before {
+    height: 100%;
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* 主体样式结束 */

@@ -1,7 +1,7 @@
 // 课程数据引入
-var tbLesson = document.getElementsByClassName("index-class-wrapper")[0]//同步课程
-var zxLesson = document.getElementsByClassName("index-class-wrapper")[1]//在线课程
-var jpLesson = document.getElementsByClassName("index-class-wrapper-890")[0]//精品课程
+var tbLesson = document.getElementsByClassName("index-class-wrapper")[0] //同步课程
+var zxLesson = document.getElementsByClassName("index-class-wrapper")[1] //在线课程
+var jpLesson = document.getElementsByClassName("index-class-wrapper-890")[0] //精品课程
 
 //调用函数,往其内部传输远程数据文件内部数据
 setHtml(lesson.online, tbLesson)
@@ -29,11 +29,11 @@ function setHtml(data, ul) {
     })
 }
 // 轮播图
-var headBanner = document.querySelector(".index-head-banner-relative")//获取整个轮播图外部容器
-var scrollImg = document.querySelector(".scroll-img")//轮播图图片ul容器
-var scrollTitle = document.querySelector(".scroll-title")//轮播图子标题ul容器
-var titleLi = scrollTitle.getElementsByTagName("li")//轮播图子标题li
-var img = scrollImg.getElementsByTagName("li")//轮播图图片容器li
+var headBanner = document.querySelector(".index-head-banner-relative") //获取整个轮播图外部容器
+var scrollImg = document.querySelector(".scroll-img") //轮播图图片ul容器
+var scrollTitle = document.querySelector(".scroll-title") //轮播图子标题ul容器
+var titleLi = scrollTitle.getElementsByTagName("li") //轮播图子标题li
+var img = scrollImg.getElementsByTagName("li") //轮播图图片容器li
 
 //调用函数,引用外部数据文件.再根据不同的父元素使用不同的数据对象
 setImg(bannerData, scrollImg)
@@ -57,32 +57,50 @@ function setImg(data, ul) {
 scrollImg.timer = setInterval(scrollTimer, 2000);
 // 声明一个n,用来指示当前显示的图片以及高亮的子标题
 var n = 0
-
+//定时器中调用的函数
 function scrollTimer() {
-    n++
-    if (n == img.length) n = 0
+    n++ //每次触发定时器让n+1,指示当前的图片的值
+    if (n == img.length) n = 0 //如果达到图片最大长度,则让n=0重新循环
+    //每次触发定时器都清空样式
     for (var i = 0; i < img.length; i++) {
-        bufferMove(img[i], { "opacity": 0 })
+        //调用运动函数,让所有图片隐藏
+        bufferMove(img[i], {
+            "opacity": 0
+        })
+        //将所有子标题的颜色都为白色
         titleLi[i].style.color = "white"
     }
-    bufferMove(img[n], { "opacity": 1 })
+    //下一张图片显示
+    bufferMove(img[n], {
+        "opacity": 1
+    })
+    //对应的指示子标题的样式
     titleLi[n].style.color = "#bfa"
 }
 // 光标移入移出
 headBanner.onmouseenter = function () {
+    //停止计时器
     clearInterval(scrollImg.timer)
 }
 headBanner.onmouseleave = function () {
+    //重新执行定时器
     scrollImg.timer = setInterval(scrollTimer, 2000);
 }
 // 光标滑过小标题
 for (var i = 0; i < titleLi.length; i++) {
+    //自定义索引
     titleLi[i].index = i
+    //每一个li光标移入事件
     titleLi[i].onmouseenter = function () {
+        //这里需要-1,不然会不好用,因为执行上方循环的时候已经+1了
         n = this.index - 1
+        //渲染
         scrollTimer()
     }
 }
+
+
+
 // 获取非行间样式函数
 function getStyle(el, attr) {
     if (el.currentStyle) {

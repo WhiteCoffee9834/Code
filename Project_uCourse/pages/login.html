@@ -21,15 +21,15 @@
             <p>
                 使用手机号登录
             </p>
-            <!-- TODO action href-->
-            <form action="#">
+            <form action="javascript:;">
                 <div class="user_form_relative">
-                    <input type="tel" id="user_tel" placeholder="请输入您的手机号">
-                    <input type="password" id="user_passwd" placeholder="请输入密码">
-                    <p>您输入的账号或密码不正确</p>
+                    <input type="tel" id="user_tel" placeholder="请输入您的手机号" maxlength="11" name="tel">
+                    <em></em>
+                    <input type="password" id="user_passwd" placeholder="请输入密码" maxlength="20" name="password">
+                    <em></em>
                     <input type="submit" value="登录">
                     <span class="forget_password"><a href="#">忘记密码?</a></span>
-                    <span class="reg_account">还没有账号?<a href="#"> 点击注册</a></span>
+                    <span class="reg_account">还没有账号?<a href="./reg.html"> 点击注册</a></span>
                 </div>
             </form>
         </div>
@@ -44,5 +44,6 @@
             </div>
         </div>
     </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>

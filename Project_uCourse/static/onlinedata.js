@@ -87,7 +87,7 @@ var online = [{
     num: 1100,
     city: 'bj',
     level: 1,
-    subject: '化学'
+    subject: 'huaxue'
 }, {
     title: '人教版生物第一节课程内容讲解',
     src: '../img/online/banner2-4.png',
@@ -127,7 +127,7 @@ var online = [{
     num: 1100,
     city: 'bj',
     level: 1,
-    subject: '化学'
+    subject: 'huaxue'
 }, {
     title: '人教版生物第一节课程内容讲解',
     src: '../img/online/banner2-4.png',
@@ -147,7 +147,7 @@ var online = [{
     num: 1100,
     city: 'bj',
     level: 1,
-    subject: '化学'
+    subject: 'huaxue'
 }, {
     title: '人教版生物第一节课程内容讲解',
     src: '../img/online/banner2-4.png',
@@ -197,7 +197,7 @@ var online = [{
     num: 1100,
     city: 'bj',
     level: 1,
-    subject: '化学'
+    subject: 'huaxue'
 }, {
     title: '人教版生物第一节课程内容讲解',
     src: '../img/online/banner2-4.png',
@@ -257,7 +257,7 @@ var online = [{
     num: 1100,
     city: 'bj',
     level: 1,
-    subject: '化学'
+    subject: 'huaxue'
 }, {
     title: '人教版生物第一节课程内容讲解',
     src: '../img/online/banner2-4.png',

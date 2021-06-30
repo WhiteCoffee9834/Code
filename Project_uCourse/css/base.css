@@ -2,50 +2,88 @@
 body {
     font: 12px/1.5 "Microsoft YaHei";
 }
-a{
+
+body::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 20px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background-color: skyblue;
+    background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent);
+}
+
+body::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #ededed;
+    border-radius: 10px;
+}
+
+a {
     color: #74C6B3;
     font-size: 12px;
 }
-.wrapper-1180{
+
+.wrapper-1180 {
     width: 1180px;
-    margin:0 auto;
+    margin: 0 auto;
 }
-.background-image-fixed .vcb-left{
+
+.background-image-fixed .vcb-left {
     position: fixed;
     left: calc(50% - 590px - 260px);
     top: 40%;
     transform: translateY(-50%);
 }
-.background-image-fixed .vcb-right{
+
+.background-image-fixed .vcb-right {
     position: fixed;
     right: calc(50% - 590px - 259px);
     top: 40%;
     transform: translateY(-50%);
 }
+
 /* 顶部导航样式开始 */
-.nav-head{
+.nav-head {
     width: 100%;
     height: 80px;
     background-color: #fff;
     box-shadow: 0 2px 4px 2px rgba(0, 0, 0, .2);
 }
-.nav-head-wrapper{
+
+.nav-head-wrapper {
     width: 1180px;
     margin: 0 auto;
 }
-.nav-head i a img{
+
+.nav-head i a img {
     margin-top: 14px;
     height: 40px;
 }
+
 .nav-head .nav-ul,
-.nav-head .nav-ul li{
+.nav-head .nav-ul li {
     float: left;
     margin-right: 20px;
 }
-.nav-head .nav-ul li:first-child{
+
+.nav-head .nav-ul li:first-child {
     margin-left: 120px;
 }
-.nav-head .nav-ul li a{
+
+.nav-head .nav-ul li a {
     display: block;
 
     height: 80px;
@@ -55,25 +93,30 @@ a{
     color: #000;
     font-size: 16px;
 }
-.nav-head .nav-ul li a::before{
+
+.nav-head .nav-ul li a::before {
     content: "";
     height: 100%;
     display: inline-block;
     vertical-align: middle;
 }
-.nav-head .nav-ul li .nav-active{
+
+.nav-head .nav-ul li .nav-active {
     background-color: #80C4AE;
     color: #fff;
 }
-.nav-head .nav-ul li:hover{
+
+.nav-head .nav-ul li:hover {
     background-color: #80C4AE;
     color: #fff;
 }
-.search-wrapper-relative{
+
+.search-wrapper-relative {
     position: relative;
     margin-top: 22px;
 }
-.search-wrapper-relative .class-select-relative{
+
+.search-wrapper-relative .class-select-relative {
     position: relative;
 
     width: 70px;
@@ -86,7 +129,8 @@ a{
     text-align: center;
     line-height: 34px;
 }
-.search-wrapper-relative .class-select-relative .triangle-down{
+
+.search-wrapper-relative .class-select-relative .triangle-down {
     position: absolute;
     top: 15px;
     right: 6px;
@@ -95,9 +139,10 @@ a{
     height: 0;
     border: 5px solid transparent;
     border-top-color: #80C4AE;
-    border-bottom: none; 
+    border-bottom: none;
 }
-.search-wrapper-relative input{
+
+.search-wrapper-relative input {
     height: 36px;
     width: 210px;
     box-sizing: border-box;
@@ -108,32 +153,38 @@ a{
 
     outline: none;
 }
-.search-wrapper-relative i{
+
+.search-wrapper-relative i {
     position: absolute;
     right: 8px;
     top: 8px;
 }
-.search-wrapper-relative i img{
+
+.search-wrapper-relative i img {
     width: 20px;
     height: 20px;
 }
+
 .search-wrapper-relative .login-reg,
-.search-wrapper-relative .login-reg a{
+.search-wrapper-relative .login-reg a {
     display: inline-block;
 
     color: #000;
     font-size: 14px;
 }
-.search-wrapper-relative .login-reg{
+
+.search-wrapper-relative .login-reg {
     margin-left: 24px;
 }
+
 /* TODO 用户登录后才显示 */
-.user-avatar-relative{
+.user-avatar-relative {
     position: relative;
     height: 80px;
 
 }
-.user-avatar-relative .avatar-wrapper{
+
+.user-avatar-relative .avatar-wrapper {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -141,11 +192,13 @@ a{
     margin-left: 37px;
     overflow: hidden;
 }
-.user-avatar-relative .avatar-wrapper img{
+
+.user-avatar-relative .avatar-wrapper img {
     width: 40px;
     height: 40px;
 }
-.user-avatar-relative .user-option{
+
+.user-avatar-relative .user-option {
     position: absolute;
     top: 70px;
     left: -30px;
@@ -158,10 +211,12 @@ a{
 
     z-index: 20;
 }
-.user-avatar-relative:hover .user-option{
+
+.user-avatar-relative:hover .user-option {
     display: block;
 }
-.user-avatar-relative .user-option::before{
+
+.user-avatar-relative .user-option::before {
     content: "";
     position: absolute;
     top: -10px;
@@ -172,42 +227,50 @@ a{
     border-bottom-color: pink;
     border-top: 0;
 }
-.user-option .user-option-ul li{
+
+.user-option .user-option-ul li {
     width: 100%;
     height: 40px;
     text-align: center;
     line-height: 40px;
 }
-.user-option .user-option-ul li:hover{
+
+.user-option .user-option-ul li:hover {
     background-color: #74C6B3;
 }
-.user-option .user-option-ul li a{
+
+.user-option .user-option-ul li a {
     display: block;
     color: #000;
     font-size: 14px;
 }
-.user-option .user-option-ul li:first-child{
+
+.user-option .user-option-ul li:first-child {
     font-weight: bold;
     height: 50px;
     line-height: 50px;
 }
-.user-option .user-option-ul li:last-child{
+
+.user-option .user-option-ul li:last-child {
     height: 50px;
     line-height: 50px;
 }
-.user-option .user-option-ul li:last-child a{
+
+.user-option .user-option-ul li:last-child a {
     color: #8b8b8b;
 }
+
 /* 顶部导航样式结束 */
 
 /* 尾部样式开始 */
-.index-footer{
+.index-footer {
     height: 264px;
     width: 100%;
     background-color: #333333;
     margin-top: 36px;
 }
-.index-footer .footer-core{
+
+.index-footer .footer-core {
     width: 1153px;
     height: 90px;
     margin: 87px auto;
@@ -216,10 +279,11 @@ a{
     text-align: center;
     font-size: 14px;
 }
+
 /* 尾部样式结束 */
 
 /* 登录注册通用样式表开始 */
-.mask{
+.mask {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .6);
@@ -229,8 +293,9 @@ a{
 
     z-index: 1;
 }
+
 /* 整体登录容器,垂直水平居中 */
-.login_wrapper{
+.login_wrapper {
     width: 480px;
     height: 482px;
     background-color: #fff;
@@ -246,25 +311,29 @@ a{
 
     z-index: 2;
 }
+
 /* 关闭按钮 */
-.shutdown{
+.shutdown {
     float: right;
 }
+
 /* logo容器 */
-.logo_wrapper{
+.logo_wrapper {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 10px;
 }
+
 /* 文字居中对齐 */
 .login_content p,
-.login_footer p{
+.login_footer p {
     font-size: 18px;
     text-align: center;
 }
+
 /* 设置文字的左右两边的横线样式 */
-.login_content > p::before,
-.login_content > p::after{
+.login_content>p::before,
+.login_content>p::after {
     content: "";
     display: inline-block;
     width: 134px;
@@ -273,28 +342,33 @@ a{
     position: relative;
     bottom: 6px;
 }
-.login_content > p::before{
+
+.login_content>p::before {
     right: 36px;
 }
-.login_content > p::after{
+
+.login_content>p::after {
     left: 36px;
 }
+
 /* 登录注册通用样式表结束 */
 
 /* subnav样式开始 */
-.subnav-tips{
+.subnav-tips {
     height: 60px;
 
     line-height: 60px;
     word-spacing: 10px;
     font-size: 14px;
 }
-.subnav-tips span b{
+
+.subnav-tips span b {
     color: #666;
 }
+
 /* subnav样式结束 */
 /* 主体小导航开始 */
-.class-content-head{
+.class-content-head {
     height: 66px;
     width: 100%;
     background-color: #fff;
@@ -303,17 +377,20 @@ a{
     font-size: 0;
     text-align: center;
 }
-.class-content-head p{
+
+.class-content-head p {
     display: inline-block;
     width: 80px;
     height: 66px;
     margin-right: 20px;
-    
+
     font-size: 14px;
     line-height: 66px;
     cursor: pointer;
 }
-.class-content-head p:hover{
+
+.class-content-head p:hover {
     background-color: #80C4AE;
 }
+
 /* 主体小导航结束 */
