@@ -1,0 +1,16 @@
+<script>
+    $("input") //选中所有input
+    $(":input") //选中所有表单类型元素
+    $(":text") //选中所有文本输入框
+    $(":password") //选中所有密码输入框
+    $(":radio") //选中所有单选框
+    $(":checkbox") //选中所有复选框
+    $(":textarea") //选中所有文本域
+    $(":checkbox:checked") //选中所有已经选中的复选框
+    //每次点击复选框都检查是否已经全部选中
+    $(":checkbox").click(function () {
+        if ($(":checkbox:checked").length == $(":checked").length) {
+            console.log("已全部选中")
+        }
+    })
+</script>

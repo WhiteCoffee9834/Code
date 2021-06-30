@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery选项卡</title>
+    <style>
+        .wrap{
+            width: 320px;
+            height: 350px;
+            margin: 100px auto;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            background-color: cornflowerblue;
+            font-size: 24px;
+            color: #fff;
+        }
+        p{
+            width: 310px;
+            height: 290px;
+            border: 2px solid mediumaquamarine;
+            font:18px/30px "Microsoft YaHei";
+            display:none
+        }
+
+        .active-bgc{
+            background-color: mediumaquamarine;
+        }
+        .active-block{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <button class="active-bgc">美食</button>
+            <button>百货</button>
+            <button>个护</button>
+        </div>
+        <div>
+            <p class="active-block">
+                香蕉
+            </p>
+            <p>
+                洒水器
+            </p>
+            <p>
+                牙膏
+            </p>
+        </div>
+    </div>
+    <script src="./jquery.js"></script>
+    <script>
+        $("button").click(function(){
+            $("p").eq($(this).index()).css("display","block").siblings("p").css("display","none")
+            $(this).css("background-color","mediumaquamarine").siblings().css("background-color","cornflowerblue")
+        })
+    </script>
+</body>
+</html>
