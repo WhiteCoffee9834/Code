@@ -94,8 +94,7 @@
     <script src="./jquery.js"></script>
     <script>
         $("div").click(function(){
-        //    $(this > "span").css("display","block")
-            console.log($(this))
+           $(this).find("span").toggleClass("appear")
         })
     </script>
 </body>
