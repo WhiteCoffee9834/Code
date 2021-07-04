@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>价格计算</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+</head>
+
+<body>
+    <p><input type="button" class="all" value="全选"> <input type="button" class="reverse" value="反选"></p>
+    <ul>
+        <li>
+            <input type="checkbox">商品1 单价：<span class="price">15.00</span>
+            <button class="reduce">-</button>
+            <input type="text" value="0">
+            <button class="add">+</button>
+            小计：<span class="sum">0</span>
+        </li>
+        <li>
+            <input type="checkbox">商品2 单价：<span class="price">10.90</span>
+            <button class="reduce">-</button>
+            <input type="text" value="0">
+            <button class="add">+</button>
+            小计：<span class="sum">0</span>
+        </li>
+        <li>
+            <input type="checkbox">商品3 单价：<span class="price">23.80</span>
+            <button class="reduce">-</button>
+            <input type="text" value="0">
+            <button class="add">+</button>
+            小计：<span class="sum">0</span>
+        </li>
+        <li>
+            <input type="checkbox">商品4 单价：<span class="price">3.99</span>
+            <button class="reduce">-</button>
+            <input type="text" value="0">
+            <button class="add">+</button>
+            小计：<span class="sum">0</span>
+        </li>
+        <li>
+            <input type="checkbox">商品5 单价：<span class="price">19.90</span>
+            <button class="reduce">-</button>
+            <input type="text" value="0">
+            <button class="add">+</button>
+            小计：<span class="sum">0</span>
+        </li>
+        <li>
+            <input type="checkbox">商品6 单价：<span class="price">49.99</span>
+            <button class="reduce">-</button>
+            <input type="text" value="0">
+            <button class="add">+</button>
+            小计：<span class="sum">0</span>
+        </li>
+    </ul>
+    <p>一共：<span class="count">0</span>件，总计：<span class="money">0</span>元</p>
+
+    <script>
+        $(".add").each(function (index, item) {
+            $(item).click(function () {
+                var count = $(this).prev().val()
+                count++
+                $(this).prev().val(count)
+                var sum = ($(this).prevAll(".price").html()) * count
+                $(this).next().html(sum.toFixed(2))
+                calc()
+            })
+        })
+        $(".reduce").each(function (index, item) {
+            $(item).click(function () {
+                var count = $(this).next().val()
+                count--
+                if (count <= 0) count = 0
+                $(this).next().val(count)
+                var sum = ($(this).prev().html()) * count
+                $(this).nextAll(".sum").html(sum.toFixed(2))
+                calc()
+            })
+        })
+        $(".all").click(function () {
+            $(":checkbox").prop("checked", true)
+            calc()
+        })
+        $(".reverse").click(function () {
+            $(":checkbox").each(function (index, item) {
+                /*  if ($(this).prop("checked")) {
+                     $(this).prop("checked", false)
+                 } else {
+                     $(this).prop("checked", true)
+                 } */
+                $(item).prop("checked", !$(item).prop("checked"))
+            })
+            calc()
+        })
+        $(":checkbox").click(calc)
+
+        function calc() {
+            var allNum = 0
+            var allSum = 0
+            $(":checkbox").each(function (index, item) {
+                if ($(item).prop("checked") == true) {
+                    var n = $(item).nextAll(":text").val()
+                    allNum += parseInt(n)
+                    var z = $(item).nextAll(".sum").html()
+                    allSum += parseFloat(z)
+                }
+            })
+            $(".count").html(allNum)
+            $(".money").html(allSum.toFixed(2))
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery表格增删项目</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 600px;
+            margin: 50px auto;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 22px;
+        }
+
+        section p {
+            margin-bottom: 20px;
+        }
+
+        section p:last-child button {
+            float: right;
+        }
+
+        section input:not([type="radio"]):not([type="checkbox"]) {
+            width: 300px;
+            height: 40px;
+            border: 2px solid #ccc;
+            outline: none;
+            font-size: 22px;
+            padding-left: 20px;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        main {
+            width: 600px;
+            margin: 50px auto;
+        }
+
+        main button {
+            float: right;
+            margin-top: 60px;
+        }
+
+        main table {
+            border-spacing: 0;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            width: 100%;
+            font-size: 22px;
+        }
+
+        main table tr {
+            height: 60px;
+        }
+
+        main table td,
+        main table th {
+            text-align: center;
+            border-right: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+        }
+
+        main table td:last-child,
+        main table th:last-child {
+            border-right: 0;
+        }
+
+        main table tr:last-child {
+            border-bottom: 0;
+        }
+
+        main table tr:last-child td {
+            border-bottom: 0;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+    <section>
+        <p>
+            请输入姓名:
+            <input type="text">
+        </p>
+        <p>
+            请选择性别:
+            <label><input type="radio" name=sex value="男">男</label>
+            <label><input type="radio" name=sex value="女">女</label>
+        </p>
+        <p>
+            请输入年龄:
+            <input type="number" step="2">
+            <button id="print">Print</button>
+        </p>
+
+    </section>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="selectAll">
+                        全选
+                    </th>
+                    <th>
+                        姓名
+                    </th>
+                    <th>
+                        性别
+                    </th>
+                    <th>
+                        年龄
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <button id="del">删除所选</button>
+    </main>
+    <script>
+        $("#print").click(function () {
+            $("tbody").append('<tr><td><input type="checkbox"></td><td>' + $(":input:eq(0)").val() +
+                '</td><td>' + $(":radio:checked").val() + '</td><td>' + $(":input:eq(3)").val() +
+                '</td></tr>')
+            $("tbody :checkbox").each(function (index, item) {
+                $(item).on("click", function () {
+                    if ($(item).prop("checked") == true) {
+                        $("thead :checkbox").prop("checked", true)
+                    }
+                })
+            })
+        })
+        $("#del").click(function () {
+            $("tbody :checkbox:checked").parents("tr").remove()
+        })
+    </script>
+</body>
+
+</html>

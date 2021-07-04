@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        $("div").mousedown(function (event) {
+
+            var x = event.clientX - $(this).offset().left
+            var y = event.clientY - $(this).offset().top
+
+            if (event.which == 3) {
+                console.log(this)
+                $(this).detach()
+            }
+            if (event.which == 1) {
+                var newDiv = $(this).clone(true).appendTo("body")
+
+                newDiv.css({
+                    position: "absolute",
+                    left: event.clientX - x,
+                    top: event.clientY - y
+                })
+
+                $(document).mousemove(function (event) {
+                    newDiv.css({
+                        left: event.clientX - x,
+                        top: event.clientY - y
+                    })
+                })
+                $(document).mouseup(function () {
+                    $(document).off("mousemove")
+                })
+            }
+        })
+        $(document).contextmenu(function (event) {
+            event.preventDefault()
+        })
+    </script>
+</body>
+
+</html>

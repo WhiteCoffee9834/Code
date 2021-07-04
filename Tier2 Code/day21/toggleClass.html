@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-weight: normal;
+        }
+
+        #list {
+            width: 300px;
+            margin: 50px auto;
+            cursor: pointer;
+        }
+
+        #list h4 {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background: pink;
+        }
+
+        #list img {
+            margin: 0 5px;
+        }
+
+        #list ul {
+            display: none;
+        }
+
+        #list .active {
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+    <ul id="list">
+        <li>
+            <h4><img src="./img/ico1.gif" alt="">亲人</h4>
+            <ul>
+                <li>爸爸</li>
+                <li>妈妈</li>
+                <li>姐姐</li>
+                <li>弟弟</li>
+            </ul>
+        </li>
+        <li>
+            <h4><img src="./img/ico1.gif" alt="">朋友</h4>
+            <ul>
+                <li>马化腾</li>
+                <li>马云</li>
+                <li>王思聪</li>
+                <li>王健林</li>
+                <li>刘强东</li>
+            </ul>
+        </li>
+        <li>
+            <h4><img src="./img/ico1.gif" alt="">同学</h4>
+            <ul>
+                <li>乔碧萝</li>
+                <li>吴亦凡</li>
+                <li>蔡徐坤</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $("h4").click(function(){
+            $(this).next().toggleClass("active")
+        })
+    </script>
+</body>
+
+</html>

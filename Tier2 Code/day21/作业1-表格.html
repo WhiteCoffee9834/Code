@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: grid;
+            grid-template-rows: repeat(8, 40px);
+            grid-template-columns: repeat(5, 120px);
+        }
+
+        aside {
+            /* grid-area: <row-start> / <column-start> / <row-end> / <column-end>; */
+            grid-area: 1 / 1 / 9 / 2;
+            background-color: plum;
+        }
+
+        aside p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 25%;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        section {
+            grid-area: 1 / 2 / 8 / 6;
+            background-color: rebeccapurple;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 60px;
+            font-weight: bold;
+            color: pink;
+        }
+
+        footer {
+            grid-area: 8 / 2 / 9 / 6;
+            background-color: red;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        footer p {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+    <main>
+        <aside>
+            <p class="a">
+                A
+            </p>
+            <p class="b">
+                B
+            </p>
+            <p class="c">
+                C
+            </p>
+            <p class="d">
+                D
+            </p>
+        </aside>
+        <section>
+
+        </section>
+        <footer>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </footer>
+    </main>
+    <script>
+        $("aside p").mouseenter(function (event) {
+            $("footer p ").html("")
+            $("footer p ").eq(0).html(($(this).attr("class")) + 1)
+            $("footer p ").eq(1).html(($(this).attr("class")) + 2)
+            $("footer p ").eq(2).html(($(this).attr("class")) + 3)
+            $("footer p ").eq(3).html(($(this).attr("class")) + 4)
+
+            $("section").html($("footer p").eq($(this).index()).html())
+        })
+        $("footer p").mouseenter(function () {
+            $("section").html("")
+            $("section").html($(this).html())
+        })
+    </script>
+</body>
+
+</html>
