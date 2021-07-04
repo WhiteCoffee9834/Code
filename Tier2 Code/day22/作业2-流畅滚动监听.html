@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流畅滚动监听</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        div {
+            height: 1000px;
+        }
+
+        ul {
+            position: fixed;
+            right: 50px;
+            top: 100px;
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+
+        ul li {
+            height: 30px;
+            border-bottom: 1px solid cadetblue;
+        }
+
+        ul .active a {
+            color: red
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li class="active"><a href="#div1">新闻一</a></li>
+        <li><a href="#div2">新闻二</a></li>
+        <li><a href="#div3">新闻三</a></li>
+        <li><a href="#div4">新闻四</a></li>
+    </ul>
+    <div style="background: rosybrown" id="div1"></div>
+    <div style="background: #99CCFF" id="div2"></div>
+    <div style="background: #ffffcc" id="div3"></div>
+    <div style="background: salmon" id="div4"></div>
+    <script>
+        //监听滚动
+        $(window).scroll(function () {
+            $("div").each(function (index, item) {
+                if ($(window).scrollTop() >= $(item).offset().top) {
+                    $("li").eq(index).addClass("active").siblings().removeClass("active")
+                }
+            })
+        })
+        //滚动动画
+        $("li").click(function(){
+            if($(this).index() == 0) $(document.documentElement).animate({"scrollTop":0})
+            if($(this).index() == 1) $(document.documentElement).animate({"scrollTop":1000})
+            if($(this).index() == 2) $(document.documentElement).animate({"scrollTop":2000})
+            if($(this).index() == 3) $(document.documentElement).animate({"scrollTop":3000})
+            console.log($(this).index())
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手风琴</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #content {
+            width: 400px;
+            margin: 50px auto;
+        }
+
+        #content dl {
+            float: left;
+        }
+
+        #content dt {
+            float: left;
+            width: 20px;
+            height: 155px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+
+        #content dd {
+            float: left;
+            width: 0px;
+            overflow: hidden;
+        }
+    </style>
+
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+</head>
+
+<body>
+    <div id="content">
+        <dl>
+            <dt style="background: #303">第一幅图的展示效果</dt>
+            <dd style="width: 295px;"><img src="img/1.jpg" width="295" height="165"></dd>
+        </dl>
+        <dl>
+            <dt style="background: #F0F">第二幅图的展示效果</dt>
+            <dd><img src="img/2.jpg" width="295" height="165"></dd>
+        </dl>
+        <dl>
+            <dt style="background: #903">第三幅图的展示效果</dt>
+            <dd><img src="img/3.jpg" width="295" height="165"></dd>
+        </dl>
+        <dl>
+            <dt style="background: #F00">第四幅图的展示效果</dt>
+            <dd><img src="img/4.jpg" width="295" height="165"></dd>
+        </dl>
+    </div>
+
+    <script>
+        $("dt").click(function(){
+            $(this).next().animate({"width":295},1000)
+            $(this).parents("dl").nextAll().children("dd").animate({"width":0},1000)
+            $(this).parents("dl").prevAll().children("dd").animate({"width":0},1000)
+        })
+    </script>
+</body>
+
+</html>

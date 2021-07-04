@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按住ctrl多选</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        section {
+            float: left;
+            margin-right: 50px;
+        }
+
+        input {
+            width: 400px;
+            height: 40px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding-left: 20px;
+            box-sizing: border-box;
+
+            outline: none;
+            font-size: 20px;
+        }
+
+        ul {
+            list-style: none;
+            display: none;
+        }
+
+        li {
+            height: 40px;
+            font-size: 20px;
+            padding-left: 20px;
+            line-height: 40px;
+        }
+
+        li:not(li[class*=brown]):hover {
+            background-color: pink;
+        }
+
+        .brown {
+            background-color: brown;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+    <section>
+        <input type="text" readonly>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+            <li>PHP</li>
+        </ul>
+    </section>
+    <section>
+        <input type="text" readonly>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+            <li>PHP</li>
+        </ul>
+    </section>
+    <script>
+        $("input").click(function (event) {
+            $(this).next().show()
+            event.stopPropagation()
+        })
+        $(document).click(function () {
+            $("ul").hide()
+        })
+        $("li").click(function (event) {
+            event.stopPropagation()
+            if (event.ctrlKey) {
+                $(this).parent().prev().val($(this).parent().prev().val() + $(this).html())
+                $(this).addClass("brown")
+            } else {
+                $(this).parent().prev().val($(this).html())
+                $(this).addClass("brown").siblings().removeClass("brown")
+            }
+        })
+    </script>
+</body>
+
+</html>
