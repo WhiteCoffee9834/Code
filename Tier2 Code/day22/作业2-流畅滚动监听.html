@@ -59,12 +59,8 @@
             })
         })
         //滚动动画
-        $("li").click(function(){
-            if($(this).index() == 0) $(document.documentElement).animate({"scrollTop":0})
-            if($(this).index() == 1) $(document.documentElement).animate({"scrollTop":1000})
-            if($(this).index() == 2) $(document.documentElement).animate({"scrollTop":2000})
-            if($(this).index() == 3) $(document.documentElement).animate({"scrollTop":3000})
-            console.log($(this).index())
+        $("a").click(function(){
+            $("html").animate({"scrollTop":$("div").eq($(this).parent().index()).offset().top})
         })
     </script>
 </body>
