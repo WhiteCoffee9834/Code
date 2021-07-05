@@ -18,12 +18,13 @@
                 this.wow()
             }
         }
+
         function MadDog() {
             Dog.call(this)
-            var that = this
             this.yelp = function () {
                 setInterval(() => {
-                    that.wow()
+                    //使用箭头函数让MadDog与定时器共享一个this
+                    this.wow()
                 }, 1000);
             }
         }
