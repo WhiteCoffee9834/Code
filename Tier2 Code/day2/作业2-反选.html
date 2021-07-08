@@ -9,13 +9,21 @@
 <body>
     <input type="checkbox">
     <button>反选</button>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    
     <script>
-        var input = document.getElementsByTagName("input")[0]
+        /* var input = document.getElementsByTagName("input")[0]
         var button = document.getElementsByTagName("button")[0]
         button.onclick = function(){
         input.checked == true ? input.checked=false : input.checked=true
         console.log(input.checked)
-        }
+        } */
+        var n = true
+        $("button").on("click",function(){
+           $(this).prev().prop("checked",n)
+           n = !n
+        })
     </script>
 </body>
 </html>
