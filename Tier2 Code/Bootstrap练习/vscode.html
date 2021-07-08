@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>vscode</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./vscode.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navWrapper navbar-fixed-top">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Visual Studio Code</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Docs<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Updates</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Extensions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Learn</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control searchBar" placeholder="Search Docs">
+                        </div>
+                        <button type="submit" class="btn btn-default downloadButton">Download</button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+    <section class="versionUpdateBar">
+        <span>
+            <a href="javascript:;">Version 1.57</a>
+            is now available! Read about the new features and fixes from May.
+        </span>
+    </section>
+    <main role="main" id="main-content">
+        <div class="jumbotron home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 copy">
+                        <h1>
+                            Code editing. Redefined.
+                        </h1>
+                        <p>
+                            Free. Built on open source. Runs everywhere.
+                        </p>
+                        <div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-lg btn-primary">
+                                    Download for Windows
+                                    <small>Stable Build</small>
+                                </button>
+                                <button type="button" class="btn btn-lg btn-primary dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <table class="dropdown-menu downloadTable">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Stable</td>
+                                        <td>Insiders</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            macos
+                                        </td>
+                                        <td>
+                                            Universal
+                                        </td>
+                                        <td>Down</td>
+                                        <td>Down</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Windows X64
+                                        </td>
+                                        <td>
+                                            User Installer
+                                        </td>
+                                        <td>Down</td>
+                                        <td>Down</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Linux x64
+                                        </td>
+                                        <td>
+                                            .deb .rpm
+                                        </td>
+                                        <td>Down</td>
+                                        <td>Down</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            Other downloads
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p class="subtext text-center">
+                                <a>Other platforms</a>and<a>Insiders Edition</a>
+                            </p>
+                            <p class="terms text-center">
+                                By using VS Code, you agree to its
+                                <span>License and privacy statement.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="screenshot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="value-props">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <span>Intellisense</span>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <span>Run and Debug</span>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <span>Built-in Git</span>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <span>Extensions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swimlane-container">
+            <div class="swimlane social-proof">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="./img/p1.png" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="./img/p2.png" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                                    data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                                    data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="meet-intellisense" class="swimlane">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7 col-sm-push-1">
+                            <h2>Meet Intellisense</h2>
+                            <p>
+                                Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="powerful-debugging">
+                
+            </div>
+        </div>
+    </main>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="./jquery-3.6.0.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="./bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+</body>
+
+</html>
