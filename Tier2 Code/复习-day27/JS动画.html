@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS动画</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 100px;
+            height: 230px;
+            background-color: #bfc;
+        }
+
+        section {
+            width: 300px;
+            height: 100px;
+            background-color: burlywood;
+            margin-top: 30px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        可拖动滑块
+    </div>
+    <section></section>
+    <section></section>
+    <script>
+        var block
+        var left
+        var x
+        var y
+        block = document.querySelector("div")
+        block.onmousedown = () => {
+            left = event.clientX - block.offsetLeft
+            var top = event.clientY - block.offsetTop
+
+            document.onmousemove = () => {
+                x = event.clientX - left
+                y = event.clientY - top
+
+                block.style.left = x + "px"
+                block.style.top = y + "px"
+            }
+            return false
+        }
+        document.onmouseup = () => {
+            document.onmousemove = null
+        }
+        var section = document.querySelectorAll("section")
+        section.forEach(function (item, index) {
+            item.onclick = function () {
+                bufferMove(this, {
+                    "width": 500,
+                    "height": 500,
+                    "opacity": 0.3
+                })
+            }
+        })
+
+        function bufferMove(el, props) {
+            var timer = null
+            clearInterval(el, timer)
+            el.timer = setInterval(() => {
+                var tag = true
+                for (var attr in props) {
+                    if (attr == "opacity") {
+                        props[attr] = props[attr] < 1 ? props[attr] * 100 : props[attr]
+                        var current = parseInt(getStyle(el, attr) * 100)
+                    } else {
+                        var current = parseInt(getStyle(el, attr))
+                    }
+                    var speed = (props[attr] - current) / 10
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed)
+                    current += speed
+                    if (current != props[attr]) {
+                        tag = false
+                    }
+                    if (attr == "opacity") {
+                        el.style.opacity = current / 100
+                    } else {
+                        el.style[attr] = current + "px"
+                    }
+                }
+                if (tag == true) {
+                    clearInterval(el.timer)
+                }
+            }, 30);
+        }
+
+        function getStyle(el, attr) {
+            return el.currentStyle ? el.currentStyle[attr] : getComputedStyle(el)[attr]
+        }
+    </script>
+</body>
+
+</html>

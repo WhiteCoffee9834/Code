@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var targetDate = new Date("2022-01-01")
+
+        var date
+        var all
+        var day
+        var hours
+        var minutes
+        var seconds
+
+        countDown = () => {
+            date = new Date()
+            all = Math.floor((targetDate - date) / 1000)
+            day = parseInt(all / 86400)
+            hours = parseInt(all % 86400 / 3600)
+            minutes = parseInt(all % 3600 / 60)
+            seconds = parseInt(all % 60)
+            document.body.innerText = "距离2022年还剩余:" + addZero(day) + "天" + addZero(hours) + "时" + addZero(minutes) +
+                "分" + addZero(seconds) + "秒"
+        }
+        addZero = num => {
+            return num < 10 ? "0" + num : num
+        }
+
+        countDown()
+        setInterval(countDown, 1000);
+    </script>
+</body>
+
+</html>
