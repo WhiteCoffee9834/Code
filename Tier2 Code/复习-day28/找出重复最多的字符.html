@@ -7,8 +7,8 @@
     var object = {}
     for (var i = 0; i < string.length; i++) {
         console.log(object[string[i]])
-        if (!object[string[i]]) { //如果没有对应字符的键名
-            object[string[i]] = 1 //则存储该键名并赋值为1
+        if (!object[string[i]]) { //如果没有对应字符的键值
+            object[string[i]] = 1 //则存储该键值对并赋值为1
         } else {
             object[string[i]]++ //如果有对应字符的键名,则自加,增加次数
         }
