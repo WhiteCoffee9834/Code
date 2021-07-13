@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小U课堂-个人中心</title>
+    <link rel="stylesheet" href="../css/resetcss.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/personInfo.css">
+</head>
+
+<body>
+    <div class="background-image-fixed">
+        <img src="../img/VCB-left.png" alt="" class="vcb-left">
+        <img src="../img/VCB-right.png" alt="" class="vcb-right">
+    </div>
+    <div class="subnav">
+        <div class="mytest">
+            <img src="../img/index/mytest.png" alt="">
+        </div>
+        <div class="myclass">
+            <img src="../img/index/mylesson.png" alt="">
+        </div>
+        <div class="pagetop">
+            <img src="../img/index/gotop.png" alt="">
+        </div>
+    </div>
+    <nav class="nav-head">
+        <div class="nav-head-wrapper clearfix">
+            <i class="fl">
+                <a href="../index.html">
+                    <img src="../img/index/logo.png" alt="">
+                </a>
+            </i>
+            <ul class="clearfix nav-ul">
+                <li>
+                    <a href="../index.html" class="nav-active">首页</a>
+                </li>
+                <li>
+                    <a href="#">同步课程</a>
+                </li>
+                <li>
+                    <a href="#">在线练习</a>
+                </li>
+                <li>
+                    <a href="#">精品课程</a>
+                </li>
+            </ul>
+            <div class="search-wrapper-relative fl">
+                <div class="class-select-relative fl">
+                    <span>课程</span>
+                    <i class="triangle-down"></i>
+                </div>
+                <input type="text" placeholder="搜索感兴趣的内容">
+                <i>
+                    <img src="../img/index/search.png" alt="">
+                </i>
+            </div>
+            <!-- TODO 登录后消失 -->
+            <div class="login-reg" style="display: none;">
+                <a href="./login.html">登录</a>
+                /
+                <a href="./reg.html">注册</a>
+            </div>
+            <!-- 用户登录后头像 -->
+            <div class="user-avatar-relative fl">
+                <div class="avatar-wrapper">
+                    <img src="../img/login/user.png" alt="">
+                </div>
+                <div class="user-option">
+                    <ul class="user-option-ul clearfix">
+                        <li>
+                            <a href="#">
+                                我是用户名
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                课程中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                订单中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                资金管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                个人中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="wrapper-1180">
+        <aside>
+            <p>
+                课程中心
+                <i class="triangle-down"></i>
+            </p>
+            <ul>
+                <li>我的课程</li>
+                <li>我的练习</li>
+            </ul>
+            <p>
+                订单中心
+                <i class="triangle-down"></i>
+            </p>
+            <ul>
+                <li>我的订单</li>
+            </ul>
+            <p>
+                资金管理
+                <i class="triangle-down"></i>
+            </p>
+            <ul>
+                <li>我的钱包</li>
+                <li>优惠券</li>
+            </ul>
+            <p>
+                个人中心
+                <i class="triangle-down"></i>
+            </p>
+            <ul>
+                <li>用户设置</li>
+                <li>我的消息</li>
+                <li>我的评价</li>
+            </ul>
+        </aside>
+        <article>
+            <div class="subnav-tips">
+                <span>
+                    首页 > 在线练习 > <b>练习详情</b>
+                </span>
+            </div>
+            <div class="tab">
+                <span class="active">学员档案</span><span>安全设置</span>
+            </div>
+            <section>
+                <ul class="user-info-setting">
+                    <li>
+                        <div>
+                            <span>头像</span>
+                            <img src="../img/login/user.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>真实姓名</span>
+                            <input type="text" placeholder="方便老师联系你,只能修改一次哦~">
+                        </div>
+                        <div>
+                            <span>昵称</span>
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>学员性别</span>
+                            <label><input type="radio">男</label>
+                            <label><input type="radio">女</label>
+                        </div>
+                        <div>
+                            <span>生日</span>
+                            <input type="month">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>联系方式</span>
+                            <span>157****8989</span>
+                            <b>修改手机号请到[安全设置]</b>
+                        </div>
+                        <div>
+                            <span>所在城市</span>
+                            <p class="select">省份</p>
+                        </div>
+                        <ul>
+                            <li>江西省</li>
+                            <li>安徽省</li>
+                            <li>河南省</li>
+                            <li>河北省</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <span>学习阶段</span>
+                            <p class="select"></p>
+                            <b>编辑学习阶段与兴趣标签,获得更好的课程推荐</b>
+                        </div>
+                        <ul>
+                            <li>第一阶段</li>
+                            <li>第二阶段</li>
+                            <li>第三阶段</li>
+                            <li>第四阶段</li>
+                            <li>第五阶段</li>
+                            <li>第六阶段</li>
+                        </ul>
+                        <button>保存</button>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer class="index-footer clearfix">
+        <div class="footer-core">
+            <p>
+                首页 | 关于我们 | 加入我们 | 合作专区 | 联系我们 | AI开放平台 | 意见反馈 | 漏洞提交 | 隐私政策 | 版权声明 | 反盗链声明 | 网上有害信息举报 | 备案公示 | 营业执照 |
+                教师资格证公示
+            </p>
+            <p>
+                京ICP备 13030888号 Copyright © 2014-2019 行者信息科技（北京）有限公司 | 地址：北京市新华区马当路388号C座 | 电话：010-66666666 | 京公网安备
+                01010102002533号
+            </p>
+            <p>
+                京网文〔2018〕4086-308号 | 网络文化经营许可证：沪网文[2018]4086-308号 | 增值电信业务经营许可证：京B2-20150021 | 食品经营许可证：JY13101140088888
+            </p>
+            <p>
+                医疗器械经营许可证：京嘉食药监械经营许20188008号 | 互联网药品信息服务资格证书：(京)-经营性-2018-0011 |
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
