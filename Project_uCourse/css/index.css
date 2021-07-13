@@ -1,40 +1,5 @@
 /* 主页样式表 */
-/* 右侧子导航样式开始 */
-.subnav{
-    position: fixed;
-    top: 700px;
-    right: 50%;
-    margin-right: -800px;
-    width: 70px;
-    height: 220px;
-}
-.subnav div{
-    position: relative;
 
-    width: 70px;
-    height: 70px;
-    background-color: #ffefd6;
-    margin-bottom: 5px;
-    overflow: hidden;
-
-    text-align: center;
-    cursor: pointer;
-}
-.subnav div img{
-    position: absolute;
-    
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 70px;
-    height: 70px;
-}
-.subnav div p{
-    margin-top: 50px;
-}    
-/* 右侧子导航样式结束 */
 /* 轮播图样式开始 */
 .body-1180{
     width: 1180px;

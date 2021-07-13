@@ -1,6 +1,6 @@
 /* 通用样式表 */
 body {
-    font: 12px/1.5 "Microsoft YaHei";
+    font-family: "PingFangSC-Regular";
 }
 
 body::-webkit-scrollbar {
@@ -54,6 +54,43 @@ a {
     top: 40%;
     transform: translateY(-50%);
 }
+
+/* 右侧子导航样式开始 */
+.subnav{
+    position: fixed;
+    top: 700px;
+    right: 50%;
+    margin-right: -800px;
+    width: 70px;
+    height: 220px;
+}
+.subnav div{
+    position: relative;
+
+    width: 70px;
+    height: 70px;
+    background-color: #ffefd6;
+    margin-bottom: 5px;
+    overflow: hidden;
+
+    text-align: center;
+    cursor: pointer;
+}
+.subnav div img{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+}
+.subnav div p{
+    margin-top: 50px;
+}    
+/* 右侧子导航样式结束 */
 
 /* 顶部导航样式开始 */
 .nav-head {
