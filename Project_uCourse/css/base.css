@@ -94,7 +94,7 @@ a {
 
 /* 顶部导航样式开始 */
 .nav-head {
-    width: 100%;
+    min-width: 1180px;
     height: 80px;
     background-color: #fff;
     box-shadow: 0 2px 4px 2px rgba(0, 0, 0, .2);
@@ -301,8 +301,8 @@ a {
 
 /* 尾部样式开始 */
 .index-footer {
+    min-width: 1180px;
     height: 264px;
-    width: 100%;
     background-color: #333333;
     margin-top: 36px;
 }
