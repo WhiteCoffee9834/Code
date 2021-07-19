@@ -36,4 +36,22 @@ id多看id,类名多看类名,标签多看标签.
 4. transition-delay    定执行过渡效果的延时
 5. transition-origin 旋转中心
 
-    
+# -webkit-box-orient
+目前没有浏览器支持 box-orient 属性.
+FF 支持替代的 -moz-box-orient 属性
+其余的支持替代的 -webkit-box-orient 属性
+box-orient 属性规定框的子元素应该被`水平`或`垂直`排列
+使用方法:
+``` css
+box-orient: horizontal | vertical | inline-axis | block-axis
+ | inherit
+ ```
+ + horizontal 在水平行中从左向右排列子元素
+ + vertical 从上向下垂直排列子元素
+ + inline-axis 沿着内轴来排列子元素(映射为horizontal)
+ + block-axis 沿着块轴来排列子元素(映射为vertical)
+ + inherit 从父元素继承 box-orient 属性的值
+ # -webkit-line-clamp
+ 把块容器中的内容限制为指定的行数
+ 它只有在display属性设置为-webkit-box或者-webkit-inline-box并且-webkit-box-orient属性设置成vertical时才有效果
+ 在大部分情况下也需要设置overflow属性为hidden,否则,里面的内容不会被裁减,并且在内容显示为指定行数后还会显示省略号
