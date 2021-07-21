@@ -12,10 +12,6 @@
 </head>
 
 <body>
-    <div class="background-image-fixed">
-        <img src="../img/VCB-left.png" alt="" class="vcb-left">
-        <img src="../img/VCB-right.png" alt="" class="vcb-right">
-    </div>
     <div class="subnav">
         <div class="mytest">
             <img src="../img/index/mytest.png" alt="">
@@ -148,14 +144,16 @@
                 </span>
             </div>
             <div class="tab">
-                <span class="active">学员档案</span><span>安全设置</span>
+                <button class="active">学员档案</button>
+                <button>安全设置</button>
             </div>
             <section>
                 <ul class="user-info-setting">
                     <li>
-                        <div>
-                            <span>头像</span>
+                        <span>头像</span>
+                        <div class="setAvatarWrapper">
                             <img src="../img/login/user.png" alt="">
+                            <div class="avatarMask">更换头像</div>
                         </div>
                     </li>
                     <li>
@@ -182,7 +180,7 @@
                     <li>
                         <div>
                             <span>联系方式</span>
-                            <span>157****8989</span>
+                            <strong>157****8989</strong>
                             <b>修改手机号请到[安全设置]</b>
                         </div>
                         <div>
