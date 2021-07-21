@@ -1,7 +1,6 @@
-main.wrapper-1180 {
+main {
   display: flex;
   padding-top: 30px;
-  margin-bottom: 260px;
 }
 
 aside {
@@ -100,20 +99,19 @@ article .tab {
   border-bottom: 1px solid #ccc;
 }
 
-article .tab button {
+article .tab span {
+  display: inline-block;
+  width: 100px;
   height: 30px;
+  line-height: 30px;
+  text-align: center;
   margin-right: 20px;
-  padding: 0 15px;
-  border: 0;
-  border-radius: 4px;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 16px;
 }
 
-article .tab button.active {
+article .tab span.active {
   background-color: #74c6b3;
   color: #fff;
+  border-radius: 4px;
 }
 
 article .user-info-setting > li {
@@ -130,49 +128,12 @@ article .user-info-setting > li:first-child {
   height: 60px;
 }
 
-article .user-info-setting > li:first-child span {
-  line-height: 60px;
-  font-size: 14px;
-}
-
-article .user-info-setting > li:first-child .setAvatarWrapper {
-  position: relative;
-  margin-left: 68px;
-}
-
-article .user-info-setting > li:first-child .setAvatarWrapper img {
+article .user-info-setting > li:first-child img {
+  vertical-align: middle;
   width: 60px;
-  cursor: pointer;
-}
-
-article .user-info-setting > li:first-child .setAvatarWrapper .avatarMask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 60px;
-  text-align: center;
-  color: #fff;
-  transition-property: transform;
-  transition-duration: 1s;
-  transform: rotate(0) scale(0);
-}
-
-article .user-info-setting > li:first-child .setAvatarWrapper:hover .avatarMask {
-  transform: rotate(-360deg) scale(1);
 }
 
 article .user-info-setting > li:last-child div {
-  display: flex;
-  align-items: center;
-}
-
-article .user-info-setting > li:nth-child(4) div {
   display: flex;
   align-items: center;
 }
@@ -186,23 +147,13 @@ article .user-info-setting > li div span {
   margin-right: 40px;
 }
 
-article .user-info-setting > li div strong {
-  font-size: 14px;
-  color: #333;
-}
-
-article .user-info-setting > li div b {
-  font-size: 12px;
-  color: #80C4AE;
-  margin-left: 20px;
-}
-
 article .user-info-setting > li div label {
   font-size: 14px;
 }
 
-article .user-info-setting > li div input[type=text], article .user-info-setting > li div p.select, article .user-info-setting > li div input[type=month] {
+article .user-info-setting > li div input[type=text], article .user-info-setting > li div p.select {
   height: 40px;
+  font-size: 12px;
   outline: none;
   width: 260px;
   border: 1px solid #80C4AE;
@@ -210,21 +161,16 @@ article .user-info-setting > li div input[type=text], article .user-info-setting
   overflow: hidden;
   box-sizing: border-box;
   padding-left: 18px;
-  font-size: 16px;
-  line-height: 38px;
 }
 
 article .user-info-setting > li div p.select {
   display: inline-block;
+  font-size: 16px;
+  line-height: 38px;
   color: #666;
 }
 
-article .user-info-setting > li div input[type=month] {
-  font-family: PingFangSC-Regular;
-}
-
 article .user-info-setting > li ul {
-  display: none;
   position: absolute;
   z-index: 1;
   background-color: #fff;
@@ -234,15 +180,11 @@ article .user-info-setting > li ul {
   overflow: hidden;
   box-sizing: border-box;
   padding-left: 18px;
-  font-size: 16px;
-  line-height: 38px;
-  padding-left: 0;
 }
 
 article .user-info-setting > li ul li {
   height: 30px;
   line-height: 30px;
-  padding-left: 18px;
 }
 
 article .user-info-setting > li ul li:hover {
@@ -261,17 +203,4 @@ article .user-info-setting > li:nth-child(4) ul {
 article .user-info-setting > li:nth-child(5) ul {
   top: 39px;
   left: 96px;
-}
-
-article .user-info-setting > li button {
-  height: 30px;
-  margin-right: 20px;
-  padding: 0 15px;
-  border: 0;
-  border-radius: 4px;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 16px;
-  color: #fff;
-  background-color: #74c6b3;
 }
