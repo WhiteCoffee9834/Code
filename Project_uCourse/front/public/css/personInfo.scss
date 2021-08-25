@@ -1,0 +1,360 @@
+main.wrapper-1180 {
+    display: flex;
+    padding-top: 30px;
+    margin-bottom: 260px;
+}
+
+aside {
+    width: 20%;
+    box-shadow: 0 -1px 3px 3px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    padding: 20px;
+
+    p {
+        position: relative;
+        height: 20px;
+        font-size: 18px;
+        line-height: 20px;
+        margin: 20px 0;
+        color: #333;
+
+        //三角形混合
+        @mixin triangle($a, $b) {
+            position: absolute;
+            top: 8px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            //使用参数,决定哪一方向的三角形显示/隐藏
+            //NOTE 如果变量需要镶嵌在字符串之中,就必须要写在#{}里
+            border-#{$a}-color: #999;
+            border-#{$b}: 0;
+        }
+
+        i.triangle-down {
+            @include triangle(top, bottom);
+        }
+
+        i.triangle-top {
+            @include triangle(bottom, top);
+        }
+
+        //P前图标混合
+        @mixin beforeImg ($url) {
+            display: inline-block;
+            content: "";
+            background-image: url(../img/userSet/set_0#{$url}.jpg);
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            background-size: cover;
+        }
+
+        //NOTE 如果要使用for循环完成每次+2则要配合if使用
+        @for $i from 1 through 7 {
+            @if $i % 2==1 {
+                &:nth-child(#{$i})::before {
+                    @include beforeImg($i)
+                }
+            }
+        }
+    }
+
+    ul {
+        color: #666;
+        padding-left: 40px;
+        display: none;
+
+        li {
+            margin: 20px 0;
+        }
+
+        &.display {
+            display: block
+        }
+    }
+}
+
+//信息输入框混合
+@mixin boxSizing-radius {
+    width: 260px;
+    border: 1px solid #80C4AE;
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 18px;
+    font-size: 16px;
+    line-height: 38px;
+}
+
+//按钮样式混合
+@mixin button {
+    height: 30px;
+    margin-right: 20px;
+    padding: 0 15px;
+    border: 0;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+article {
+    padding-left: 25px;
+    width: 80%;
+
+    // 列表混合
+    @mixin wrapperLi {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    .tab {
+        border-bottom: 1px solid #ccc;
+
+        button {
+            @include button();
+
+            // TAG 控制选项卡样式
+            &.active {
+                background-color: #74c6b3;
+                color: #fff;
+            }
+        }
+    }
+
+    .user-info-setting {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        >li {
+            @include wrapperLi();
+
+            &:first-child {
+                justify-content: flex-start;
+                height: 60px;
+
+                span {
+                    line-height: 60px;
+                    font-size: 14px;
+                }
+
+                .setAvatarWrapper {
+                    position: relative;
+                    margin-left: 68px;
+
+                    img {
+                        width: 60px;
+                        cursor: pointer;
+                    }
+
+                    .avatarMask {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background-color: rgba(0, 0, 0, 0.6);
+
+                        cursor: pointer;
+                        font-size: 12px;
+                        line-height: 60px;
+                        text-align: center;
+                        color: #fff;
+                        transition-property: transform;
+                        transition-duration: 1s;
+                        transform: rotate(0) scale(0);
+                    }
+
+                    &:hover .avatarMask {
+                        transform: rotate(-360deg) scale(1);
+                    }
+                }
+            }
+
+            &:last-child div {
+                display: flex;
+                align-items: center;
+            }
+
+            &:nth-child(4) div {
+                display: flex;
+                align-items: center;
+            }
+
+            div {
+                font-size: 0;
+
+                span {
+                    font-size: 14px;
+                    margin-right: 40px;
+                }
+
+                strong {
+                    font-size: 14px;
+                    color: #333;
+                }
+
+                b {
+                    font-size: 12px;
+                    color: #80C4AE;
+                    margin-left: 20px;
+                }
+
+                label {
+                    font-size: 14px;
+                }
+
+                input[type=text] {
+                    height: 40px;
+                    outline: none;
+                    @include boxSizing-radius();
+                }
+
+                p.select {
+                    @extend input[type=text];
+                    display: inline-block;
+                    color: #666;
+                }
+
+                input[type=date] {
+                    @extend input[type=text];
+                    font-family: PingFangSC-Regular;
+                }
+            }
+
+            ul {
+                display: none;
+
+                &.displayOption {
+                    display: block;
+                }
+
+                position: absolute;
+                z-index: 1;
+                background-color: #fff;
+                @include boxSizing-radius();
+                //混合内有18px的做内边距,需要清除掉
+                padding-left: 0;
+
+                max-height: 300px;
+                overflow-y: auto;
+                overflow-x: hidden;
+
+                li {
+                    height: 30px;
+                    line-height: 30px;
+                    //把18px的做内边距添加到li中,而不是ul中
+                    padding-left: 18px;
+
+                    &:hover {
+                        background-color: plum;
+                    }
+                }
+
+                //TAG 控制下拉框的显示
+                &:active {
+                    display: block;
+                }
+            }
+
+            &:nth-child(4) ul {
+                right: 0;
+                top: 39px;
+            }
+
+            &:nth-child(5) ul {
+                top: 39px;
+                left: 96px;
+            }
+
+            button {
+                @include button();
+                color: #fff;
+                background-color: #74c6b3;
+            }
+        }
+    }
+
+    .security-setting {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        li {
+            @include wrapperLi();
+
+            span:nth-child(2) {
+                margin-left: 40px
+            }
+
+            &:last-child {
+                margin-top: 160px
+            }
+        }
+
+        button {
+            @include button();
+            color: #fff;
+            background-color: #74c6b3;
+        }
+    }
+}
+
+.changePwdWindow {
+    display: none;
+
+    .changePwdForm {
+        padding: 10px;
+        position: absolute;
+        background-color: #fff;
+        width: 400px;
+        height: 300px;
+        border-radius: 6px;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+
+        z-index: 2;
+
+        h2 {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        p{
+            text-align: center;
+        }
+
+        input {
+            margin-left: 30px;
+            margin-top: 100px;
+            @include boxSizing-radius;
+            outline: none;
+        }
+
+        div {
+            margin-top: 100px;
+            text-align: center;
+
+            button {
+                @include button;
+                background-color: #74c6b3;
+            }
+        }
+    }
+}

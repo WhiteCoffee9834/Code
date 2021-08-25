@@ -1,0 +1,394 @@
+main.wrapper-1180 {
+  display: flex;
+  padding-top: 30px;
+  margin-bottom: 260px;
+}
+
+aside {
+  width: 20%;
+  box-shadow: 0 -1px 3px 3px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+aside p {
+  position: relative;
+  height: 20px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 20px 0;
+  color: #333;
+}
+
+aside p i.triangle-down {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #999;
+  border-bottom: 0;
+}
+
+aside p i.triangle-top {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #999;
+  border-top: 0;
+}
+
+aside p:nth-child(1)::before {
+  display: inline-block;
+  content: "";
+  background-image: url(../img/userSet/set_01.jpg);
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+aside p:nth-child(3)::before {
+  display: inline-block;
+  content: "";
+  background-image: url(../img/userSet/set_03.jpg);
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+aside p:nth-child(5)::before {
+  display: inline-block;
+  content: "";
+  background-image: url(../img/userSet/set_05.jpg);
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+aside p:nth-child(7)::before {
+  display: inline-block;
+  content: "";
+  background-image: url(../img/userSet/set_07.jpg);
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+aside ul {
+  color: #666;
+  padding-left: 40px;
+  display: none;
+}
+
+aside ul li {
+  margin: 20px 0;
+}
+
+aside ul.display {
+  display: block;
+}
+
+article {
+  padding-left: 25px;
+  width: 80%;
+}
+
+article .tab {
+  border-bottom: 1px solid #ccc;
+}
+
+article .tab button {
+  height: 30px;
+  margin-right: 20px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+article .tab button.active {
+  background-color: #74c6b3;
+  color: #fff;
+}
+
+article .user-info-setting {
+  display: none;
+}
+
+article .user-info-setting.display {
+  display: block;
+}
+
+article .user-info-setting > li {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin-top: 20px;
+}
+
+article .user-info-setting > li:first-child {
+  justify-content: flex-start;
+  height: 60px;
+}
+
+article .user-info-setting > li:first-child span {
+  line-height: 60px;
+  font-size: 14px;
+}
+
+article .user-info-setting > li:first-child .setAvatarWrapper {
+  position: relative;
+  margin-left: 68px;
+}
+
+article .user-info-setting > li:first-child .setAvatarWrapper img {
+  width: 60px;
+  cursor: pointer;
+}
+
+article .user-info-setting > li:first-child .setAvatarWrapper .avatarMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  transition-property: transform;
+  transition-duration: 1s;
+  transform: rotate(0) scale(0);
+}
+
+article .user-info-setting > li:first-child .setAvatarWrapper:hover .avatarMask {
+  transform: rotate(-360deg) scale(1);
+}
+
+article .user-info-setting > li:last-child div {
+  display: flex;
+  align-items: center;
+}
+
+article .user-info-setting > li:nth-child(4) div {
+  display: flex;
+  align-items: center;
+}
+
+article .user-info-setting > li div {
+  font-size: 0;
+}
+
+article .user-info-setting > li div span {
+  font-size: 14px;
+  margin-right: 40px;
+}
+
+article .user-info-setting > li div strong {
+  font-size: 14px;
+  color: #333;
+}
+
+article .user-info-setting > li div b {
+  font-size: 12px;
+  color: #80C4AE;
+  margin-left: 20px;
+}
+
+article .user-info-setting > li div label {
+  font-size: 14px;
+}
+
+article .user-info-setting > li div input[type=text], article .user-info-setting > li div p.select, article .user-info-setting > li div input[type=date] {
+  height: 40px;
+  outline: none;
+  width: 260px;
+  border: 1px solid #80C4AE;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 38px;
+}
+
+article .user-info-setting > li div p.select {
+  display: inline-block;
+  color: #666;
+}
+
+article .user-info-setting > li div input[type=date] {
+  font-family: PingFangSC-Regular;
+}
+
+article .user-info-setting > li ul {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  width: 260px;
+  border: 1px solid #80C4AE;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 38px;
+  padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+article .user-info-setting > li ul.displayOption {
+  display: block;
+}
+
+article .user-info-setting > li ul li {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 18px;
+}
+
+article .user-info-setting > li ul li:hover {
+  background-color: plum;
+}
+
+article .user-info-setting > li ul:active {
+  display: block;
+}
+
+article .user-info-setting > li:nth-child(4) ul {
+  right: 0;
+  top: 39px;
+}
+
+article .user-info-setting > li:nth-child(5) ul {
+  top: 39px;
+  left: 96px;
+}
+
+article .user-info-setting > li button {
+  height: 30px;
+  margin-right: 20px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  background-color: #74c6b3;
+}
+
+article .security-setting {
+  display: none;
+}
+
+article .security-setting.display {
+  display: block;
+}
+
+article .security-setting li {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin-top: 20px;
+}
+
+article .security-setting li span:nth-child(2) {
+  margin-left: 40px;
+}
+
+article .security-setting li:last-child {
+  margin-top: 160px;
+}
+
+article .security-setting button {
+  height: 30px;
+  margin-right: 20px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  background-color: #74c6b3;
+}
+
+.changePwdWindow {
+  display: none;
+}
+
+.changePwdWindow .changePwdForm {
+  padding: 10px;
+  position: absolute;
+  background-color: #fff;
+  width: 400px;
+  height: 300px;
+  border-radius: 6px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+.changePwdWindow .changePwdForm h2 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.changePwdWindow .changePwdForm p {
+  text-align: center;
+}
+
+.changePwdWindow .changePwdForm input {
+  margin-left: 30px;
+  margin-top: 100px;
+  width: 260px;
+  border: 1px solid #80C4AE;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 38px;
+  outline: none;
+}
+
+.changePwdWindow .changePwdForm div {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.changePwdWindow .changePwdForm div button {
+  height: 30px;
+  margin-right: 20px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #74c6b3;
+}
