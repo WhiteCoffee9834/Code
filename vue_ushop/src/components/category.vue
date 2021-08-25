@@ -1,0 +1,107 @@
+<template>
+    <article id="category">
+        <header>
+            <div class="search-wrapper-relative">
+                <input type="text" placeholder="按内容搜索" />
+                <input type="submit" value="" />
+            </div>
+        </header>
+        <main>
+            <div class="left-wrapper">
+                <ul>
+                    <router-link to="/category/mz" tag="li">本周特惠</router-link>
+                    <router-link to="/category/mz" tag="li">美妆</router-link>
+                    <router-link to="/category/mz" tag="li">酒水</router-link>
+                    <router-link to="/category/mz" tag="li">小家电</router-link>
+                    <router-link to="/category/mz" tag="li">服饰</router-link>
+                    <router-link to="/category/mz" tag="li">鞋靴</router-link>
+                    <router-link to="/category/mz" tag="li">饰品</router-link>
+                    <router-link to="/category/mz" tag="li">家电</router-link>
+                    <router-link to="/category/mz" tag="li">厨卫</router-link>
+                    <router-link to="/category/mz" tag="li">汽车配件</router-link>
+                    <li>占位</li>
+                    <li>占位</li>
+                    <li>占位</li>
+                    <li>占位</li>
+                    <li>占位</li>
+                    <li>占位</li>
+                    <li>占位</li>
+                </ul>
+            </div>
+            <router-view></router-view>
+        </main>
+    </article>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style scoped>
+/* 顶部样式开始 */
+
+header {
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    height: 0.52rem;
+    background-image: linear-gradient(#ff6040, #ff8a80);
+}
+header .search-wrapper-relative {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+header .search-wrapper-relative input[type="submit"] {
+    position: absolute;
+    top: 0.16rem;
+    left: 0.2rem;
+    background-image: url(../image/search.png);
+    width: 0.18rem;
+    height: 0.18rem;
+    background-size: cover;
+    border: 0;
+}
+header .search-wrapper-relative input[type="text"] {
+    outline: none;
+    border: 0;
+    width: 3.55rem;
+    height: 0.32rem;
+    padding: 0;
+    padding-left: 0.34rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-size: 14px;
+}
+header .search-wrapper-relative input[type="text"]::placeholder {
+    font-size: 14px;
+}
+/* 顶部样式结束 */
+
+/* 中部样式开始 */
+main {
+    display: flex;
+    justify-content: space-between;
+
+    height: calc(100vh - 0.83rem - 0.52rem);
+}
+main .left-wrapper {
+    width: 118px;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+main .left-wrapper li {
+    padding: 0.16rem 0;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+/* 中部样式结束 */
+</style>

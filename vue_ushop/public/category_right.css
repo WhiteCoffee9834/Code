@@ -1,0 +1,43 @@
+#right-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#right-wrapper .sell-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 2.32rem;
+  height: 2.18rem;
+  background-color: #fff;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+#right-wrapper .sell-box > p {
+  width: 100%;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+#right-wrapper section {
+  width: 0.64rem;
+  height: 0.8rem;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+
+#right-wrapper section p {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
