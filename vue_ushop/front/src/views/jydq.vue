@@ -3,7 +3,7 @@
         <div class="sell-box">
             <p>热门精选</p>
             <section>
-                <img src="../image/img1.png" alt="" />
+                <img src="../image/section1.png" alt="" />
                 <p>热卖爆品</p>
             </section>
             <section>
@@ -102,3 +102,6 @@
 <script>
 export default {};
 </script>
+<style scoped lang="scss">
+    @import "../assets/scss/category_right.scss";
+</style>

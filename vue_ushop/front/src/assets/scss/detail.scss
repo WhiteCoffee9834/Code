@@ -1,0 +1,117 @@
+#detail {
+    header {
+        background-color: #ff6040;
+
+        button {
+            border: 0;
+            font-size: .2rem;
+            color: #fff;
+            background-color: transparent;
+            margin-right: auto;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+                font-size: .2rem;
+                color: #fff;
+                margin-right: auto;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-top: .1rem;
+            padding-bottom: .1rem;
+            background-image: linear-gradient(#ff6040, #ff7a68, #ff8a80);
+
+            button {
+                font-size: .16rem;
+                text-align: center;
+                margin-right: 0;
+            }
+        }
+    }
+
+    main {
+        img {
+            width: 100vw;
+            height: 4rem;
+            box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.3);
+        }
+
+        .infoBox {
+            padding: .1rem;
+
+            .price {
+                .nowPrice {
+                    font-size: 0.26rem;
+                    color: #ff6f52;
+                    font-weight: bold;
+                    padding: 0 5px;
+                }
+
+                .oldPrice {
+                    font-size: 0.16rem;
+                    color: #888;
+                    text-decoration: line-through;
+                    font-weight: bold;
+                    padding: 0 5px;
+                }
+            }
+
+            .name {
+                font-size: .24rem;
+
+            }
+
+            .description {
+                font-size: 0.22rem;
+                color: #777;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        footer {
+            height: 0.5rem;
+            display: flex;
+            line-height: 0.5rem;
+
+            .operate1 {
+                flex: 4;
+                width: 40%;
+                display: flex;
+                justify-content: space-around;
+                font-size: 18px;
+            }
+
+            .operate2 {
+                flex: 6;
+                width: 60%;
+                display: flex;
+                font-size: 20px;
+
+                .addCart {
+                    background-color: #ffcc66;
+                    flex: 1;
+                    text-align: center;
+                    color: #663014;
+                }
+
+                .buyNow {
+                    background-color: #ff6040;
+                    flex: 1;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
