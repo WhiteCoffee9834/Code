@@ -28,85 +28,15 @@
                 </div>
             </div>
             <section>
-                <div class="item">
-                    <img src="../image/section4.png" alt="" />
+                <div v-for="(item,index) in goodsList" :key="index" class="item">
+                    <img :src="item.img" alt="">
                     <div class="description">
-                        <p>溪牧原山茶花洁面泡沫 氨基酸123123123123</p>
-                        <p>敏感肌可用，控油祛痘、男女可用12312312312</p>
+                        <p>{{item.firstcatename}}</p>
+                        <p>{{item.goodsname}}</p>
                         <p>
-                            <span> &yen;999 </span>
-                            <b> &yen;1099 </b>
-                            <b> 999人已付款 </b>
-                        </p>
-                        <p>11.11限时299元起</p>
-                        <p>999条评论 99.9%好评</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../image/section4.png" alt="" />
-                    <div class="description">
-                        <p>溪牧原山茶花洁面泡沫 氨基酸123123123123</p>
-                        <p>敏感肌可用，控油祛痘、男女可用12312312312</p>
-                        <p>
-                            <span> &yen;999 </span>
-                            <b> &yen;1099 </b>
-                            <b> 999人已付款 </b>
-                        </p>
-                        <p>11.11限时299元起</p>
-                        <p>999条评论 99.9%好评</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../image/section4.png" alt="" />
-                    <div class="description">
-                        <p>溪牧原山茶花洁面泡沫 氨基酸123123123123</p>
-                        <p>敏感肌可用，控油祛痘、男女可用12312312312</p>
-                        <p>
-                            <span> &yen;999 </span>
-                            <b> &yen;1099 </b>
-                            <b> 999人已付款 </b>
-                        </p>
-                        <p>11.11限时299元起</p>
-                        <p>999条评论 99.9%好评</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../image/section4.png" alt="" />
-                    <div class="description">
-                        <p>溪牧原山茶花洁面泡沫 氨基酸123123123123</p>
-                        <p>敏感肌可用，控油祛痘、男女可用12312312312</p>
-                        <p>
-                            <span> &yen;999 </span>
-                            <b> &yen;1099 </b>
-                            <b> 999人已付款 </b>
-                        </p>
-                        <p>11.11限时299元起</p>
-                        <p>999条评论 99.9%好评</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../image/section4.png" alt="" />
-                    <div class="description">
-                        <p>溪牧原山茶花洁面泡沫 氨基酸123123123123</p>
-                        <p>敏感肌可用，控油祛痘、男女可用12312312312</p>
-                        <p>
-                            <span> &yen;999 </span>
-                            <b> &yen;1099 </b>
-                            <b> 999人已付款 </b>
-                        </p>
-                        <p>11.11限时299元起</p>
-                        <p>999条评论 99.9%好评</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../image/section4.png" alt="" />
-                    <div class="description">
-                        <p>溪牧原山茶花洁面泡沫 氨基酸123123123123</p>
-                        <p>敏感肌可用，控油祛痘、男女可用12312312312</p>
-                        <p>
-                            <span> &yen;999 </span>
-                            <b> &yen;1099 </b>
-                            <b> 999人已付款 </b>
+                            <span>&yen;{{item.price}}</span>
+                            <b>&yen;1099</b>
+                            <b>999人已付款</b>
                         </p>
                         <p>11.11限时299元起</p>
                         <p>999条评论 99.9%好评</p>
@@ -118,7 +48,21 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+    async created() {
+        let list = await axios.get("/api/goodslist");
+        if (list.data.code == 200) {
+            this.goodsList = list.data.list;
+            console.log(this.goodsList);
+        }
+    },
+    data() {
+        return {
+            goodsList: [],
+        };
+    },
+};
 </script>
 
 <style scoped>
@@ -280,6 +224,10 @@ main section .item {
     width: 3.56rem;
     height: 1.1rem;
     margin-bottom: 0.2rem;
+}
+main section .item img{
+    width: 1rem;
+    height: 1rem;
 }
 main section .item .description {
     width: calc(3.56rem - 108px);
