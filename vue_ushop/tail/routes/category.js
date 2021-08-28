@@ -5,19 +5,28 @@ const fs = require('fs');
 var multipart = require('connect-multiparty');
 var router = express.Router();
 const tableName = 'category'
-const { Success, MError } = require("../utils/Result");
+const {
+	Success,
+	MError
+} = require("../utils/Result");
 const Db = require("../utils/Db");
-const { getTree,getUUID } = require("../utils");
+const {
+	getTree,
+	getUUID
+} = require("../utils");
 //分类列表
 router.get("/catelist", async (req, res) => {
-    const { pid,istree } = req['query'];
-    let data = [];
-    if(pid){
-        data = await Db.select(req, `SELECT * FROM ${tableName} WHERE pid = ${pid}`);
-    }else{
-        data = await Db.select(req, `SELECT * FROM ${tableName}`);
-    }
-    istree ? res.send(Success(getTree(data))) : res.send(Success(data));
+	const {
+		pid,
+		istree
+	} = req['query'];
+	let data = [];
+	if (pid) {
+		data = await Db.select(req, `SELECT * FROM ${tableName} WHERE pid = ${pid}`);
+	} else {
+		data = await Db.select(req, `SELECT * FROM ${tableName}`);
+	}
+	istree ? res.send(Success(getTree(data))) : res.send(Success(data));
 });
 
 // 移动图片的方法
@@ -27,10 +36,10 @@ const moveFile = async (req) => {
 	formObj.uploadDir = "./tempDir"; // 接收的文件缓存路径
 	return new Promise((resolve, reject) => {
 		formObj.parse(req, (err, fields, files) => {
-			if(!files.img){
+			if (!files.img) {
 				resolve({
 					body: fields,
-					fileName:''
+					fileName: ''
 				});
 				return;
 			}
@@ -61,7 +70,7 @@ router.post("/cateadd", async (req, res) => {
 		return;
 	}
 	let data = resultObj['body'];
-	if(resultObj['fileName']){
+	if (resultObj['fileName']) {
 		data.img = resultObj['fileName'];
 	}
 	const info = await Db.select(req, `SELECT * FROM ${tableName} WHERE catename = '${data.catename}'`);
@@ -75,17 +84,19 @@ router.post("/cateadd", async (req, res) => {
 			res.send(MError("添加失败，请查看字段信息是否正确"));
 		}
 	}
-    
+
 });
 //获取一条
 router.get("/cateinfo", async (req, res) => {
-    const {id} = req['query'];
-    if (!id) {
-        res.send(MError("缺少必要条件"));
-    } else {
-        const info = await Db.select(req, `SELECT * FROM ${tableName} WHERE id = '${id}'`);
-        res.send(Success(info, '获取成功', tableName));
-    }
+	const {
+		id
+	} = req['query'];
+	if (!id) {
+		res.send(MError("缺少必要条件"));
+	} else {
+		const info = await Db.select(req, `SELECT * FROM ${tableName} WHERE id = '${id}'`);
+		res.send(Success(info, '获取成功', tableName));
+	}
 
 })
 //修改分类
@@ -98,14 +109,14 @@ router.post("/cateedit", async (req, res) => {
 	let data = resultObj['body'];
 	let id = data.id;
 	if (!id) {
-        res.send(MError("缺少必要条件"));
-    } 
-    delete data.id;
-	if(resultObj['fileName']){
+		res.send(MError("缺少必要条件"));
+	}
+	delete data.id;
+	if (resultObj['fileName']) {
 		data.img = resultObj['fileName'];
 	}
 	const result = await Db.update(req, tableName, data, ` WHERE id = ${id}`);
-    result === true ? res.send(Success()) : res.send(MError(result));
+	result === true ? res.send(Success()) : res.send(MError(result));
 	if (result) {
 		res.send(Success([], "添加成功"));
 	} else {
@@ -114,22 +125,32 @@ router.post("/cateedit", async (req, res) => {
 });
 //删除分类
 router.post("/catedelete", async (req, res) => {
-    let { id } = req['body'];
-    if (!id) {
-        res.send(MError("缺少必要条件"));
-    } else {
-        let data = await Db.select(req, `SELECT * FROM ${tableName} WHERE pid = ${id}`);
-        if(data){
-            res.send(MError("该分类下还有子级分类，不能删除！"));
-            return;
-        }
-        const result = await Db.delete(req, `DELETE FROM ${tableName} WHERE id = '${id}'`);
-        if(result === true){
-            data = await Db.select(req, `SELECT * FROM ${tableName}`);
-            res.send(Success(getTree(data)))
-        }else{
-            res.send(MError());
-        }
-    }
+	let {
+		id
+	} = req['body'];
+	if (!id) {
+		res.send(MError("缺少必要条件"));
+	} else {
+		let data = await Db.select(req, `SELECT * FROM ${tableName} WHERE pid = ${id}`);
+		if (data) {
+			res.send(MError("该分类下还有子级分类，不能删除！"));
+			return;
+		}
+		const result = await Db.delete(req, `DELETE FROM ${tableName} WHERE id = '${id}'`);
+		if (result === true) {
+			data = await Db.select(req, `SELECT * FROM ${tableName}`);
+			res.send(Success(getTree(data)))
+		} else {
+			res.send(MError());
+		}
+	}
+});
+// 获取图片
+router.post("/cateImg", async (req, res) => {
+	let {
+		params
+	} = req['body'];
+	const result = await Db.select(req, `SELECT * from category c LEFT JOIN fenleilist f ON c.params=f.params WHERE c.params = "${params}"`);
+	res.send(Success(result, '获取成功'));
 });
 module.exports = router;

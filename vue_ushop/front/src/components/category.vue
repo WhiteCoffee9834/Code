@@ -9,7 +9,14 @@
         <main>
             <div class="left-wrapper">
                 <ul>
-                    <router-link v-for="item in category" :key="item.id" :to="item.router" tag="li" exact-active-class="active">{{item.catename}}</router-link>
+                    <router-link
+                        v-for="item in category"
+                        :key="item.id"
+                        :to="'/category/'+item.params"
+                        tag="li"
+                        exact-active-class="active"
+                        >{{ item.catename }}</router-link
+                    >
                 </ul>
             </div>
             <router-view></router-view>
@@ -19,20 +26,19 @@
 
 <script>
 export default {
-    data(){
-        return{
-            category:[]
-        }
+    data() {
+        return {
+            category: [],
+        };
     },
-    created(){
-        this.$axios.get("/api/catelist").then((res)=>{
-            this.category=res.data.list
-            console.log(this.category)
-        })
-    }
+    created() {
+        this.$axios.get("/api/catelist").then((res) => {
+            this.category = res.data.list;
+        });
+    },
 };
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/category.scss"
+@import "../assets/scss/category.scss";
 </style>

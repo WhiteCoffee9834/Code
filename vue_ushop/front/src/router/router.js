@@ -5,7 +5,6 @@ import category from '../components/category.vue'
 import itemList from '../components/itemList.vue'
 import person from '../components/person.vue'
 import shopCart from '../components/shopCart.vue'
-
 Vue.use(VueRouter)
 
 const routes = [{
@@ -23,50 +22,14 @@ const routes = [{
     {
         path: "/category",
         name: "category",
-        redirect:"/category/jydq",
+        redirect:"/category/msgj",
         component: category,
         // TAG 分类子路由
         children:[
             {
-                path:"jydq",
-                component:()=> import("../views/jydq.vue")
-            },
-            {
-                path:"sjtx",
-                component:()=> import("../views/sjtx.vue")
-            },
-            {
-                path:"dnbg",
-                component:()=> import("../views/dnbg.vue")
-            },
-            {
-                path:"jj",
-                component:()=> import("../views/jj.vue")
-            },
-            {
-                path:"fz",
-                component:()=> import("../views/fz.vue")
-            },
-            {
-                path:"ds",
-                component:()=> import("../views/ds.vue")
-            },
-            {
-                path:"kt",
-                component:()=> import("../views/kt.vue")
-            },
-            {
-                path:"xyj",
-                component:()=> import("../views/xyj.vue")
-            },
-            {
-                path:"sj",
-                component:()=> import("../views/sj.vue")
-            },
-            {
-                path:"bjb",
-                component:()=> import("../views/bjb.vue")
-            },
+                path:":name",
+                component:()=> import("../views/child.vue")
+            }
         ]
     },
     // TAG 畅销商品路由
@@ -96,14 +59,6 @@ const routes = [{
         name:"shopCart",
         component:shopCart
     }
-    // {
-    //   path: '/about',
-    //   name: 'About',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (about.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-    // }
 ]
 
 const router = new VueRouter({

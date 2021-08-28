@@ -55,6 +55,10 @@ main .left-wrapper {
     background-color: #fff;
     overflow-y: auto;
     overflow-x: hidden;
+
+    .all{
+        font-size: 20px;
+    }
 }
 
 main .left-wrapper li {
@@ -65,7 +69,6 @@ main .left-wrapper li {
 
     &.active{
         color: #FF6040;
-        font-size: .18rem;
     }
 }
 /* 中部样式结束 */
