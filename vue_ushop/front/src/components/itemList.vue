@@ -59,7 +59,6 @@ export default {
         let list = await axios.get("/api/goodslist");
         if (list.data.code == 200) {
             this.goodsList = list.data.list;
-            console.log(this.goodsList);
         }
     },
     data() {

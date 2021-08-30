@@ -23,11 +23,15 @@ export default {
         $route: {
             handler() {
                 this.vis = this.$route.fullPath.slice(10);
-                this.$axios
-                    .post("/api/cateImg", { params: this.vis })
-                    .then((res) => {
-                        this.imgData = res.data.list;
-                    });
+                this.$axios({
+                    method:"post",
+                    url:"/api/cateImg",
+                    data:{
+                        params:this.vis
+                    }
+                }).then(res=>{
+                    this.imgData = res.data.list
+                })
             },
             immediate: true,
         },

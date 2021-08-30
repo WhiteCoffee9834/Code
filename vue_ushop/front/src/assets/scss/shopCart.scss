@@ -38,18 +38,21 @@ $itemInfoHeight:1rem;
         width: .15rem;
         border-radius: 50%;
     }
-    .viewWrapper{
+
+    .viewWrapper {
         height: calc(100vh - 1.43rem);
         overflow-y: auto;
         overflow-x: hidden;
     }
+
     section {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: .1rem;
         height: $itemInfoHeight;
-        img{
+
+        img {
             width: 0.8rem;
             height: 0.8rem;
         }
@@ -87,7 +90,8 @@ $itemInfoHeight:1rem;
                 font-weight: bold;
             }
 
-            .countBox { // 物品数量盒子
+            .countBox {
+                // 物品数量盒子
                 display: flex;
                 justify-content: space-between;
 
@@ -96,9 +100,11 @@ $itemInfoHeight:1rem;
                     font-size: .2rem;
                     font-weight: bold;
                 }
-                .numberBox{
+
+                .numberBox {
+
                     // 物品购买数量
-                    span{
+                    span {
                         font-size: 18px;
                     }
                 }

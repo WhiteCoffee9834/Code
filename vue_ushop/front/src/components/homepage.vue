@@ -19,12 +19,6 @@
                     <a href="#">母婴</a>
                     <a href="#">美妆</a>
                     <a href="#">母婴</a>
-                    <a href="#">母婴</a>
-                    <a href="#">母婴</a>
-                    <a href="#">母婴</a>
-                    <a href="#">母婴</a>
-                    <a href="#">母婴</a>
-                    <a href="#">母婴</a>
                 </div>
             </nav>
             <div class="nav-more">
@@ -34,21 +28,19 @@
         </header>
         <div class="big-wrapper">
             <main>
-                <div class="main-scroll-img">
-                    <div class="imgzhanwei1"></div>
-                    <div class="imgzhanwei2"></div>
-                    <div class="imgzhanwei3"></div>
-                    <div class="imgzhanwei4"></div>
-                    <div class="imgzhanwei5"></div>
-                    <div class="imgzhanwei6"></div>
-                </div>
-                <div class="pointer">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                <!-- 轮播图区域 -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div
+                            class="swiper-slide"
+                            v-for="item in bannerList"
+                            :key="item.id"
+                        >
+                            <img :src="item.img" alt="" />
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
                 </div>
                 <nav class="main-nav">
                     <section>
@@ -119,13 +111,48 @@
 </template>
 
 <script>
+import "swiper/css/swiper.css";
+import Swiper from "swiper";
 export default {
-    methods:{
+    methods: {
         // 跳转到商品列表页方法
-        toItemList(){
-            this.$router.push("/itemList")
-        }
-    }
+        toItemList() {
+            this.$router.push("/itemList");
+        },
+    },
+    data() {
+        return {
+            bannerList: [],
+        };
+    },
+    created() {
+        this.$axios({
+            method: "get",
+            url: "/api/bannerlist",
+        }).then((res) => {
+            if (res.data.code == 200) {
+                this.bannerList = res.data.list;
+                // NOTE this.$nextTick将回调延迟到下次DOM更新循环之后执行.再修改数据后立即使用它,然后等待DOM更新.它跟全局方法Vue.nextTick一样,不同的是回调的this自动绑定到调用它的实例上
+                // NOTE 在created钩子函数执行的时候,DOM其实并未进行任何渲染,而此时进行DOM操作并无作用,而在created里使用this.$nextTick可以等待DOM生成以后再来获取DOM对象
+                this.$nextTick(() => {
+                    new Swiper(".swiper-container", {
+                        direction: "horizontal", // 垂直切换选项
+                        loop: true, // 循环模式选项
+                        autoplay: {
+                            delay: 1000,
+                            stopOnLastSlide: false,
+                            disableOnInteraction: false, // 是否禁用交互
+                        },
+
+                        // 如果需要分页器
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+                    });
+                });
+            }
+        });
+    },
 };
 </script>
 

@@ -1,0 +1,36 @@
+#login{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 3rem;
+    .imgBox{
+        text-align: center;
+        margin-bottom: .2rem;
+    }
+    .loginBox{
+        text-align: center;
+        input{
+            border: .02rem solid #ccc;
+            padding-left: .15rem;
+            height: .3rem;
+            outline: none;
+            font-size: .18rem;
+            margin-bottom: .2rem;
+            border-radius: .1rem;
+        }
+        button{
+            display: block;
+            width: 100vw;
+            border: 0;
+            border-radius: .1rem;
+            font-size: .2rem;
+            height: .3rem;
+            background-color: #ff6a4d;
+            color: #fff;
+        }
+    }
+}
