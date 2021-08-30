@@ -32,7 +32,10 @@
                     <div>购物车</div>
                 </div>
                 <div class="operate2">
-                    <div class="addCart" @click="add(obj)">加入购物车</div>
+                    <!-- BUG 必须使用...obj这种形式传递参数,否则只能加到2 -->
+                    <div class="addCart" @click="add({ ...obj }) ">
+                        加入购物车
+                    </div>
                     <div class="buyNow">立即购买</div>
                 </div>
             </footer>
@@ -42,7 +45,7 @@
 
 <script>
 import axios from "axios";
-import {mapMutations} from "vuex"
+import { mapMutations } from "vuex";
 export default {
     created() {
         // 发送axios请求,获取商品的详细信息
@@ -55,11 +58,11 @@ export default {
             obj: {},
         };
     },
-    methods:{
+    methods: {
         // ...mapMutations(["addCart"])
         // 使用对象形式,对象的键名就是上面的方法名,键值为vuex中的mutation中的方法名.当vuex中方法与调用时的方法名字两者的名字不一致时可以采用这种方式
-        ...mapMutations({add:"addCart"}) // mapMutations会自动携带方法里的参数,不需要再写
-    }
+        ...mapMutations({ add: "addCart" }), // mapMutations会自动携带方法里的参数,不需要再写
+    },
 };
 </script>
 
