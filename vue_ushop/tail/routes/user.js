@@ -31,7 +31,6 @@ router.get("/userlist", async (req, res) => {
   
   let data = await Db.select(req, sql);
     res.send(Success(data));
-res.send("hello")
 });
 //添加用户
 router.post("/useradd", async (req, res) => {
