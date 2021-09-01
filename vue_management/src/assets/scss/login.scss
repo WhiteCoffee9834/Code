@@ -1,0 +1,24 @@
+#login {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+
+    .el-form {
+        width: 450px;
+        height: 170px;
+        border-radius: 10px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        padding: 30px;
+        transform: translateX(-50%) translateY(-50%);
+
+        .el-input,
+        .el-button {
+            width: 300px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
