@@ -6,6 +6,7 @@ import itemList from '../components/itemList.vue'
 import person from '../components/person.vue'
 import shopCart from '../components/shopCart.vue'
 import login from "../components/login.vue"
+import reg from "../components/reg.vue"
 Vue.use(VueRouter)
 
 const routes = [{
@@ -63,7 +64,6 @@ const routes = [{
         component: person,
         meta: {
             title: "个人中心",
-            needLogin: true
         }
     },
     // TAG 购物车路由
@@ -83,6 +83,15 @@ const routes = [{
         component: login,
         meta: {
             title: "用户登录"
+        }
+    },
+    // TAG 用户注册路由
+    {
+        path:"/reg",
+        name:"reg",
+        component:reg,
+        meta:{
+            title:"用户注册"
         }
     }
 ]

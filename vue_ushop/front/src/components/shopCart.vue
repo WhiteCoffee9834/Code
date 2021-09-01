@@ -62,8 +62,8 @@
                 <button>结算</button>
             </footer>
         </div>
-        <div v-else>
-            <h2>购物车为空</h2>
+        <div v-else class="noData">
+            <h2>您的购物车为空,快去购买吧</h2>
         </div>
     </article>
 </template>

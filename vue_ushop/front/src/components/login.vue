@@ -25,8 +25,17 @@ export default {
     },
     methods: {
         login() {
-            sessionStorage.setItem("user", this.username);
-            this.$router.push(this.$route.query.path);
+            this.$axios.post("/api/login",{phone:this.username,password:this.password}).then(res=>{
+                if(res.data.code == 200){
+                    sessionStorage.setItem("user", res.data.list.nickname);
+                    alert("登录成功")
+                    this.$router.push(this.$route.query.path);
+                }else{
+                    alert(res.data.msg)
+                    this.username=""
+                    this.password=""
+                }
+            })
         },
     },
 };

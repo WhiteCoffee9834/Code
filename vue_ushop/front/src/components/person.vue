@@ -11,8 +11,13 @@
                 </div>
                 <!-- 信息区 -->
                 <div class="info">
-                    <p>用户名</p>
+                    <p>{{username}}</p>
                     <button>完善资料让小U更懂你</button>
+                </div>
+                <!-- 登录框,登录后不可见 -->
+                <div v-if="vis" class="loginButton">
+                    <button @click="$router.push('/login?path=person')">登录</button>
+                    <button @click="$router.push('/reg')">注册</button>
                 </div>
             </div>
             <!-- 按钮区 -->
@@ -73,7 +78,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            username:"",
+            vis:true
+        }
+    },
+    created(){
+        if(sessionStorage.getItem("user")){
+            this.username = sessionStorage.getItem("user")
+            this.vis = false
+        }
+    }
+};
 </script>
 
 <style scoped lang="scss">

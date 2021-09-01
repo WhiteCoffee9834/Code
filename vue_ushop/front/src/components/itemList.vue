@@ -2,16 +2,16 @@
     <article id="itemList">
         <header>
             <div class="search-wrapper-relative">
-                <input type="text" placeholder="按内容搜索" />
+                <input type="text" placeholder="按内容搜索" v-model="search" @keydown.enter="sousuo"/>
                 <input type="submit" value="" />
             </div>
             <nav class="header-nav-relative">
                 <div class="slider">
-                    <a href="#" class="highlight">综合推荐</a>
-                    <a href="#">销量</a>
-                    <a href="#">价格</a>
-                    <a href="#">好评度</a>
-                    <a href="#">店铺</a>
+                    <a href="javascript:;" class="highlight">综合推荐</a>
+                    <a href="javascript:;">销量</a>
+                    <a href="javascript:;" @click="sortByPrice">价格</a>
+                    <a href="javascript:;">好评度</a>
+                    <a href="javascript:;">店铺</a>
                 </div>
             </nav>
             <div class="nav-more">
@@ -58,18 +58,48 @@ export default {
     async created() {
         let list = await axios.get("/api/goodslist");
         if (list.data.code == 200) {
+            this.allList = list.data.list
             this.goodsList = list.data.list;
         }
     },
     data() {
         return {
             goodsList: [],
+            search:"",
+            allList:[],
+            ss:[],
+            sort:true
         };
     },
     methods: {
         info(id) {
             this.$router.push("/detail/" + id);
         },
+        sousuo(){
+            this.goodsList.filter(item=>{
+                if(item.goodsname.includes(this.search)){
+                    if(!this.ss.includes(item)){
+                        this.ss.push(item)
+                    }
+                }
+            })
+            this.goodsList = this.ss
+            if(this.search == ""){
+                this.goodsList = this.allList
+            }
+        },
+        sortByPrice(){
+            if(this.sort){
+                this.goodsList.sort((a,b)=>{
+                    return a.price - b.price
+                })
+            }else{
+                this.goodsList.sort((a,b)=>{
+                    return b.price - a.price
+                })
+            }
+            this.sort = !this.sort
+        }
     },
 };
 </script>

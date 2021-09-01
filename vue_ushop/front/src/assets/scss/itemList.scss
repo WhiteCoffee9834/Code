@@ -94,6 +94,7 @@
     }
 
     main {
+        height: calc(100vh - 1.63rem);
         overflow-y: auto;
         overflow-x: hidden;
 
