@@ -2,7 +2,6 @@
 <el-container>
     <el-header>
         <h2>XXX大型后台管理系统</h2>
-        <!-- FIXME 刷新页面后失效 -->
         <div v-if="$store.state.user" class="userBox">
             <span>欢迎 {{$store.state.user.username}}</span>
             <el-button @click="logout">注销</el-button>

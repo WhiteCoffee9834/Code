@@ -6,10 +6,14 @@
         label-width="80px"
         :rules="rules">
         <el-form-item label="用户名称" prop="username">
-            <el-input v-model="form.username"></el-input>
+            <el-input v-model="form.username" maxlength="10" show-word-limit></el-input>
         </el-form-item>
         <el-form-item label="密码">
-            <el-input v-model="form.password" type="password"></el-input>
+            <el-input
+                v-model="form.password"
+                type="password"
+                @keyup.enter.native="onNext('form')"
+                maxlength="16"></el-input>
         </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="valideForm('form')">Login</el-button>
@@ -19,7 +23,9 @@
 </template>
 
 <script>
-import {mapActions} from "vuex"
+import {
+    mapActions
+} from "vuex"
 export default {
     data() {
         return {
@@ -32,31 +38,37 @@ export default {
                     required: true,
                     message: "请输入用户名",
                     trigger: "blur"
-                },{
-                    min:3,
-                    max:15,
-                    trigger:blur,
-                    message:"字符应为 3 到 15 位"
+                }, {
+                    min: 3,
+                    max: 15,
+                    trigger: blur,
+                    message: "字符应为 3 到 15 位"
                 }]
             }
         }
     },
     methods: {
-        valideForm(form){
-            this.$refs[form].validate((result)=>{
-                if(result){
+        valideForm(form) {
+            this.$refs[form].validate((result) => {
+                if (result) {
                     // 当登录成功后执行then中的数据
-                    this.login({username:this.form.username,password:this.form.password}).then((res)=>{
-                        if(res == "Success"){
+                    this.login({
+                        username: this.form.username,
+                        password: this.form.password
+                    }).then((res) => {
+                        if (res == "Success") {
                             this.$router.replace("/")
-                        }else{
+                        } else {
                             alert("登录失败")
                         }
                     })
                 }
             })
         },
-    ...mapActions(["login"])
+        ...mapActions(["login"]),
+        onNext(form) {
+            this.valideForm(form)
+        }
     },
 }
 </script>
