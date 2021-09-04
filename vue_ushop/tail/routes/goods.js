@@ -117,7 +117,7 @@ router.post("/goodsedit", async (req, res) => {
 		data.img = resultObj['fileName'];
 	}
 	const result = await Db.update(req, tableName, data, ` WHERE id = ${id}`);
-    result === true ? res.send(Success()) : res.send(MError(result));
+    // result === true ? res.send(Success()) : res.send(MError(result));
 	if (result) {
 		res.send(Success([], "添加成功"));
 	} else {

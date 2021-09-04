@@ -35,18 +35,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 如果想被登录拦截器拦截判断的, 接口放到下面
 
-// app.use(async (req, res, next) => {
-//     console.log(req.headers.authorization)
-//         if (!req.headers.authorization) {
-//             res.send(MError("请设置请求头,并携带验证字符串"));
-//          } else {
-//             if (!await checkToken(req)) { // 过期  
-//                 res.send(Guest([],"登录已过期或访问权限受限"));
-//              } else {
-//                  next();
-//            }
-//          }
-//      });
+app.use(async (req, res, next) => {
+    console.log(req.headers.authorization)
+        if (!req.headers.authorization) {
+            res.send(MError("请设置请求头,并携带验证字符串"));
+         } else {
+            if (!await checkToken(req)) { // 过期  
+                res.send(Guest([],"登录已过期或访问权限受限"));
+             } else {
+                 next();
+           }
+         }
+     });
 
 //后台管理相关接口
 var menuRouter = require('./routes/menu');

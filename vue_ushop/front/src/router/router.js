@@ -102,16 +102,16 @@ const router = new VueRouter({
     routes
 })
 // 全局前置守卫
-router.afterEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
     if (to.matched.some(item => item.meta.needLogin)) {
         if (sessionStorage.getItem("user")) {
-            next
+            next()
         } else {
             alert("你还没有登录,请先登录")
             router.push("/login?path=" + (to.fullPath).slice(1))
         }
     } else {
-        next
+        next()
     }
 })
 // 全局后置守卫,用于显示网页标题
