@@ -1,0 +1,34 @@
+@import "./variable.scss";
+
+#homepage {
+    header {
+        padding: $headerPadding;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff5626;
+
+        .logo {
+            font-size: 20px;
+            color: #fff;
+            margin-right: auto;
+        }
+
+        input {
+            margin-right: auto;
+            width: 1.5rem;
+            height: .4rem;
+            border-radius: .2rem;
+            padding-left: .15rem;
+            border: 0;
+            background-color: rgba($color: #fff, $alpha: 0.3);
+            color: #fff;
+            transform: translateX(-25%);
+            outline: none;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+    }
+}

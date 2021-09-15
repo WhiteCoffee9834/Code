@@ -1,0 +1,150 @@
+#shopcart input {
+  width: .25rem;
+  height: .25rem;
+  border: solid 2px #dddddd;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  overflow: hidden;
+}
+
+#shopcart input:checked::after {
+  content: '';
+  top: .03rem;
+  left: .03rem;
+  position: absolute;
+  background: plum;
+  height: .15rem;
+  width: .15rem;
+  border-radius: 50%;
+}
+
+#shopcart header {
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  background-image: linear-gradient(#ff6040, #ff8a80);
+  padding: 0.2rem 0;
+}
+
+#shopcart header h2 {
+  text-align: center;
+  font-size: 0.2rem;
+  color: #fff;
+  margin-bottom: 0.16rem;
+}
+
+#shopcart header .buttonBox {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.08rem;
+}
+
+#shopcart header .buttonBox button {
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: .16rem;
+}
+
+#shopcart article {
+  height: calc(100vh - 1.18rem - 0.6rem - 0.6rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#shopcart article ul li {
+  display: flex;
+  align-items: center;
+  margin-top: .1rem;
+}
+
+#shopcart article ul li .selectBox {
+  flex: 1;
+}
+
+#shopcart article ul li .imgBox {
+  flex: 4;
+}
+
+#shopcart article ul li .imgBox img {
+  width: 100%;
+  height: 100%;
+  border-radius: .2rem;
+}
+
+#shopcart article ul li .info {
+  flex: 8;
+  align-self: flex-start;
+  margin-left: 0.1rem;
+}
+
+#shopcart article ul li .info .goodsName {
+  font-size: .18rem;
+}
+
+#shopcart article ul li .info p {
+  font-size: .24rem;
+  color: #ff6040;
+  font-weight: bold;
+}
+
+#shopcart article ul li .info .numberBox button {
+  border: 0;
+  background-color: wheat;
+  width: .3rem;
+  height: .3rem;
+  border-radius: .06rem;
+}
+
+#shopcart article ul li .info .numberBox span {
+  font-size: .2rem;
+  margin: 0 .1rem;
+}
+
+#shopcart footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  bottom: 0.6rem;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.4);
+  height: .6rem;
+}
+
+#shopcart footer .allSelectBox {
+  width: 0.2rem;
+  text-align: center;
+}
+
+#shopcart footer .allSelectDecoration {
+  font-size: .18rem;
+  margin-left: -0.2rem;
+}
+
+#shopcart footer .priceCountBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1.8rem;
+}
+
+#shopcart footer .priceCountBox .price {
+  color: #f98e78;
+  font-size: .2rem;
+}
+
+#shopcart footer button {
+  background-color: #ff6040;
+  padding: .1rem .2rem;
+  color: #fff;
+  font-size: .18rem;
+  border: 0;
+  height: 100%;
+}

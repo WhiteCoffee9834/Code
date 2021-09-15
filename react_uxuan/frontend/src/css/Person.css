@@ -1,0 +1,173 @@
+#person {
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+#person header {
+  padding: 0.2rem 0;
+  background-color: #ff6040;
+}
+
+#person header h2 {
+  font-size: 0.2rem;
+  color: #fff;
+  text-align: center;
+}
+
+#person .topSection {
+  background-image: linear-gradient(#FF6040, #FF8A80);
+  padding: 0 .1rem;
+  height: 2rem;
+  border-bottom-left-radius: .2rem;
+  border-bottom-right-radius: .2rem;
+}
+
+#person .topSection .userInfoBox {
+  display: flex;
+}
+
+#person .topSection .userInfoBox .avatar {
+  margin-right: .2rem;
+}
+
+#person .topSection .userInfoBox .avatar img {
+  border-radius: 50%;
+  width: .64rem;
+  height: .64rem;
+}
+
+#person .topSection .userInfoBox .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#person .topSection .userInfoBox .info p {
+  font-size: .2rem;
+  color: #fff;
+}
+
+#person .topSection .userInfoBox .info button {
+  border: .01rem solid #fff;
+  font-size: .12rem;
+  color: #fff;
+  background-color: transparent;
+}
+
+#person .topSection .userInfoBox .loginButton {
+  position: relative;
+  left: 0rem;
+}
+
+#person .topSection .userInfoBox .loginButton button {
+  border: 2px solid #fff;
+  border-radius: .1rem;
+  background-color: transparent;
+  color: #fff;
+  font-size: .2rem;
+  margin-right: .05rem;
+}
+
+#person .topSection .overview {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#person .topSection .overview div {
+  color: #fff;
+  padding: .1rem 0;
+}
+
+#person .topSection .overview div p:first-child {
+  font-size: .18rem;
+  text-align: center;
+}
+
+#person .topSection .overview div p:last-child {
+  font-size: .12rem;
+  text-align: center;
+}
+
+#person .topSection .order {
+  background-color: #fff;
+  border-radius: 0.06rem;
+  padding: .12rem;
+}
+
+#person .topSection .order .order_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#person .topSection .order .order_head span:first-child {
+  font-size: .16rem;
+}
+
+#person .topSection .order .order_head span:last-child {
+  font-size: .14rem;
+  color: #ff6040;
+}
+
+#person .topSection .order div {
+  margin-top: 0.1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#person .topSection .order div button {
+  border: 0;
+  font-size: .12rem;
+  background-color: transparent;
+}
+
+#person .bottomSection {
+  padding: .12rem;
+}
+
+#person .bottomSection .imgBox {
+  height: .9rem;
+  margin-top: .35rem;
+  background-color: plum;
+  border-radius: .1rem;
+}
+
+#person .bottomSection .tools {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: .1rem;
+  margin-top: .1rem;
+}
+
+#person .bottomSection .tools > div {
+  padding: .16rem;
+}
+
+#person .bottomSection .tools .img {
+  background-image: url(../image/sprite.png);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#person .bottomSection .tools .img1 {
+  background-position: -23px -709px;
+}
+
+#person .bottomSection .tools .img2 {
+  background-position: -94px -709px;
+}
+
+#person .bottomSection .tools .img3 {
+  background-position: -166px -709px;
+}
+
+#person .bottomSection .tools .img4 {
+  background-position: -238px -709px;
+}
+
+#person .bottomSection .tools .img5 {
+  background-position: -310px -709px;
+}

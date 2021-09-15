@@ -1,0 +1,69 @@
+#login header {
+  display: flex;
+  justify-content: center;
+  background-color: #ff6040;
+  padding: .1rem 0;
+}
+
+#login header button {
+  margin-right: auto;
+  font-size: .16rem;
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+}
+
+#login header h2 {
+  margin-right: auto;
+  font-size: .22rem;
+  color: #fff;
+  transform: translateX(-25%);
+}
+
+#login section {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100vw;
+  height: 3rem;
+}
+
+#login section .imgBox {
+  margin: 0 auto;
+  width: 189px;
+  height: 48px;
+  background-image: url(../image/sprite.png);
+  background-position: -22px -574px;
+}
+
+#login section .loginBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login section .loginBox input {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding-left: .15rem;
+  height: .3rem;
+  outline: none;
+  font-size: .18rem;
+  margin: .2rem 0;
+  width: 90vw;
+}
+
+#login section .loginBox button {
+  margin: 0 auto;
+  display: block;
+  width: 90vw;
+  border: 0;
+  border-radius: .2rem;
+  font-size: .2rem;
+  height: .5rem;
+  background-image: linear-gradient(#ff6040, #ff7a68, #ff8a80);
+  color: #fff;
+}
