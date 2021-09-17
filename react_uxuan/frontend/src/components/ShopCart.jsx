@@ -19,6 +19,11 @@ class ShopCart extends Component {
     numberChange(type){
         this.props.changeNumber(type)
     }
+    componentWillUnmount(){
+        this.setState=()=>{
+            return
+        }
+    }
 
     render() {
         return (

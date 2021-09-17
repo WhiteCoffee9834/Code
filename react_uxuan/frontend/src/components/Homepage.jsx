@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import "../css/Homepage.css"
 export default class homepage extends Component {
+    componentWillUnmount(){
+        this.setState=()=>{
+            return
+        }
+    }
     render() {
         return (
             <main id="homepage">

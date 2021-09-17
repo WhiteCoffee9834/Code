@@ -27,6 +27,11 @@ export default class Person extends Component {
             username: name
         })
     }
+    componentWillUnmount(){
+        this.setState=()=>{
+            return
+        }
+    }
     render() {
         return (
             <main id="person">
