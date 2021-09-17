@@ -18,6 +18,11 @@ export default class Category extends Component {
             }
         })
     }
+    componentWillUnmount(){
+        this.setState=()=>{
+            return
+        }
+    }
     render() {
         return (
             <main id="category">
