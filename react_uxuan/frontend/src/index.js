@@ -8,12 +8,10 @@ import store from "./store"
 import axios from "axios"
 React.Component.prototype.$axios = axios
 ReactDOM.render( 
-    <React.StrictMode >
         <BrowserRouter>
             <Provider store={store}>
                 <App / >
             </Provider>
-        </BrowserRouter>
-    </React.StrictMode>,
+        </BrowserRouter>,
     document.getElementById('root')
 );
