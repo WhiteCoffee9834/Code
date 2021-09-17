@@ -1,0 +1,97 @@
+@import "./variable.scss";
+
+#detail {
+    header {
+        position: relative;
+        width: 100%;
+        max-width: 768px;
+        background-image: linear-gradient(#ff6040, #ff8a80);
+        padding: $headerPadding;
+
+        .headNameBox {
+            display: flex;
+            justify-content: center;
+
+            button {
+                margin-right: auto;
+                font-size: .16rem;
+                border: 0;
+                background-color: transparent;
+                color: #fff;
+            }
+
+            h2 {
+                font-size: $headerH2;
+                color: #fff;
+                margin-right: auto;
+                transform: translateX(-10%);
+            }
+        }
+
+        .buttonBox {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 0.24rem;
+
+            button {
+                border: 0;
+                background-color: transparent;
+                color: #fff;
+                font-size: .16rem;
+            }
+        }
+    }
+
+    article {
+        .priceBox {
+            span:first-child {
+                font-size: .26rem;
+                font-weight: bold;
+                color: #ff6040;
+                margin-right: .1rem;
+            }
+
+            span:last-child {
+                font-size: .14rem;
+                color: #aaa;
+                text-decoration: line-through;
+            }
+        }
+
+        .description {
+            font-size: .16rem;
+            color: #ccc;
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        height: $bottomNav;
+        box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3);
+
+
+        div{
+            margin-left: .16rem;
+        }
+
+        .addShopCart {
+            width: 1rem;
+            padding: .1rem 0;
+            text-align: center;
+            background-color: #ffcc66;
+            font-size: .18rem;
+            border-radius: .2rem;
+            color: #ac783a;
+        }
+
+        .buyNow {
+            @extend .addShopCart;
+            color: #fff;
+            background-color: #ff6040;
+        }
+    }
+}

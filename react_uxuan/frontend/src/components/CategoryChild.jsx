@@ -18,6 +18,11 @@ export default class CategoryChild extends Component {
             this.getData(id)
         }
     }
+    componentWillUnmount(){
+        this.setState=()=>{
+            return
+        }
+    }
     getData = (id) => {
         this.$axios("/api/getgoods?fid=" + id).then(res => {
             if (res.data.code === 200) {
@@ -35,7 +40,7 @@ export default class CategoryChild extends Component {
                     this.state.goodsList.map(item => {
                         return (
                             <section key={item.id}>
-                                <div className="imgBox">
+                                <div className="imgBox" onClick={this.detail.bind(this,item.id)}>
                                     <img src={item.img} alt="" />
                                 </div>
                                 <div className="info">
@@ -61,5 +66,9 @@ export default class CategoryChild extends Component {
         this.$axios.post("/api/cartadd",{uid:uid,type:"1",goodsid:id,num:1})
         :
         this.props.history.push({pathname:"/login",search:"?path=/category"})
+    }
+
+    detail(id){
+        this.props.history.push("/detail/"+id)
     }
 }
