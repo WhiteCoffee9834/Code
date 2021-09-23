@@ -1,4 +1,4 @@
-import { GETDATA, CHANGESELECT, CHANGESELECTALL, CHANGENUMBER } from "../constants/ActionTypes"
+import { GETDATA, CHANGESELECT, CHANGESELECTALL, CHANGENUMBER,DEL} from "../constants/ActionTypes"
 const initialState = {
     list: []
 }
@@ -37,6 +37,10 @@ export default (state = initialState, { type, payload }) => {
             let {type} = payload
             let index2 = newState.list.findIndex(x=>payload.item.id === x.id)
             newState.list[index2].num+=type
+            return newState
+        case DEL:
+            let index3 = newState.list.findIndex(x => x.id === payload.id)
+            newState.list.splice(index3,1)
             return newState
         default:
             return state

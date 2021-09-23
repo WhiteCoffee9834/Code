@@ -1,5 +1,5 @@
 import axios from "axios"
-import {GETDATA,CHANGESELECT,CHANGESELECTALL,CHANGENUMBER} from "../constants/ActionTypes"
+import {GETDATA,CHANGESELECT,CHANGESELECTALL,CHANGENUMBER,DEL} from "../constants/ActionTypes"
 let action = {
     getData(){
         let uid = sessionStorage.getItem("uid")
@@ -35,6 +35,20 @@ let action = {
         return{
             type:CHANGENUMBER,
             payload:obj
+        }
+    },
+    delItem(obj){
+        return(dispatch)=>{
+            axios.post("/api/cartdelete",{id:obj.id}).then(res=>{
+                if(res.data.code === 200){
+                    dispatch({
+                        type:DEL,
+                        payload:obj
+                    })
+                }else{
+                    alert("删除失败,请刷新页面")
+                }
+            })
         }
     }
 }

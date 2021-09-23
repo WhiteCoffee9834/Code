@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import "../css/ShopCart.css"
 import ActionCreator from '../action/ActionCreator'
 import { createSelector } from "reselect"
+import { SwipeAction, List } from "antd-mobile"
 class ShopCart extends Component {
     componentDidMount() {
         this.props.getData()
@@ -16,11 +17,16 @@ class ShopCart extends Component {
         this.props.selectAllButton()
     }
 
-    numberChange(type){
-        this.props.changeNumber(type)
+    numberChange(obj) {
+        this.props.changeNumber(obj)
     }
-    componentWillUnmount(){
-        this.setState=()=>{
+
+    delItem(obj) {
+        this.props.delItem(obj)
+    }
+    
+    componentWillUnmount() {
+        this.setState = () => {
             return
         }
     }
@@ -47,23 +53,36 @@ class ShopCart extends Component {
                                 switch (item.type) {
                                     case 1:
                                         return (
-                                            <li key={item.id}>
-                                                <div className="selectBox">
-                                                    <input type="checkbox" checked={item.checked} onChange={this.change.bind(this, item)} />
-                                                </div>
-                                                <div className="imgBox">
-                                                    <img src={item.img} alt="" />
-                                                </div>
-                                                <div className="info">
-                                                    <div className="goodsName">{item.goodsname}</div>
-                                                    <p>&yen;{item.price}</p>
-                                                    <div className="numberBox">
-                                                        <button onClick={this.numberChange.bind(this,{type:-1,item})}>-</button>
-                                                        <span>{item.num}</span>
-                                                        <button onClick={this.numberChange.bind(this,{type:1,item})}>+</button>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            <SwipeAction
+                                                key={item.id}
+                                                autoClose
+                                                right={[
+                                                    {
+                                                        text: 'Delete',
+                                                        onPress: this.delItem.bind(this, item),
+                                                        style: { backgroundColor: '#F4333C', color: 'white' },
+                                                    },
+                                                ]}>
+                                                <List.Item arrow="horizontal">
+                                                    <li>
+                                                        <div className="selectBox">
+                                                            <input type="checkbox" checked={item.checked} onChange={this.change.bind(this, item)} />
+                                                        </div>
+                                                        <div className="imgBox">
+                                                            <img src={item.img} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <div className="goodsName">{item.goodsname}</div>
+                                                            <p>&yen;{item.price}</p>
+                                                            <div className="numberBox">
+                                                                <button onClick={this.numberChange.bind(this, { type: -1, item })}>-</button>
+                                                                <span>{item.num}</span>
+                                                                <button onClick={this.numberChange.bind(this, { type: 1, item })}>+</button>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </List.Item>
+                                            </SwipeAction>
                                         )
                                     default:
                                         break;
