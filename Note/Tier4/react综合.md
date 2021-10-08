@@ -35,7 +35,7 @@ StrictMode 是一个用来突出显示应用程序中潜在问题的工具。与
 
 - ​    两个作用  es6—>es5   解析jsx 
 
--   ~~~
+- ~~~
   <script type="text/babel">
   ~~~
 
@@ -229,13 +229,13 @@ PubSub.subscribe("事件名",(msg,data)=>{  })   ($on)  监听事件
 3.卸载
    componentWillUnmount 
 
-4.context传值（高级)
+4.context传值(高级)
 
 ​    createContext()   Provider  提供数据    Consumer 消费数组 
 
 5.children  <组件> 中间的内容</组件>   组件里 用{this.props.children}拿到中间的内容
 
-6.高阶组件（Hoc)  本质是高阶函数   参数是组件，返回值也是组件这个样的组件叫高阶组件
+6.高阶组件(Hoc)  本质是高阶函数   参数是组件，返回值也是组件这个样的组件叫高阶组件
 
   属性代理
 
@@ -391,7 +391,7 @@ flux redux mobx
 
 ~~~
 1.单一数据源(store是唯一的)
-2.state是只读的（一旦修改就会产生新的状态)
+2.state是只读的(一旦修改就会产生新的状态)
 3.使用纯函数来执行修改
 纯函数 只要是同样的输入，必定得到同样的输出
 ~~~
