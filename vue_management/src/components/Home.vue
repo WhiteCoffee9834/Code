@@ -2,8 +2,9 @@
 <el-container>
     <el-header>
         <h2>XXX大型后台管理系统</h2>
-        <div v-if="$store.state.user" class="userBox">
-            <span>欢迎 {{$store.state.user.username}}</span>
+        <!-- 如果在vuex中使用了module,那么这个地方不能直接$store.state.user,还需要接一个module名 -->
+        <div v-if="$store.state.validator.user" class="userBox">
+            <span>欢迎 {{$store.state.validator.user.username}}</span>
             <el-button @click="logout">注销</el-button>
         </div>
     </el-header>
