@@ -22,7 +22,7 @@ Vue 的核心库只关注视图层
 <!-- 生产环境版本，优化了尺寸和速度 -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-vue-cli方式（新手不推荐)
+vue-cli方式(新手不推荐)
 
 ### 3.数据驱动
 
@@ -62,9 +62,10 @@ vue用的是数据驱动的思路 数据改变了，视图会“自动"改变
 
 ### 3、模板 template 
 
-       1) template和el同时存在 渲染的是template的内容
-       2) 模板的内容不能只是文本
-       3)根元素只能有一个
+  1. template和el同时存在 渲染的是template的内容
+  2. 模板的内容不能只是文本
+  3. 根元素只能有一个
+
 ### 4、computed
 
 ~~~js
@@ -136,8 +137,8 @@ watch: {
 
 + 事件监听的指令  v-on:事件="事件处理函数"
 + 事件处理函数是放在methods里面
-+ $event 事件对象 （事件处理函数调用时不传参数 默认 传递的参数是$event)
-+ 阻止冒泡 v-on:事件.stop，阻止默认的行为 v-on:事件.prevent （.stop .prevent 指令的修饰符)
++ $event 事件对象 (事件处理函数调用时不传参数 默认 传递的参数是$event)
++ 阻止冒泡 v-on:事件.stop，阻止默认的行为 v-on:事件.prevent (.stop .prevent 指令的修饰符)
 + 简写为 @
 + 监听键盘事件  v-on:keyup.enter 回车  v-on:keyup.esc      esc键
 
@@ -304,11 +305,11 @@ data(){  //为了保证每个组件的实例数据是独立的
 
     + Vue的实例上有连个方法 $on $emit 
 
-          1） vuebus = new Vue()   也可以用公共的父组件 this.$parent    this.$root
+          1. vuebus = new Vue()   也可以用公共的父组件 this.$parent    this.$root
 
-          2) 发送  vuebus.$emit("事件","数据")
+          2. 发送  vuebus.$emit("事件","数据")
 
-          3) created  vuebus.$on("事件",(data)=>{ }) data 就是拿到的数据
+          3. created  vuebus.$on("事件",(data)=>{ }) data 就是拿到的数据
 
 ### 5.生命周期钩子函数
 
